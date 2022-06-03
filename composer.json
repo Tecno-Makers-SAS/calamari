@@ -20,6 +20,7 @@
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/core-vendor-hardening": "^9.3",
+        "drupal/entity_print": "^2.5",
         "drush/drush": "^10.3",
         "wa72/htmlpagedom": "^2.0"
     },
