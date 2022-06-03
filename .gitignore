@@ -44,3 +44,4 @@ sites/simpletest
 #IDES
 nbproject
 .idea
+/example.gitignore
