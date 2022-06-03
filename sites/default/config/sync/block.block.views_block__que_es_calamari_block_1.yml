@@ -18,13 +18,13 @@ plugin: 'views_block:que_es_calamari-block_1'
 settings:
   id: 'views_block:que_es_calamari-block_1'
   label: 'El Proyecto'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'El Proyecto'
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /proyecto
     negate: false
     context_mapping: {  }
+    pages: /proyecto

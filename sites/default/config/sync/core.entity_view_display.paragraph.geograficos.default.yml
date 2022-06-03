@@ -16,36 +16,36 @@ bundle: geograficos
 mode: default
 content:
   field_ref_docpueblo:
-    weight: 3
+    type: entity_reference_label
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_ref_docregion:
-    weight: 2
+    type: entity_reference_label
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_ref_geograficos:
-    weight: 0
+    type: entity_reference_shs
     label: hidden
     settings:
       link: 0
     third_party_settings: {  }
-    type: entity_reference_shs
+    weight: 0
     region: content
   field_ref_n5lugar:
-    weight: 1
+    type: entity_reference_label
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

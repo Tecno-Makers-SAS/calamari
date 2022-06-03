@@ -1,0 +1,31 @@
+uuid: c1e95b45-d2e7-4f20-899a-abcc2588348a
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1c18f929-361d-446f-899e-2764a0df5fb0'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_headerdocumentos
+theme: seven
+region: header
+weight: -8
+provider: null
+plugin: 'block_content:1c18f929-361d-446f-899e-2764a0df5fb0'
+settings:
+  id: 'block_content:1c18f929-361d-446f-899e-2764a0df5fb0'
+  label: 'Header Documentos'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos

@@ -18,12 +18,12 @@ plugin: 'facet_block:personas_mencionadas'
 settings:
   id: 'facet_block:personas_mencionadas'
   label: 'Personas mencionadas'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: personasmencionadas
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

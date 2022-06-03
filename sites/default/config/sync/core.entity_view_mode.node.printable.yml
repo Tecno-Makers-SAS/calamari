@@ -2,11 +2,11 @@ uuid: 6d50779a-16a3-4e5a-9c71-b9f1aa04b853
 langcode: es
 status: false
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - printable
-  module:
-    - node
 _core:
   default_config_hash: ixCuR5U6Q6-4dIvMWUP6wWwkolzJaDQWuQrer5YJjT4
 id: node.printable

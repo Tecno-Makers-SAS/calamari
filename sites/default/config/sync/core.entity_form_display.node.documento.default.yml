@@ -46,24 +46,24 @@ third_party_settings:
         - field_doc_nfolio
         - field_doc_nimgdigital
         - field_doc_cantimg
+      label: 'Módulo de Ubicación'
+      region: content
       parent_name: ''
       weight: 4
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
+        formatter: closed
         description: ''
         required_fields: true
         effect: none
-        formatter: closed
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
         speed: fast
         attributes: ''
-      label: 'Módulo de Ubicación'
     group_mdescripcion:
       children:
         - field_doc_topagi
@@ -78,34 +78,34 @@ third_party_settings:
         - field_doc_title
         - field_doc_body1
         - field_doc_body2
+      label: 'Módulo de Descripción'
+      region: content
       parent_name: ''
       weight: 5
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Módulo de Descripción'
     group_mdescriptores:
       children:
         - field_ref_onomasticos
         - field_ref_tematicos
         - field_doc_institucion
         - field_doc_geograficos
+      label: 'Módulo Descriptores'
+      region: content
       parent_name: ''
       weight: 6
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Módulo Descriptores'
 id: node.documento.default
 targetEntityType: node
 bundle: documento
@@ -118,63 +118,64 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_doc_body1:
+    type: text_textarea
     weight: 14
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_doc_body2:
+    type: text_textarea
     weight: 15
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_doc_cantimg:
+    type: number
     weight: 10
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_doc_clasedoc:
+    type: chosen_select
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_destinatario:
+    type: chosen_select
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_fagi:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 4
     region: content
-  field_doc_fexpedicion:
-    weight: 11
     settings: {  }
     third_party_settings: {  }
+  field_doc_fexpedicion:
     type: datetime_default
+    weight: 11
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_doc_flimite:
+    type: string_textfield
     weight: 9
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_doc_geograficos:
     type: entity_reference_paragraphs
     weight: 44
+    region: content
     settings:
       title: Párrafo
       title_plural: Parráfos
@@ -183,93 +184,93 @@ content:
       form_display_mode: default
       default_paragraph_type: geograficos
     third_party_settings: {  }
-    region: content
   field_doc_institucion:
+    type: chosen_select
     weight: 43
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_lexpedicion:
+    type: chosen_select
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_nfolio:
+    type: string_textfield
     weight: 8
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_doc_nimgdigital:
+    type: string_textfield
     weight: 9
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_doc_nlegajo:
-    weight: 5
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
+    weight: 5
     region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_doc_nodoc:
+    type: string_textfield
     weight: 7
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_doc_nolibro:
+    type: string_textfield
     weight: 6
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_doc_procedencia:
+    type: chosen_select
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_remitente:
+    type: chosen_select
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_title:
+    type: text_textarea
     weight: 13
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_doc_topagi:
+    type: chosen_select
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_topologia:
+    type: chosen_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_ref_onomasticos:
     type: entity_reference_paragraphs
     weight: 41
+    region: content
     settings:
       title: Párrafo
       title_plural: Parráfos
@@ -278,10 +279,15 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_ref_tematicos:
+    type: options_shs_chosen
     weight: 42
+    region: content
     settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
       chosen_override: false
       chosen_settings:
         disable_search: false
@@ -289,13 +295,7 @@ content:
         placeholder_text_multiple: 'Elija algunas opciones'
         placeholder_text_single: 'Elige una opción'
         no_results_text: 'No hay resultados coincidentes'
-      display_node_count: false
-      create_new_items: false
-      create_new_levels: false
-      force_deepest: false
     third_party_settings: {  }
-    type: options_shs_chosen
-    region: content
   langcode:
     type: language_select
     weight: 8

@@ -1,0 +1,29 @@
+uuid: 7b8523ae-bafb-4506-ac63-b56239d3c042
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.fecha_de_expedicion
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_fechadeexpedicion
+theme: seven
+region: header
+weight: -6
+provider: null
+plugin: 'facet_block:fecha_de_expedicion'
+settings:
+  id: 'facet_block:fecha_de_expedicion'
+  label: 'Refine por años'
+  label_display: visible
+  provider: facets
+  block_id: fechadeexpedicion
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "<front>\r\n/documentos"

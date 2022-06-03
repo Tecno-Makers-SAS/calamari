@@ -1,0 +1,34 @@
+uuid: bf5d5154-e00a-4c42-abfa-5e28bf8bcd09
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.calamari_blocks
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - seven
+third_party_settings:
+  block_class:
+    classes: list_projects
+id: seven_views_block__seven_blocks_block_1
+theme: seven
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:calamari_blocks-block_1'
+settings:
+  id: 'views_block:calamari_blocks-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /proyecto

@@ -1,0 +1,29 @@
+uuid: 6dfa3c70-e1b9-4864-bde1-74b8b47df77c
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.procedencia
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_procedencia
+theme: seven
+region: header
+weight: -5
+provider: null
+plugin: 'facet_block:procedencia'
+settings:
+  id: 'facet_block:procedencia'
+  label: Procedencia
+  label_display: visible
+  provider: facets
+  block_id: procedencia
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos

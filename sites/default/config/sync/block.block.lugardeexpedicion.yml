@@ -18,12 +18,12 @@ plugin: 'facet_block:lugar_de_expedicion'
 settings:
   id: 'facet_block:lugar_de_expedicion'
   label: 'Lugar de expedición'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: lugardeexpedicion
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

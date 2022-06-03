@@ -1,0 +1,29 @@
+uuid: d9199e31-fc65-4385-bdd1-0efd466961ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tipologia_agi
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_tipologiaagi
+theme: seven
+region: header
+weight: -8
+provider: null
+plugin: 'facet_block:tipologia_agi'
+settings:
+  id: 'facet_block:tipologia_agi'
+  label: 'Tipología AGI'
+  label_display: visible
+  provider: facets
+  block_id: tipologiaagi
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos

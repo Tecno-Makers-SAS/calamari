@@ -17,19 +17,21 @@ bundle: geograficos
 mode: default
 content:
   field_ref_docpueblo:
+    type: chosen_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_ref_docregion:
+    type: chosen_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_ref_geograficos:
+    type: options_shs_chosen
     weight: 0
+    region: content
     settings:
       display_node_count: false
       create_new_items: false
@@ -43,14 +45,12 @@ content:
         placeholder_text_single: 'Elige una opción'
         no_results_text: 'No hay resultados coincidentes'
     third_party_settings: {  }
-    type: options_shs_chosen
-    region: content
   field_ref_n5lugar:
+    type: chosen_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
 hidden:
   created: true
   status: true

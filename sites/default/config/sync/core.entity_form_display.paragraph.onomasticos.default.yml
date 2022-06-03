@@ -15,23 +15,23 @@ bundle: onomasticos
 mode: default
 content:
   field_doc_cargo1:
+    type: chosen_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_cargo2:
+    type: chosen_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_doc_pmencionadas:
+    type: chosen_select
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
 hidden:
   created: true
   status: true

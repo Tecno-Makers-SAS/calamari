@@ -16,11 +16,11 @@ plugin: search_path_block
 settings:
   id: search_path_block
   label: 'Search path block'
-  provider: calamari_config
   label_display: '0'
+  provider: calamari_config
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

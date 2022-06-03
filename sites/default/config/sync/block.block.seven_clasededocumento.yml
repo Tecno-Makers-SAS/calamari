@@ -1,0 +1,29 @@
+uuid: 269c969a-073a-46e9-894a-115d91806c55
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.clase_de_documento
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_clasededocumento
+theme: seven
+region: header
+weight: -6
+provider: null
+plugin: 'facet_block:clase_de_documento'
+settings:
+  id: 'facet_block:clase_de_documento'
+  label: 'Clase de documento'
+  label_display: visible
+  provider: facets
+  block_id: clasededocumento
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos

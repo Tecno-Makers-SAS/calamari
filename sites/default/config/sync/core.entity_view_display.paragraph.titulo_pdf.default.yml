@@ -13,12 +13,12 @@ bundle: titulo_pdf
 mode: default
 content:
   field_pdf:
-    weight: 1
+    type: pdf_pages
     label: hidden
     settings:
       scale: 1
     third_party_settings: {  }
-    type: pdf_pages
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

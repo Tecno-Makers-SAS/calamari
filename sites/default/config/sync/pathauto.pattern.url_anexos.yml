@@ -11,12 +11,12 @@ pattern: 'anexos/[node:title]'
 selection_criteria:
   c3a2874c-df80-4d59-aec0-78c8d854d9fe:
     id: node_type
-    bundles:
-      anexo: anexo
     negate: false
+    uuid: c3a2874c-df80-4d59-aec0-78c8d854d9fe
     context_mapping:
       node: node
-    uuid: c3a2874c-df80-4d59-aec0-78c8d854d9fe
+    bundles:
+      anexo: anexo
 selection_logic: and
 weight: -5
 relationships: {  }

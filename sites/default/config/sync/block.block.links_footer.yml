@@ -17,8 +17,8 @@ plugin: 'block_content:b12aa904-fd3b-4738-88ea-79f78a0816bb'
 settings:
   id: 'block_content:b12aa904-fd3b-4738-88ea-79f78a0816bb'
   label: links_footer
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

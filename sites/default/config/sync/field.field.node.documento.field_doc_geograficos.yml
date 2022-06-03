@@ -21,13 +21,13 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       geograficos: geograficos
+    negate: 0
     target_bundles_drag_drop:
       geograficos:
-        enabled: true
         weight: 6
+        enabled: true
       onomasticos:
         weight: 7
         enabled: false

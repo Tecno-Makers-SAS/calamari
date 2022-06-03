@@ -1,0 +1,29 @@
+uuid: c29da218-4d44-4ea3-aa13-9c9dadce7ef6
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.lugar_de_expedicion
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_lugardeexpedicion
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'facet_block:lugar_de_expedicion'
+settings:
+  id: 'facet_block:lugar_de_expedicion'
+  label: 'Lugar de expedición'
+  label_display: visible
+  provider: facets
+  block_id: lugardeexpedicion
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos

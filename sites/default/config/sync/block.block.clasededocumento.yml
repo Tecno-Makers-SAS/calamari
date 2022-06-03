@@ -18,12 +18,12 @@ plugin: 'facet_block:clase_de_documento'
 settings:
   id: 'facet_block:clase_de_documento'
   label: 'Clase de documento'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: clasededocumento
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

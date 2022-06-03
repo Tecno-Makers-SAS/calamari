@@ -1,0 +1,25 @@
+uuid: 0ed9cd76-28fe-4a10-b234-ed8655c5c43b
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+id: seven_pagetitle
+theme: seven
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /contacto

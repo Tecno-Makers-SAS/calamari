@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: '--64pTFtZ_ATDgWZMzTVtdhWcYJcq7fvQT9fZn3UCOU'
+langcode: es
 printable_entities:
   node: node
   block: '0'
@@ -20,8 +23,8 @@ extract_links: '0'
 save_pdf: true
 pdf_tool: wkhtmltopdf
 paper_size: Letter
-page_orientation: portrait
 path_to_binary: ''
+page_orientation: portrait
 pdf_location: documento
 send_to_printer: true
 close_window: false
@@ -34,10 +37,7 @@ printable_pdf_link_locations:
   node: '0'
   comment: '0'
   user: '0'
-print_pdf_use_xvfb_run: 0
+print_pdf_use_xvfb_run: false
 path_to_xvfb_run: ''
-_core:
-  default_config_hash: '--64pTFtZ_ATDgWZMzTVtdhWcYJcq7fvQT9fZn3UCOU'
-langcode: es
 ignore_warnings: 0
 path_to_xfb_run: ''

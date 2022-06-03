@@ -18,12 +18,12 @@ plugin: 'facet_block:geograficos'
 settings:
   id: 'facet_block:geograficos'
   label: Geográficos
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: geograficos
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

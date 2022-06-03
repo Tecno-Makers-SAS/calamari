@@ -1,0 +1,29 @@
+uuid: 7cb64f56-9864-42eb-9c78-97de06d53721
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.instituciones
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_instituciones
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'facet_block:instituciones'
+settings:
+  id: 'facet_block:instituciones'
+  label: Instituciones
+  label_display: visible
+  provider: facets
+  block_id: instituciones
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos

@@ -18,14 +18,14 @@ plugin: 'block_content:1c18f929-361d-446f-899e-2764a0df5fb0'
 settings:
   id: 'block_content:1c18f929-361d-446f-899e-2764a0df5fb0'
   label: 'Header Documentos'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

@@ -18,12 +18,12 @@ plugin: 'facet_block:tematicos'
 settings:
   id: 'facet_block:tematicos'
   label: Temas
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: temas
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

@@ -11,12 +11,12 @@ pattern: 'documento/[node:title]'
 selection_criteria:
   4989ea57-b4a0-458b-90cc-76185f095dbc:
     id: node_type
-    bundles:
-      documento: documento
     negate: false
+    uuid: 4989ea57-b4a0-458b-90cc-76185f095dbc
     context_mapping:
       node: node
-    uuid: 4989ea57-b4a0-458b-90cc-76185f095dbc
+    bundles:
+      documento: documento
 selection_logic: and
 weight: -5
 relationships: {  }

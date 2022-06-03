@@ -13,12 +13,12 @@ bundle: titulo_pdf
 mode: default
 content:
   field_pdf:
+    type: file_generic
     weight: 1
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
 hidden:
   created: true
   status: true

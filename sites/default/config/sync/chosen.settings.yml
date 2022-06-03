@@ -1,21 +1,21 @@
+_core:
+  default_config_hash: exRaKE0s6uZbfQrl_2WFEcTlc_1t81xEqCLuCCteUSk
+langcode: es
 minimum_single: 20
 minimum_multiple: 20
 disable_search_threshold: 0
 minimum_width: 0
+max_shown_results: null
 use_relative_width: false
 jquery_selector: ''
 search_contains: false
 disable_search: false
 allow_single_deselect: false
-placeholder_text_multiple: 'Elija algunas opciones'
-placeholder_text_single: 'Elige una opción'
-no_results_text: 'No hay resultados coincidentes'
-max_shown_results: null
 disabled_themes:
   bootstrap: '0'
   calamari: '0'
   sevenadmin: '0'
 chosen_include: 2
-_core:
-  default_config_hash: exRaKE0s6uZbfQrl_2WFEcTlc_1t81xEqCLuCCteUSk
-langcode: es
+placeholder_text_multiple: 'Elija algunas opciones'
+placeholder_text_single: 'Elige una opción'
+no_results_text: 'No hay resultados coincidentes'

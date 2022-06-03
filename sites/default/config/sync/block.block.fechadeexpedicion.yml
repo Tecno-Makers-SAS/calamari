@@ -18,12 +18,12 @@ plugin: 'facet_block:fecha_de_expedicion'
 settings:
   id: 'facet_block:fecha_de_expedicion'
   label: 'Refine por años'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: fechadeexpedicion
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/documentos"
     negate: false
     context_mapping: {  }
+    pages: "<front>\r\n/documentos"

@@ -1,0 +1,25 @@
+uuid: 87af74a1-c755-4aa9-9f27-fb1dbe1de9e7
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3d04a066-d9bb-4957-be3d-a092f88685fe'
+  module:
+    - block_content
+  theme:
+    - seven
+id: seven_logo_blanco
+theme: seven
+region: header
+weight: -8
+provider: null
+plugin: 'block_content:3d04a066-d9bb-4957-be3d-a092f88685fe'
+settings:
+  id: 'block_content:3d04a066-d9bb-4957-be3d-a092f88685fe'
+  label: logo_blanco
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

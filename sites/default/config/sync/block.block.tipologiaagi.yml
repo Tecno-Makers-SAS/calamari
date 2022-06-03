@@ -18,12 +18,12 @@ plugin: 'facet_block:tipologia_agi'
 settings:
   id: 'facet_block:tipologia_agi'
   label: 'Tipología AGI'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: tipologiaagi
 visibility:
   request_path:
     id: request_path
-    pages: /documentos
     negate: false
     context_mapping: {  }
+    pages: /documentos

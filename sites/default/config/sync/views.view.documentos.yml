@@ -31,127 +31,12 @@ base_table: search_api_index_documents
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
-      exposed_form:
-        type: bef
-        options:
-          submit_button: Buscar
-          reset_button: true
-          reset_button_label: 'Nueva busqueda'
-          exposed_sorts_label: Ordenar
-          expose_sort_order: false
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
-          text_input_required_format: basic_html
-          bef:
-            general:
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: false
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              secondary_open: false
-            filter:
-              search_api_fulltext:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_doc_pmencionadas:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_doc_cargo1:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_doc_institucion:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_ref_tematicos:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_ref_geograficos:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_ref_docregion:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_ref_docpueblo:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-      pager:
-        type: full
-        options:
-          items_per_page: 10
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« Primero'
-            last: 'Último »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 4
-      style:
-        type: default
-      row:
-        type: fields
+      title: Documentos
       fields:
         nothing:
           id: nothing
@@ -160,6 +45,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -201,7 +87,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         title:
           id: title
           table: search_api_datasource_documents_entity_node
@@ -209,6 +94,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -271,8 +158,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
         field_doc_fexpedicion:
           id: field_doc_fexpedicion
           table: search_api_datasource_documents_entity_node
@@ -280,6 +165,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -325,7 +212,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: America/Bogota
-            date_format: d-m-Y
+            date_format: 'Y'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -343,8 +230,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
         field_doc_title:
           id: field_doc_title
           table: search_api_datasource_documents_entity_node
@@ -352,6 +237,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: ''
           exclude: true
           alter:
@@ -413,8 +300,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
         field_doc_body1:
           id: field_doc_body1
           table: search_api_datasource_documents_entity_node
@@ -422,6 +307,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -483,8 +370,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
         field_doc_remitente:
           id: field_doc_remitente
           table: search_api_datasource_documents_entity_node
@@ -492,6 +377,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: 'Remitente: '
           exclude: false
           alter:
@@ -588,8 +475,6 @@ display:
                 display_method: label
               topologia:
                 display_method: label
-          entity_type: node
-          plugin_id: search_api_field
         field_doc_destinatario:
           id: field_doc_destinatario
           table: search_api_datasource_documents_entity_node
@@ -597,6 +482,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: 'Destinatario:'
           exclude: false
           alter:
@@ -693,8 +580,6 @@ display:
                 display_method: label
               topologia:
                 display_method: label
-          entity_type: node
-          plugin_id: search_api_field
         field_doc_lexpedicion:
           id: field_doc_lexpedicion
           table: search_api_datasource_documents_entity_node
@@ -702,6 +587,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
           label: 'Lugar de Expedición'
           exclude: false
           alter:
@@ -798,8 +685,141 @@ display:
                 display_method: label
               topologia:
                 display_method: label
-          entity_type: node
-          plugin_id: search_api_field
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 4
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Buscar
+          reset_button: true
+          reset_button_label: 'Nueva búsqueda'
+          exposed_sorts_label: Ordenar
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+            filter:
+              search_api_fulltext:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_doc_pmencionadas:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_doc_cargo1:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_doc_institucion:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_ref_tematicos:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_ref_geograficos:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_ref_docregion:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_ref_docpueblo:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<h4>No se encontraron resultados</h4>'
+            format: full_html
+          tokenize: false
+      sorts:
+        title:
+          id: title
+          table: search_api_index_documents
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: title
+          exposed: false
+      arguments: {  }
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -808,6 +828,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: or
           value: ''
           group: 1
@@ -848,7 +869,6 @@ display:
             - field_doc_body1
             - field_doc_body2
             - title
-          plugin_id: search_api_fulltext
         field_doc_pmencionadas:
           id: field_doc_pmencionadas
           table: search_api_index_documents
@@ -856,6 +876,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -891,12 +912,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          type: select
-          limit: true
           vid: personas_mencionadas
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_doc_cargo1:
           id: field_doc_cargo1
           table: search_api_index_documents
@@ -904,13 +924,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
             operator_id: field_doc_cargo1_op
-            label: Cargo1
+            label: Cargos
             description: ''
             use_operator: false
             operator: field_doc_cargo1_op
@@ -939,12 +960,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          type: select
-          limit: true
           vid: cargos
+          type: select
           hierarchy: true
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_doc_institucion:
           id: field_doc_institucion
           table: search_api_index_documents
@@ -952,6 +972,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -987,12 +1008,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          type: select
-          limit: true
           vid: instituciones
+          type: select
           hierarchy: true
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_ref_tematicos:
           id: field_ref_tematicos
           table: search_api_index_documents
@@ -1000,6 +1020,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -1035,12 +1056,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          type: select
-          limit: true
           vid: tematicos
+          type: select
           hierarchy: true
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_ref_geograficos:
           id: field_ref_geograficos
           table: search_api_index_documents
@@ -1048,6 +1068,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -1083,12 +1104,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          type: select
-          limit: true
           vid: geograficos
+          type: select
           hierarchy: true
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_ref_docregion:
           id: field_ref_docregion
           table: search_api_index_documents
@@ -1096,13 +1116,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
             operator_id: field_ref_docregion_op
-            label: 'Según doc original Región'
+            label: 'Lugares mencionados en el original'
             description: ''
             use_operator: false
             operator: field_ref_docregion_op
@@ -1131,12 +1152,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: doc_original_region
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_ref_docpueblo:
           id: field_ref_docpueblo
           table: search_api_index_documents
@@ -1144,13 +1164,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
             operator_id: field_ref_docpueblo_op
-            label: 'Según doc. original Pueblo / ciudad'
+            label: '&nbsp;'
             description: ''
             use_operator: false
             operator: field_ref_docpueblo_op
@@ -1179,26 +1200,26 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: doc_original_pueblo
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
-      sorts:
-        field_doc_fexpedicion:
-          id: field_doc_fexpedicion
-          table: search_api_index_documents
-          field: field_doc_fexpedicion
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: 'Fecha de expedición'
-          plugin_id: search_api
-      title: Documentos
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      relationships: {  }
       header:
         result:
           id: result
@@ -1207,31 +1228,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: result
           empty: false
           content: 'Mostrando @start - @end of @total'
-          plugin_id: result
       footer: {  }
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content:
-            value: '<h4>No se encontraron resultados</h4>'
-            format: full_html
-          plugin_id: text
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -1250,18 +1251,18 @@ display:
         - 'config:field.storage.node.field_doc_title'
         - 'config:search_api.index.documents'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: documentos
       cache:
         type: none
       defaults:
         cache: false
       exposed_block: true
+      display_extenders: {  }
+      path: documentos
     cache_metadata:
       max-age: -1
       contexts:

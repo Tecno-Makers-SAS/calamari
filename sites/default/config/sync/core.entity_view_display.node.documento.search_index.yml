@@ -39,192 +39,192 @@ bundle: documento
 mode: search_index
 content:
   field_doc_body1:
-    weight: 16
+    type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 16
     region: content
   field_doc_body2:
-    weight: 17
+    type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 17
     region: content
   field_doc_cantimg:
-    weight: 8
+    type: number_unformatted
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: number_unformatted
+    weight: 8
     region: content
   field_doc_clasedoc:
-    weight: 10
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 10
     region: content
   field_doc_destinatario:
-    weight: 13
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 13
     region: content
   field_doc_fagi:
-    weight: 3
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_doc_fexpedicion:
-    weight: 15
+    type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: html_date
     third_party_settings: {  }
-    type: datetime_default
+    weight: 15
     region: content
   field_doc_flimite:
-    weight: 18
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 18
     region: content
   field_doc_geograficos:
-    weight: 25
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 25
     region: content
   field_doc_institucion:
-    weight: 19
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 19
     region: content
   field_doc_lexpedicion:
-    weight: 14
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 14
     region: content
   field_doc_nfolio:
-    weight: 7
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 7
     region: content
   field_doc_nimgdigital:
-    weight: 20
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 20
     region: content
   field_doc_nlegajo:
-    weight: 4
+    type: number_unformatted
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: number_unformatted
+    weight: 4
     region: content
   field_doc_nodoc:
-    weight: 6
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_doc_nolibro:
-    weight: 5
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_doc_procedencia:
-    weight: 11
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 11
     region: content
   field_doc_remitente:
-    weight: 12
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 12
     region: content
   field_doc_title:
-    weight: 24
+    type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 24
     region: content
   field_doc_topagi:
-    weight: 9
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 9
     region: content
   field_doc_topologia:
-    weight: 2
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_ref_onomasticos:
-    weight: 26
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 26
     region: content
   field_ref_tematicos:
-    weight: 21
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 21
     region: content
   links:
-    weight: 1
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   langcode: true
   search_api_excerpt: true

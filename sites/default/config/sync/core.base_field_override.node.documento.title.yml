@@ -1,0 +1,18 @@
+uuid: 233c46fc-f5e7-4611-9032-75950cc1e1e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.documento
+id: node.documento.title
+field_name: title
+entity_type: node
+bundle: documento
+label: 'Número de catalogación'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

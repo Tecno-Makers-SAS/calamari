@@ -1,0 +1,29 @@
+uuid: febf8eb0-5bfe-4d7f-96ac-22ea1b7cf563
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.personas_mencionadas
+  module:
+    - facets
+    - system
+  theme:
+    - seven
+id: seven_personasmencionadas
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'facet_block:personas_mencionadas'
+settings:
+  id: 'facet_block:personas_mencionadas'
+  label: 'Personas mencionadas'
+  label_display: visible
+  provider: facets
+  block_id: personasmencionadas
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /documentos
