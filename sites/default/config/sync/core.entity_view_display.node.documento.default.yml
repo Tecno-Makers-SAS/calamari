@@ -1,0 +1,231 @@
+uuid: 89a4acd5-9545-4b11-af11-ec178210cf25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.documento.field_doc_body1
+    - field.field.node.documento.field_doc_body2
+    - field.field.node.documento.field_doc_cantimg
+    - field.field.node.documento.field_doc_clasedoc
+    - field.field.node.documento.field_doc_destinatario
+    - field.field.node.documento.field_doc_fagi
+    - field.field.node.documento.field_doc_fexpedicion
+    - field.field.node.documento.field_doc_flimite
+    - field.field.node.documento.field_doc_geograficos
+    - field.field.node.documento.field_doc_institucion
+    - field.field.node.documento.field_doc_lexpedicion
+    - field.field.node.documento.field_doc_nfolio
+    - field.field.node.documento.field_doc_nimgdigital
+    - field.field.node.documento.field_doc_nlegajo
+    - field.field.node.documento.field_doc_nodoc
+    - field.field.node.documento.field_doc_nolibro
+    - field.field.node.documento.field_doc_procedencia
+    - field.field.node.documento.field_doc_remitente
+    - field.field.node.documento.field_doc_title
+    - field.field.node.documento.field_doc_topagi
+    - field.field.node.documento.field_doc_topologia
+    - field.field.node.documento.field_ref_onomasticos
+    - field.field.node.documento.field_ref_tematicos
+    - node.type.documento
+  module:
+    - datetime
+    - entity_reference_revisions
+    - shs
+    - text
+    - user
+id: node.documento.default
+targetEntityType: node
+bundle: documento
+mode: default
+content:
+  field_doc_body1:
+    weight: 15
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_doc_body2:
+    weight: 16
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_doc_cantimg:
+    weight: 7
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_doc_clasedoc:
+    weight: 9
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_destinatario:
+    weight: 12
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_fagi:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_fexpedicion:
+    weight: 14
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_doc_flimite:
+    weight: 17
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_doc_geograficos:
+    weight: 22
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_doc_institucion:
+    weight: 18
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_shs
+    region: content
+  field_doc_lexpedicion:
+    weight: 13
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_nfolio:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_doc_nimgdigital:
+    weight: 19
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_doc_nlegajo:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_doc_nodoc:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_doc_nolibro:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_doc_procedencia:
+    weight: 10
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_remitente:
+    weight: 11
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_title:
+    weight: 21
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_doc_topagi:
+    weight: 8
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_topologia:
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ref_onomasticos:
+    weight: 23
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_ref_tematicos:
+    weight: 20
+    label: hidden
+    settings:
+      link: 0
+    third_party_settings: {  }
+    type: entity_reference_shs
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,11 @@
+uuid: 66e1ec0e-dd5f-4ecd-8555-5a9276c81db3
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.personas_mencionadas
+id: taxonomy_term.personas_mencionadas
+target_entity_type_id: taxonomy_term
+target_bundle: personas_mencionadas
+default_langcode: site_default
+language_alterable: false

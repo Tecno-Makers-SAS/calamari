@@ -1,0 +1,9 @@
+uuid: 69da4a4f-7f8b-4eaa-87e9-0a3629d92a1b
+langcode: es
+status: true
+dependencies: {  }
+id: onomasticos
+label: Onomásticos
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

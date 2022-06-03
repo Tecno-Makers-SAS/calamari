@@ -1,0 +1,22 @@
+uuid: fdfa6afd-c27e-41d3-8481-786913e3d197
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sevenadmin
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: sevenadmin_content
+theme: sevenadmin
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  provider: system
+  label_display: '0'
+visibility: {  }

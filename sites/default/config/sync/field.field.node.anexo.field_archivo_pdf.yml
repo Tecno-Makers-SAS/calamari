@@ -1,0 +1,27 @@
+uuid: 85bd0f4d-b25c-4a68-b9bd-ef0668fb5ca6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archivo_pdf
+    - node.type.anexo
+  module:
+    - file
+id: node.anexo.field_archivo_pdf
+field_name: field_archivo_pdf
+entity_type: node
+bundle: anexo
+label: 'Archivo pdf'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'pdf_anexos/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

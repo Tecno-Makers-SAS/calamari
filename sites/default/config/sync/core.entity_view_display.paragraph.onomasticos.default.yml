@@ -1,0 +1,39 @@
+uuid: 554f8c2c-edc4-4587-8bf1-742ce9845c8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.onomasticos.field_doc_cargo1
+    - field.field.paragraph.onomasticos.field_doc_cargo2
+    - field.field.paragraph.onomasticos.field_doc_pmencionadas
+    - paragraphs.paragraphs_type.onomasticos
+id: paragraph.onomasticos.default
+targetEntityType: paragraph
+bundle: onomasticos
+mode: default
+content:
+  field_doc_cargo1:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_cargo2:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_doc_pmencionadas:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

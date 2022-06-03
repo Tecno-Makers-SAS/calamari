@@ -1,0 +1,20 @@
+uuid: a7af7b69-ca35-4e62-b882-768ae21c990d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - calamari
+id: tabs_3
+theme: calamari
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

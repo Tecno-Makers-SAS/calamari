@@ -1,0 +1,8 @@
+uuid: adc28284-4952-4e76-8f75-f29bff822cdd
+langcode: es
+status: true
+dependencies: {  }
+name: 'Nivel 5 - Lugar Especifico'
+vid: nivel_5_lugar_especifico
+description: ''
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 86428462-e4a2-4f1d-82ef-30de0dd2c2e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.lugar_de_expedicion
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: lugardeexpedicion
+theme: calamari
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:lugar_de_expedicion'
+settings:
+  id: 'facet_block:lugar_de_expedicion'
+  label: 'Lugar de expedición'
+  provider: facets
+  label_display: visible
+  block_id: lugardeexpedicion
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,35 @@
+uuid: cf891911-6957-4d28-a08f-92cce880bc02
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.proyectos.body
+    - field.field.node.proyectos.field_gnal_image
+    - field.field.node.proyectos.field_gnal_sumary
+    - node.type.proyectos
+  module:
+    - text
+    - user
+id: node.proyectos.teaser
+targetEntityType: node
+bundle: proyectos
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_gnal_image: true
+  field_gnal_sumary: true
+  langcode: true

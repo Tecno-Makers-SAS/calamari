@@ -1,0 +1,11 @@
+uuid: be163d05-5ca0-4b8f-8727-ac3819502d2a
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.remitente
+id: taxonomy_term.remitente
+target_entity_type_id: taxonomy_term
+target_bundle: remitente
+default_langcode: site_default
+language_alterable: false

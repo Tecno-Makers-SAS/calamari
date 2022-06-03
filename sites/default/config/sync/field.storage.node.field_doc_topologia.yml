@@ -1,0 +1,20 @@
+uuid: 65eae4e5-8fd7-4e9d-932b-1c9f2784135f
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_doc_topologia
+field_name: field_doc_topologia
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

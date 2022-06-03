@@ -1,0 +1,20 @@
+uuid: ace44cba-78ec-409e-9810-407437849550
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_ref_docpueblo
+field_name: field_ref_docpueblo
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

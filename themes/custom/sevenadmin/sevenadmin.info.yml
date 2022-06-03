@@ -1,0 +1,67 @@
+name: Sevenadmin
+type: theme
+base theme: classy
+description: 'The default administration theme for Drupal 8 was designed with clean lines, simple blocks, and sans-serif font to emphasize the tools and tasks at hand.'
+alt text: 'Default administration theme for Drupal 8 with simple blocks and clean lines.'
+package: Core
+version: VERSION
+core_version_requirement: ^8.8 || ^9
+libraries:
+ - sevenadmin/global-styling
+libraries-override:
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/system-status-counter.css: css/components/system-status-counter.css
+        /core/themes/stable/css/system/components/system-status-report-counters.css: css/components/system-status-report-counters.css
+        /core/themes/stable/css/system/components/system-status-report-general-info.css: css/components/system-status-report-general-info.css
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        /core/themes/stable/css/core/vertical-tabs.css: false
+  core/jquery.ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false
+  core/jquery.ui.dialog:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/dialog.css: false
+  classy/dialog:
+    sevenadmin/sevenadmin.drupal.dialog
+  classy/base:
+    css:
+      component:
+        css/components/details.css: false
+  classy/media_library:
+    css:
+      layout:
+        css/layout/media-library.css: false
+
+libraries-extend:
+  core/ckeditor:
+    - sevenadmin/ckeditor-dialog
+  core/drupal.vertical-tabs:
+    - sevenadmin/vertical-tabs
+  core/jquery.ui:
+    - sevenadmin/sevenadmin.jquery.ui
+  media_library/view:
+    - sevenadmin/media_library
+  media_library/widget:
+    - sevenadmin/media_library
+  tour/tour-styling:
+    - sevenadmin/tour-styling
+quickedit_stylesheets:
+  - css/components/quickedit.css
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first

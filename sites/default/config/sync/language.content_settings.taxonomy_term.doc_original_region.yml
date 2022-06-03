@@ -1,0 +1,11 @@
+uuid: 6f34986c-36c4-4960-a1ec-81d2c2f6c308
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.doc_original_region
+id: taxonomy_term.doc_original_region
+target_entity_type_id: taxonomy_term
+target_bundle: doc_original_region
+default_langcode: site_default
+language_alterable: false

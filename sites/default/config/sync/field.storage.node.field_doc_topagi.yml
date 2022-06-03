@@ -1,0 +1,20 @@
+uuid: b153e274-ff7c-45f3-af53-cd5dfb7d5f34
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_doc_topagi
+field_name: field_doc_topagi
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: eeceaefb-dc53-4863-8d0f-02bf90e2f141
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor
+  module:
+    - user
+id: user_add_role_action.editor
+label: 'Añade el rol Editor al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editor

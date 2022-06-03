@@ -1,0 +1,2960 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@font-face {
+  font-family: 'iconFont';
+  src: url("../fonts/iconFont/iconFont.eot?rth2s6");
+  src: url("../fonts/iconFont/iconFont.eot?rth2s6#iefix") format("embedded-opentype"), url("../fonts/iconFont/iconFont.ttf?rth2s6") format("truetype"), url("../fonts/iconFont/iconFont.woff?rth2s6") format("woff"), url("../fonts/iconFont/iconFont.svg?rth2s6#iconFont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/*===================================
+				COLORS
+=====================================
+*/
+/*black*/
+/*white*/
+/*green*/
+/*yellow*/
+/*gray*/
+/*light green*/
+/*light grya*/
+/*===================================
+				FONTS
+=====================================
+*/
+/* line 1, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.page-node-type-proyectos .page-header, .page-docs-content .header_document h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+#block-formularioexpuestodocumentospage-1{
+  display: none;
+}
+
+
+/* line 6, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.page-docs-content .panel .panel-heading {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+/* line 11, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+section[class*="block-views-blockque-es-calamari-block-"] .block-title, .field--name-field-gnal-parrafo .field--label, .field--name-field-gnal-parrafo .field--name-field-gnal-title, .list_projects .block-title, .view-calamari-blocks .views-row .content_project .info_project h3 a, .block-calamari-config h5, .block_search form h3, .path-documentos .region-filters .message-search h3, .view-documentos .views-row .views-field-title h2 {
+  color: #393939;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+/* line 24, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.view-calamari-blocks .views-row .content_project .info_project .link a {
+  color: #1B9F90;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* line 35, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.btn_green, form .form-actions button, form.webform-submission-contact-form .form-actions button {
+  background: #1B9F90;
+  border: 1px solid #1B9F90;
+  border-radius: 0px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-weight: bold;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 25px;
+}
+
+/* line 47, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.btn_green:hover, form .form-actions button:hover, .btn_green:active:focus, form .form-actions button:active:focus, .btn_green:active:hover, form .form-actions button:active:hover, .btn_green:active.focus, form .form-actions button:active.focus {
+  background: #fff;
+  border: 1px solid #1B9F90;
+  color: #1B9F90;
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 59, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.block-facets .facets-widget-links .slick-arrow:before, .pager-nav .pagination li.pager__item--next a:after, .pager-nav .pagination li.pager__item--previous a:after, .webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-titlebar-close:before,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:before {
+  display: inline-block;
+  font-family: "iconFont";
+  vertical-align: middle;
+}
+
+/* line 64, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+.block-facets {
+  left: -50vw;
+  margin-left: 50%;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+@media screen and (max-width: 1100px) {
+  /* line 72, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+  .page-node-type-proyectos .page-header, .page-docs-content .header_document h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  /* line 76, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+  section[class*="block-views-blockque-es-calamari-block-"] .block-title, .field--name-field-gnal-parrafo .field--label, .field--name-field-gnal-parrafo .field--name-field-gnal-title, .list_projects .block-title, .view-calamari-blocks .views-row .content_project .info_project h3 a, .block-calamari-config h5, .block_search form h3, .path-documentos .region-filters .message-search h3, .view-documentos .views-row .views-field-title h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* line 86, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_extends.scss */
+  .page-node-type-proyectos .page-header, .page-docs-content .header_document h2 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+/* line 1, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "iconFont" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 15, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-send:before {
+  content: "\e904";
+}
+
+/* line 18, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-close:before {
+  content: "\e908";
+}
+
+/* line 21, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-menu:before {
+  content: "\e909";
+}
+
+/* line 24, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-check:before {
+  content: "\e91b";
+}
+
+/* line 27, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-date:before {
+  content: "\e91c";
+}
+
+/* line 30, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-add-user-button1:before {
+  content: "\e937";
+}
+
+/* line 33, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-arrow_down:before {
+  content: "\e900";
+}
+
+/* line 36, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-arrow_left:before {
+  content: "\e901";
+}
+
+/* line 39, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-arrow_right:before {
+  content: "\e902";
+}
+
+/* line 42, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-arrow_up:before {
+  content: "\e903";
+}
+
+/* line 45, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/global/_icons.scss */
+.icon-icono_usuario:before {
+  content: "\e906";
+}
+
+/* line 2, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.toolbar-fixed header {
+  top: 90px;
+}
+
+/* line 6, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header {
+  background: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* line 13, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header.header_green {
+  background: #1B9F90;
+}
+
+/* line 16, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .btn_toggle_mobile {
+  cursor: pointer;
+  display: none;
+  font-size: 0;
+  left: 19px;
+  position: fixed;
+  top: 15px;
+  z-index: 2;
+}
+
+/* line 24, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .btn_toggle_mobile:before {
+  content: "\e909";
+  color: #1B9F90;
+  font-family: "iconFont";
+  font-size: 20px;
+}
+
+/* line 30, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .btn_toggle_mobile:hover, header .btn_toggle_mobile:focus {
+  opacity: 0.8;
+}
+
+/* line 35, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .btn_toggle_mobile.change_icon:before {
+  content: "\e908";
+}
+
+/* line 40, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .container {
+  border-bottom: 1px solid #CDCDCD;
+}
+
+/* line 44, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 48, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header .logo {
+  display: inline-block;
+  float: none !important;
+  margin: 0;
+  max-width: 220px;
+  padding: 20px 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* line 56, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header .logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 61, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu {
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  width: calc(100% - 220px);
+}
+
+/* line 66, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav {
+  float: none;
+}
+
+/* line 68, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
+
+/* line 72, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a {
+  color: #393939;
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 22px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* line 80, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:hover, header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:focus {
+  background: transparent;
+  color: #1B9F90;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 86, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:hover:after, header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:focus:after {
+  opacity: 1;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+/* line 92, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:after {
+  background: #00A290;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  transition: all 0.5s;
+}
+
+/* line 106, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li.active a {
+  color: #1B9F90;
+}
+
+/* line 108, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+header .block_menu .region-header #block-calamari-main-menu .navbar-nav li.active a:after {
+  opacity: 1;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+/* line 126, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.path-frontpage header .block_menu .region-header .logo img {
+  display: none;
+}
+
+/* line 136, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .container {
+  max-width: 100%;
+  padding: 0px;
+}
+
+/* line 140, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .logo_footer,
+.footer_calamari #block-logo-blanco {
+  background: #1B9F90;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* line 145, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .logo_footer img,
+.footer_calamari #block-logo-blanco img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 55px;
+}
+
+/* line 151, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .logo_footer p,
+.footer_calamari #block-logo-blanco p {
+  display: none;
+}
+
+/* line 157, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom {
+  background: #138275;
+  padding: 15px;
+  text-align: center;
+}
+
+/* line 161, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom .field--name-body {
+  color: #fff;
+}
+
+/* line 163, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom .field--name-body p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* line 167, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom .field--name-body a {
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+/* line 176, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom .powered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 15px;
+}
+
+/* line 183, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom .powered p {
+  display: block;
+  margin: 0;
+}
+
+/* line 187, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom .powered img {
+  height: auto;
+  margin: 0;
+  margin-left: 10px;
+  max-width: 150px;
+}
+
+/* line 195, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 198, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom ul li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+/* line 205, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom ul li:after {
+  content: '|';
+  margin: 0 3px;
+}
+
+/* line 210, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+.footer_calamari .footer_bottom ul li:last-child:after {
+  content: none;
+}
+
+@media screen and (max-width: 960px) {
+  /* line 222, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .btn_toggle_mobile {
+    display: block;
+  }
+  /* line 227, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header .logo {
+    margin: 0 auto;
+    max-width: 140px;
+    padding: 15px 0;
+    width: auto;
+  }
+  /* line 233, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu {
+    background: #fff;
+    height: 100%;
+    left: -100%;
+    position: fixed;
+    text-align: left;
+    top: 68px;
+    width: 100%;
+    transition: left 0.5s;
+  }
+  /* line 242, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu.open_menu {
+    left: 0;
+    transition: left 0.5s;
+  }
+  /* line 246, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu .navbar-nav {
+    margin: 0;
+    padding: 20px 15px;
+  }
+  /* line 249, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu .navbar-nav li {
+    display: block;
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  /* line 253, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu .navbar-nav li:last-child {
+    margin-right: 0;
+  }
+  /* line 256, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a {
+    display: inline-block;
+    padding-left: 0;
+    text-transform: uppercase;
+  }
+  /* line 260, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:hover, header .block_menu .region-header #block-calamari-main-menu .navbar-nav li a:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 277, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  header .block_menu .region-header #block-calamari-main-menu {
+    overflow: auto;
+    top: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* line 287, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  .footer_calamari .logo_footer,
+  .footer_calamari #block-logo-blanco {
+    padding: 15px;
+  }
+  /* line 293, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  .footer_calamari .footer_bottom .field--name-body p {
+    font-size: 11px;
+  }
+  /* line 294, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_layout.scss */
+  .footer_calamari .footer_bottom .field--name-body a {
+    font-size: 11px;
+  }
+}
+
+/* line 1, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+body {
+  color: #393939;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* line 10, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* line 14, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.container.container_medium {
+  max-width: 795px;
+}
+
+/* line 21, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-node .layout_content,
+.path-documentos .layout_content,
+.path-webform .layout_content {
+  margin-top: 100px;
+}
+
+/* line 25, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view {
+  display: none;
+}
+
+/* line 28, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view ul.pre_links {
+  text-align: right;
+}
+
+/* line 30, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view ul.pre_links li {
+  float: none;
+}
+
+/* line 32, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view ul.pre_links li.print {
+  background: transparent;
+}
+
+/* line 34, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view ul.pre_links li.print a {
+  color: #1B9F90;
+}
+
+/* line 36, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view ul.pre_links li.print a:before {
+  content: "\e905";
+  font-family: "iconFont";
+  margin-right: 10px;
+}
+
+/* line 41, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.node_view ul.pre_links li.print a:hover, .node_view ul.pre_links li.print a:focus {
+  text-decoration: none;
+}
+
+/* line 53, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.page-node-type-page .main_container .container {
+  margin: 0 auto;
+  max-width: 795px;
+}
+
+/* line 60, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.page-node-type-page.proyect_page .main_container .container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* line 67, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.logo_home {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* line 70, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.logo_home img {
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 510px;
+}
+
+/* line 77, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage {
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* line 80, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage:after {
+  background: rgba(0, 0, 0, 0.4);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* line 90, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .layout_content,
+.path-frontpage footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 95, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .full_content {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+/* line 98, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .full_content #watemark {
+  bottom: 10px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 15px;
+  left: 0;
+  padding: 0 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 111, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .main_container .content {
+  text-align: center;
+}
+
+/* line 114, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .main_container .content .paragraph--type--texto-largo h2 {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 40px 0 10px;
+}
+
+/* line 122, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search {
+  margin: 45px 0;
+}
+
+/* line 124, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search h3 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* line 130, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search h3.subtitle {
+  margin-top: 30px;
+}
+
+/* line 134, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search .col-md-12 {
+  float: none;
+  padding: 0;
+}
+
+/* line 140, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-item label {
+  display: none;
+}
+
+/* line 143, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-item.form-item-search-api-fulltext {
+  margin-bottom: 20px;
+}
+
+/* line 146, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-item.form-item-content-total {
+  float: none;
+  margin-bottom: 15px;
+}
+
+/* line 149, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-item.form-item-content-total input {
+  background: url("../images/icons/ic_search.svg") #fff no-repeat;
+  background-size: 15px;
+  background-position: calc(100% - 18px) center;
+  display: block;
+  width: 100%;
+}
+
+/* line 157, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-item.form-item-field-ref-tematicos {
+  float: none;
+}
+
+/* line 161, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-actions {
+  display: block;
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* line 165, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .form-actions button {
+  min-width: 180px;
+}
+
+/* line 169, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .advanced_search {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* line 172, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.path-frontpage .block_search form .advanced_search a {
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+/* line 183, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.sidebar_left_content .block-facets {
+  left: inherit;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* line 190, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+section[class*="block-views-blockque-es-calamari-block-"] .block-title {
+  text-align: center;
+}
+
+/* line 195, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.view-que-es-calamari {
+  margin-bottom: 20px;
+}
+
+/* line 197, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.view-que-es-calamari .view-content {
+  opacity: 0;
+}
+
+/* line 200, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.view-que-es-calamari .view-content .views-row img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 207, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.breadcrumb {
+  background: transparent;
+  margin: 100px auto 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* line 212, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.breadcrumb li {
+  display: inline;
+}
+
+/* line 214, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.breadcrumb li a {
+  color: #393939;
+}
+
+/* line 217, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.breadcrumb li.active {
+  color: #1B9F90;
+}
+
+/* line 222, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.slick-dots {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 226, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.slick-dots li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* line 229, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+
+/* line 233, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.slick-dots li.slick-active button {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* line 238, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.slick-dots li button {
+  background: #1B9F90;
+  border-radius: 100%;
+  border: 0;
+  box-shadow: none;
+  font-size: 0;
+  height: 10px;
+  opacity: 0.5;
+  padding: 0;
+  width: 10px;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  transition: all 0.5s;
+  transform: scale(0.9);
+}
+
+/* line 251, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+
+/* line 260, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+/* line 264, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .block-title {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 10px 0 20px;
+}
+
+/* line 269, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links {
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+}
+
+/* line 273, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links .slick-arrow {
+  background: transparent;
+  border: 0;
+  font-size: 0;
+  left: -40px;
+  padding: 0;
+  position: absolute;
+  top: 29px;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 282, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links .slick-arrow.slick-disabled {
+  opacity: 0;
+}
+
+/* line 285, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links .slick-arrow:before {
+  background: #fff;
+  border-radius: 100%;
+  content: "\e901";
+  color: #1B9F90;
+  display: inline-block;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+
+/* line 298, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links .slick-arrow:hover, .block-facets .facets-widget-links .slick-arrow:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* line 303, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links .slick-arrow.slick-next {
+  left: inherit;
+  right: -45px;
+}
+
+/* line 306, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links .slick-arrow.slick-next:before {
+  content: "\e902";
+}
+
+/* line 311, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul {
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* line 316, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-track {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+/* line 321, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-track:before, .block-facets .facets-widget-links ul .slick-track:after {
+  content: none;
+}
+
+/* line 326, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-list {
+  padding: 0 20px;
+  position: relative;
+}
+
+/* line 330, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide {
+  padding: 0 25px;
+  position: relative;
+}
+
+/* line 333, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:before {
+  border: 1px solid #fff;
+  content: '';
+  display: block;
+  right: 67px;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+/* line 342, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:hover, .block-facets .facets-widget-links ul .slick-slide:focus {
+  outline: none;
+}
+
+/* line 347, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:nth-child(2):before {
+  right: 67px;
+  width: calc(100% + 10px);
+}
+
+/* line 352, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:first-child {
+  padding-right: 50px;
+}
+
+/* line 354, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:first-child:before {
+  content: none;
+}
+
+/* line 358, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:last-child {
+  padding-left: 50px;
+  margin-right: 0;
+}
+
+/* line 361, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:last-child:before {
+  top: 30px;
+}
+
+/* line 365, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:first-child, .block-facets .facets-widget-links ul .slick-slide:last-child {
+  margin-top: 10px;
+}
+
+/* line 369, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:first-child a:before, .block-facets .facets-widget-links ul .slick-slide:last-child a:before {
+  height: 60px;
+  margin-bottom: 25px;
+  width: 60px;
+}
+
+/* line 374, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:first-child a:after, .block-facets .facets-widget-links ul .slick-slide:last-child a:after {
+  border-radius: 100%;
+  border: 1px solid #1B9F90;
+  content: '';
+  display: block;
+  height: 80px;
+  left: 50%;
+  margin-left: -40px;
+  position: absolute;
+  top: -10px;
+  width: 80px;
+}
+
+/* line 386, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul .slick-slide:first-child a:hover, .block-facets .facets-widget-links ul .slick-slide:first-child a:focus, .block-facets .facets-widget-links ul .slick-slide:last-child a:hover, .block-facets .facets-widget-links ul .slick-slide:last-child a:focus {
+  outline: none;
+}
+
+/* line 393, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li {
+  list-style: none;
+}
+
+/* line 395, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li a {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 401, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li a:before {
+  background: #1B9F90;
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: 40px;
+  margin: 0 auto 10px;
+  width: 40px;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+/* line 412, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li a:after {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+/* line 416, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li a:hover, .block-facets .facets-widget-links ul li a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 420, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li a:hover:before, .block-facets .facets-widget-links ul li a:focus:before {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+/* line 424, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.block-facets .facets-widget-links ul li a:hover:after, .block-facets .facets-widget-links ul li a:focus:after {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+/* line 437, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.layout_content {
+  margin-top: 78px;
+  min-height: calc(100vh - 257px);
+  padding: 0;
+}
+
+/* line 441, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.layout_content.sidebar_left {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -o-align-content: flex-start;
+  -ms-align-content: flex-start;
+  align-content: flex-start;
+}
+
+/* line 445, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.layout_content.sidebar_left .sidebar_left_content {
+  max-width: 400px;
+  width: 40%;
+}
+
+/* line 449, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.layout_content.sidebar_left .main_container {
+  max-width: calc(100% - 420px);
+  padding-left: 20px;
+  width: 60%;
+}
+
+/* line 456, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.page-header {
+  border: 0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  margin: 0px 0 30px;
+}
+
+/* line 464, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.table-responsive-sm ul.shs li {
+  display: inline-block;
+  float: none;
+  list-style: none;
+  vertical-align: top;
+  white-space: normal;
+}
+
+/* line 474, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.table-responsive-sm table thead {
+  background: #F4F4F4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 478, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.table-responsive-sm table thead tr {
+  border: 0;
+}
+
+/* line 480, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.table-responsive-sm table thead tr th {
+  border: 0;
+}
+
+/* line 486, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.table-responsive-sm table tbody tr {
+  background: transparent;
+}
+
+/* line 488, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.table-responsive-sm table tbody tr:nth-of-type(odd) {
+  background: transparent;
+}
+
+/* line 491, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+/*.table-responsive-sm table tbody tr:nth-child(2n) {
+  background: rgba(244, 244, 244, 0.5);
+}*/
+
+/* line 498, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_404,
+.content_503 {
+  height: calc(100vh - 120px);
+}
+
+/* line 501, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_404:before,
+.content_503:before {
+  background: url("../images/bk_404.png") no-repeat center;
+  background-size: cover;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+/* line 511, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_404 .container,
+.content_503 .container {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+/* line 519, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_404 .container .txt_404 img,
+.content_503 .container .txt_404 img {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 100%;
+}
+
+/* line 525, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_404 .container h3,
+.content_503 .container h3 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+/* line 529, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_404 .container .link,
+.content_503 .container .link {
+  margin-top: 100px;
+}
+
+/* line 535, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_503:before {
+  background: url("../images/bk_503.png") no-repeat center;
+  background-size: cover;
+}
+
+/* line 539, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_503 .container {
+  margin: 0 auto;
+  text-align: right;
+  width: 70%;
+}
+
+/* line 543, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.content_503 .container .info_503 {
+  display: inline-block;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* line 550, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav {
+  margin: 25px 0;
+}
+
+/* line 552, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 555, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 558, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li a {
+  background: transparent;
+  border: 0;
+  color: #000;
+  padding: 10px 15px;
+}
+
+/* line 563, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li a:hover, .pager-nav .pagination li a:focus {
+  color: #1B9F90;
+}
+
+/* line 569, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li.active a {
+  background: transparent;
+  border: 0;
+  color: #1B9F90;
+}
+
+/* line 573, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li.active a:hover, .pager-nav .pagination li.active a:focus {
+  opacity: 0.9;
+}
+
+/* line 579, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li.pager__item--last, .pager-nav .pagination li.pager__item--first {
+  display: none;
+}
+
+/* line 585, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li.pager__item--next a, .pager-nav .pagination li.pager__item--previous a {
+  color: #1B9F90;
+  font-size: 0;
+}
+
+/* line 588, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li.pager__item--next a:after, .pager-nav .pagination li.pager__item--previous a:after {
+  content: "\e902";
+  font-size: 23px;
+}
+
+/* line 597, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+.pager-nav .pagination li.pager__item--previous a:after {
+  content: "\e901";
+}
+
+@media screen and (max-width: 1380px) and (max-height: 700px) {
+  /* line 609, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .layout_content {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  /* line 616, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .block-facets .facets-widget-links {
+    max-width: 830px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* line 624, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .block_search .col-md-4,
+  .path-frontpage .block_search .col-xs-12 {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  /* line 628, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .block_search .col-md-4:last-child,
+  .path-frontpage .block_search .col-xs-12:last-child {
+    margin-bottom: 0;
+  }
+  /* line 635, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_503 .container {
+    text-align: center;
+    width: 100%;
+  }
+  /* line 642, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .block-facets .facets-widget-links .slick-arrow {
+    display: none !important;
+  }
+  /* line 650, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-node .layout_content,
+  .path-documentos .layout_content,
+  .path-webform .layout_content {
+    margin-top: 80px;
+  }
+  /* line 654, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .layout_content {
+    margin-top: 55px;
+  }
+  /* line 657, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .layout_content.sidebar_left .sidebar_left_content {
+    max-width: 100%;
+    width: 100%;
+  }
+  /* line 661, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .layout_content.sidebar_left .main_container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 673, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .block_search form .form-actions button {
+    display: block;
+    min-width: inherit;
+    width: 100%;
+  }
+  /* line 677, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .block_search form .form-actions button + button {
+    margin-top: 15px;
+  }
+  /* line 682, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .block_search form .advanced_search {
+    text-align: center;
+  }
+  /* line 684, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .block_search form .advanced_search a {
+    display: block;
+    width: 100%;
+  }
+  /* line 692, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .path-frontpage .full_content #watemark {
+    bottom: -25px;
+  }
+  /* line 698, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .logo_home img {
+    max-width: 80%;
+  }
+  /* line 702, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .block-facets {
+    left: inherit;
+    margin: 0 -15px;
+    overflow: inherit;
+    width: calc(100% + 30px);
+  }
+  /* line 708, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .block-facets .facets-widget-links ul {
+    padding: 0;
+    padding-left: 0px;
+  }
+  /* line 711, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .block-facets .facets-widget-links ul .slick-slide {
+    padding: 0 20px;
+  }
+  /* line 717, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .breadcrumb {
+    margin-top: 65px;
+  }
+  /* line 720, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .layout_content {
+    margin-top: 55px;
+  }
+  /* line 723, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .layout_content.sidebar_left .sidebar_left_content {
+    max-width: 100%;
+  }
+  /* line 726, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .layout_content.sidebar_left .main_container {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  /* line 732, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404,
+  .content_503 {
+    height: calc(100vh - 120px);
+  }
+  /* line 735, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404:before,
+  .content_503:before {
+    background: url("../images/bk_404_m.png") no-repeat center;
+    background-size: cover;
+  }
+  /* line 741, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404 .container .txt_404 img,
+  .content_503 .container .txt_404 img {
+    max-width: 240px;
+  }
+  /* line 745, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404 .container .link,
+  .content_503 .container .link {
+    margin-top: 25px;
+  }
+  /* line 751, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_503:before {
+    background: url("../images/bk_503_m.png") no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 758, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404,
+  .content_503 {
+    height: 380px;
+  }
+  /* line 761, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404:before,
+  .content_503:before {
+    background: url("../images/bk_404_m.png") no-repeat center;
+    background-size: cover;
+  }
+  /* line 767, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404 .container .txt_404 img,
+  .content_503 .container .txt_404 img {
+    max-width: 240px;
+  }
+  /* line 771, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_general.scss */
+  .content_404 .container .link,
+  .content_503 .container .link {
+    margin-top: 25px;
+  }
+}
+
+/* line 5, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.field--name-field-gnal-parrafo .field--name-field-gnal-title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* line 11, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 980px;
+  justify-content: space-between;
+}
+
+/* line 18, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images .field--item {
+  max-width: 25%;
+  padding: 0 20px;
+}
+
+/* line 21, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images .field--item img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* line 31, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.list_projects {
+  margin: 0 auto;
+  max-width: 790px;
+}
+
+/* line 34, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.list_projects .block-title {
+  margin-top: 40px;
+}
+
+/* line 40, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row {
+  border-bottom: 1px solid #979797;
+  padding: 18px 0;
+}
+
+/* line 43, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row:first-child {
+  padding-top: 0;
+}
+
+/* line 46, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row:last-child {
+  border: 0;
+}
+
+/* line 49, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 52, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .img_project {
+  display: inline-block;
+  max-height: 180px;
+  max-width: 180px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 58, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .img_project img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 63, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .info_project {
+  padding-left: 20px;
+  width: calc(100% - 190px);
+}
+
+/* line 66, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .info_project h3 {
+  margin: 0;
+}
+
+/* line 68, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .info_project h3 a {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* line 72, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .info_project h3 a:hover, .view-calamari-blocks .views-row .content_project .info_project h3 a:focus {
+  opacity: 0.8;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 80, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .info_project .date_created {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 86, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.view-calamari-blocks .views-row .content_project .info_project .link {
+  margin-top: 20px;
+}
+
+/* line 98, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.proyect_page .page-header {
+  display: none;
+}
+
+/* line 106, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.page-node-type-proyectos .layout_content {
+  margin-top: 0;
+}
+
+/* line 109, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.page-node-type-proyectos .layout_content .region-content article {
+  margin-bottom: 50px;
+}
+
+/* line 112, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.page-node-type-proyectos .layout_content .region-content article .content .field--name-field-gnal-image {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  max-width: 30%;
+}
+
+/* line 117, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.page-node-type-proyectos .layout_content .region-content article .content .field--name-field-gnal-image img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 123, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+.page-node-type-proyectos .layout_content .region-content article .content .field--type-text-with-summary img {
+  height: auto;
+  margin: 10px 0;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 137, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .view-calamari-blocks .views-row .content_project {
+    max-width: 220px;
+    display: block;
+  }
+  /* line 140, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .view-calamari-blocks .views-row .content_project .img_project {
+    display: block;
+    margin: 0 auto 15px;
+    max-height: inherit;
+    max-width: 100%;
+    width: 100%;
+  }
+  /* line 146, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .view-calamari-blocks .views-row .content_project .img_project img {
+    display: block;
+    width: 100%;
+  }
+  /* line 151, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .view-calamari-blocks .views-row .content_project .info_project {
+    display: block;
+    padding-left: 0;
+    width: 100%;
+  }
+  /* line 155, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .view-calamari-blocks .views-row .content_project .info_project h3 {
+    text-align: left;
+  }
+  /* line 163, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .field--name-field-gnal-parrafo .field--name-field-gnal-title {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  /* line 168, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images {
+    left: -50vw;
+    margin-left: 50%;
+    opacity: 0;
+    overflow: hidden;
+    padding-left: 15px;
+    position: relative;
+    width: 100vw;
+  }
+  /* line 176, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images .slick-slide {
+    margin-right: 20px;
+  }
+  /* line 179, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images .field--item {
+    max-width: inherit;
+    padding: 0;
+  }
+  /* line 182, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_pages.scss */
+  .field--name-field-gnal-parrafo .paragraph--type--title-images .field--name-field-gnal-images .field--item img {
+    height: 70px;
+    max-width: inherit;
+    width: auto;
+  }
+}
+
+/* line 2, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form label {
+  color: #393939;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 10, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form label.form-required:after {
+  content: none;
+}
+
+/* line 16, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form input.form-control {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #979797;
+  height: 35px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+/* line 23, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form input.form-control:focus, form input.form-control:hover {
+  box-shadow: none;
+  outline: none;
+}
+
+/* line 31, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form textarea.form-control {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #979797;
+  min-height: 200px;
+  padding: 15px 20px;
+}
+
+/* line 40, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form select.form-control {
+  background: url("../images/icons/ic_arrow.svg") #fff no-repeat;
+  background-position: calc(100% - 15px) center;
+  background-size: 25px;
+  border-radius: 20px;
+  border: 1px solid #979797;
+  height: 35px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 53, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .select-wrapper:after {
+  content: none;
+  display: none;
+}
+
+/* line 58, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check {
+  padding: 0;
+}
+
+/* line 60, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check label {
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  vertical-align: top;
+  width: 94%;
+}
+
+/* line 67, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check label a {
+  color: #393939;
+}
+
+/* line 72, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check.active label {
+  color: #393939;
+}
+
+/* line 76, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check input {
+  border: 1px solid #979797;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  height: 14px;
+  margin: 0 10px 0 0;
+  position: relative;
+  top: inherit;
+  vertical-align: -2px;
+  width: 14px;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 88, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check input:checked {
+  background: url("../images/check.svg") no-repeat center #1B9F90;
+  background-size: 10px;
+}
+
+/* line 92, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-check input:hover, form .form-check input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* line 99, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-actions {
+  margin-top: 30px;
+  text-align: right;
+}
+
+/* line 102, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-actions button {
+  transition: all 0.5s;
+}
+
+/* line 105, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-actions button:hover, form .form-actions button:focus {
+  transition: all 0.5s;
+}
+
+/* line 111, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .form-textarea-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* line 115, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container {
+  background: url("../images/icons/ic_arrow.svg") #fff no-repeat;
+  background-position: calc(100% - 15px) center;
+  background-size: 25px;
+  border-radius: 20px;
+  border: 1px solid #979797;
+  height: 35px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  position: relative;
+  width: 100% !important;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 127, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container.chosen-with-drop, form .chosen-container.chosen-container-active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 131, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container.chosen-with-drop .chosen-single, form .chosen-container.chosen-container-active .chosen-single {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* line 137, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container .chosen-single {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  padding: 5px 0;
+}
+
+/* line 145, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container .chosen-single div b {
+  display: none;
+}
+
+/* line 150, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container .chosen-drop {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  left: 0;
+  margin-top: 1px;
+  overflow: hidden;
+}
+
+/* line 156, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container .chosen-drop .chosen-results {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* line 160, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container .chosen-drop .chosen-results li.result-selected, form .chosen-container .chosen-drop .chosen-results li:hover, form .chosen-container .chosen-drop .chosen-results li:focus {
+  background: #1B9F90;
+  color: #fff;
+}
+
+/* line 171, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container.chosen-container-single .chosen-search input[type="text"] {
+  background: url("../images/icons/ic_search.svg") no-repeat;
+  background-position: calc(100% - 15px) center;
+  background-size: 15px;
+}
+
+/* line 177, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form .chosen-container.chosen-container-single .chosen-drop {
+  left: 0;
+}
+
+/* line 182, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form.user-login-form {
+  margin: 150px auto 40px;
+  max-width: 350px;
+}
+
+/* line 187, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form.webform-submission-contact-form .form-actions {
+  margin-bottom: 55px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* line 191, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form.webform-submission-contact-form .form-actions button {
+  margin: 0;
+}
+
+/* line 194, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form.webform-submission-contact-form .form-actions button:before {
+  content: "\e904";
+  display: inline-block;
+  font-family: "iconFont";
+  font-size: 25px;
+  margin-right: 12px;
+  vertical-align: middle;
+  width: 25px;
+}
+
+/* line 203, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+form.webform-submission-contact-form .form-actions button:hover, form.webform-submission-contact-form .form-actions button:focus {
+  outline: none;
+}
+
+/* line 212, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.form-control:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+/* line 217, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.has-glyphicons .select-wrapper:after {
+  content: none;
+}
+
+/* line 220, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+input[type="checkbox"] {
+  border: 2px solid #393939;
+  border-radius: 0px;
+  cursor: pointer;
+  display: inline-block;
+  height: 18px;
+  margin: 0 10px 0 0;
+  position: relative;
+  top: inherit;
+  vertical-align: -2px;
+  width: 18px;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 232, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+input[type="checkbox"]:checked {
+  background: url("../images/check.svg") no-repeat center;
+  background-size: 10px;
+  border: 2px solid #1B9F90;
+}
+
+/* line 237, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+input[type="checkbox"]:hover, input[type="checkbox"]:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* line 243, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation__back {
+  text-align: center;
+}
+
+/* line 246, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal,
+.ui-dialog {
+  border: 0 !important;
+  border-top: 8px solid #1B9F90 !important;
+}
+
+/* line 250, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-dialog-titlebar,
+.ui-dialog .ui-dialog-titlebar {
+  background: transparent;
+  border: 0;
+  color: #1B9F90;
+  padding-top: 15px;
+}
+
+/* line 255, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-title,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 40px;
+  white-space: inherit;
+  width: 100%;
+}
+
+/* line 265, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-titlebar-close,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background: transparent;
+  border: 0;
+  font-size: 0;
+  text-indent: 0;
+  right: 10px;
+}
+
+/* line 271, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-titlebar-close:hover, .webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-titlebar-close:focus,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+/* line 276, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-titlebar-close span,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close span {
+  display: none;
+}
+
+/* line 279, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-dialog-titlebar .ui-dialog-titlebar-close:before,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:before {
+  color: #1B9F90;
+  content: "\e908";
+  font-size: 14px;
+}
+
+/* line 287, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.webform-confirmation-modal .ui-widget-content,
+.ui-dialog .ui-widget-content {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+/* line 294, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.message_contact {
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* line 297, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+.message_contact p {
+  color: #FFB52B;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  /* line 308, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+  form.webform-submission-formulario-contactenos-form .form-item {
+    width: 47.9%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* line 317, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+  form.webform-submission-contact-form .form-actions {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  /* line 320, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+  form.webform-submission-contact-form .form-actions button {
+    display: block;
+    width: 100%;
+  }
+  /* line 328, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+  .message_contact p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-height: 767px) {
+  /* line 335, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+  .webform-confirmation-modal,
+  .ui-dialog {
+    left: 50% !important;
+    width: calc(100% - 30px) !important;
+    transform: translateX(-50%);
+  }
+  /* line 340, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_forms.scss */
+  .webform-confirmation-modal .ui-widget-content,
+  .ui-dialog .ui-widget-content {
+    padding: 20px 40px;
+  }
+}
+
+/* line 1, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.filter_section {
+  display: none;
+}
+
+/* line 4, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.title-filters {
+  font-size: 18px;
+  display: none;
+  margin: 0 0 0 10px;
+}
+
+/* line 9, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.fexped {
+  margin-bottom: 20px;
+}
+
+/* line 12, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters {
+  background: #1B9F90;
+  border-radius: 100%;
+  display: none;
+  height: 32px;
+  line-height: 0;
+  padding-top: 8px;
+  position: relative;
+  text-align: center;
+  width: 32px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* line 23, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters span {
+  background: #fff;
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  width: 18px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* line 31, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters span:nth-child(1), .show_filters span:nth-child(3) {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* line 35, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters span:nth-child(1) {
+  margin-bottom: 3px;
+  width: 10px;
+}
+
+/* line 39, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters span:nth-child(2) {
+  margin-bottom: 3px;
+  width: 14px;
+}
+
+/* line 46, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters:not(.collapsed) span:nth-child(1) {
+  left: 6px;
+  margin: 0;
+  position: absolute;
+  opacity: 0.9;
+  top: 15px;
+  width: 20px;
+  transform: rotate(135deg);
+}
+
+/* line 55, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters:not(.collapsed) span:nth-child(2) {
+  background-color: transparent;
+  height: 12px;
+  visibility: hidden;
+}
+
+/* line 60, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.show_filters:not(.collapsed) span:nth-child(3) {
+  left: 7px;
+  margin: 0;
+  opacity: 0.9;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+  transform: rotate(-135deg);
+}
+
+/* line 72, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block-calamari-config {
+  margin-bottom: 30px;
+}
+
+/* line 74, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block-calamari-config h5 {
+  color: #1B9F90;
+}
+
+/* line 81, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search .bef-exposed-form .form--inline > .form-item {
+  display: block;
+  float: none;
+}
+
+/* line 87, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form h3 {
+  margin-top: 0;
+}
+
+/* line 91, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form .col-sm-6,
+.block_search form .col-sm-12,
+.block_search form .col-md-12 {
+  margin-bottom: 30px;
+}
+
+/* line 96, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form .form-item {
+  display: block;
+}
+
+/* line 98, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form .form-item label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 102, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form .form-item .form-control {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* line 106, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form .form-item .select-wrapper {
+  display: block;
+  width: 100%;
+}
+
+/* line 109, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.block_search form .form-item .select-wrapper select {
+  display: block;
+  width: 100%;
+}
+
+/* line 119, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters {
+  /*form{
+			display: none;
+		}*/
+}
+
+/* line 123, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets {
+  margin-bottom: 30px;
+}
+
+/* line 125, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links {
+  max-width: 1095px;
+}
+
+/* line 127, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul {
+  padding-left: 0;
+}
+
+/* line 129, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide {
+  padding: 0 10px;
+}
+
+/* line 131, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:before {
+  border-color: #979797;
+  top: 11px;
+}
+
+/* line 136, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:nth-child(2):before {
+  right: 60px;
+  width: 100%;
+}
+
+/* line 141, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:first-child {
+  padding-right: 30px;
+}
+
+/* line 144, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:last-child {
+  padding-left: 30px;
+}
+
+/* line 146, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:last-child:before {
+  top: 18px;
+  right: 20px;
+  width: calc(100% + 50px);
+}
+
+/* line 155, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:first-child a:after, .path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:last-child a:after {
+  height: 44px;
+  margin-left: -22px;
+  top: -7px;
+  width: 44px;
+}
+
+/* line 161, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:first-child a:before, .path-documentos .region-filters .block-facets .facets-widget-links ul .slick-slide:last-child a:before {
+  height: 30px;
+  width: 30px;
+}
+
+/* line 169, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul li a {
+  color: #393939;
+}
+
+/* line 171, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .block-facets .facets-widget-links ul li a:before {
+  height: 22px;
+  width: 22px;
+}
+
+/* line 180, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .message-search {
+  margin-bottom: 45px;
+}
+
+/* line 182, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .message-search h3 {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* line 188, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .btn-filters {
+  text-align: right;
+}
+
+/* line 191, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .btn-filters .btn_green:hover, .path-documentos .region-filters .btn-filters .btn_green:focus {
+  color: #1B9F90;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 197, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .btn-filters .btn_green:focus {
+  color: #fff;
+}
+
+/* line 199, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .region-filters .btn-filters .btn_green:focus:hover, .path-documentos .region-filters .btn-filters .btn_green:focus:active {
+  color: #1B9F90;
+}
+
+/* line 209, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.path-documentos .block_search form .form-actions {
+  margin: 10px 0 30px;
+  text-align: right;
+  width: 100%;
+}
+
+/* line 217, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content {
+  position: relative;
+}
+
+/* line 219, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .region-sidebar-first {
+  background: #F4F4F4;
+  padding: 25px 40px;
+}
+
+/* line 223, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox {
+  color: #393939;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* line 231, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox:first-child .block-title {
+  margin-top: 0;
+}
+
+/* line 235, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox .block-title {
+  color: #393939;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 25px 0 20px;
+  position: relative;
+  padding-right: 40px;
+}
+
+/* line 244, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox .block-title.active:after {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+/* line 249, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox .block-title:after {
+  content: "\e900";
+  color: #1B9F90;
+  font-family: "iconFont";
+  height: 16px;
+  line-height: 16px;
+  margin-top: -8px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+/* line 263, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox .facets-widget-checkbox {
+  display: none;
+}
+
+/* line 266, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 269, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li {
+  list-style: none;
+}
+
+/* line 271, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li .facets-checkbox {
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: -3px;
+}
+
+/* line 276, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li a {
+  display: none;
+}
+
+/* line 279, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li label {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  vertical-align: top;
+  width: calc(100% - 29px);
+}
+
+/* line 285, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li label span {
+  display: inline-block;
+}
+
+/* line 287, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li label span.facet-item__value {
+  padding-right: 5px;
+  width: 83%;
+}
+
+/* line 291, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.sidebar_left_content .block-facet--checkbox ul li label span.facet-item__count {
+  text-align: right;
+  width: 15%;
+}
+
+/* line 302, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .view-header {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* line 306, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .view-empty {
+  margin: 0px 0 20px;
+  text-align: center;
+}
+
+/* line 309, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .view-empty:before {
+  background: url("../images/icons/error.svg") no-repeat center;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 100px;
+  margin: 0 auto 20px;
+  width: 100px;
+}
+
+/* line 319, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row {
+  border-bottom: 1px solid #979797;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/* line 323, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row:last-child {
+  border-bottom: 0;
+}
+
+/* line 326, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .ico-doc {
+  color: #FFB52B;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+  padding-left: 35px;
+  position: relative;
+}
+
+/* line 334, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .ico-doc:before {
+  background: url("../images/icons/ic_doc.svg") no-repeat center;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 30px;
+  left: 0;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+}
+
+/* line 348, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-title h2 {
+  margin: 0 0 5px;
+}
+
+/* line 351, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-title h2 a {
+  color: #393939;
+}
+
+/* line 353, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-title h2 a:hover, .view-documentos .views-row .views-field-title h2 a:focus {
+  outline: none;
+  opacity: 0.8;
+}
+
+/* line 361, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-body1 {
+  margin-bottom: 10px;
+}
+
+/* line 364, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-fexpedicion {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* line 368, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-remitente,
+.view-documentos .views-row .views-field-field-doc-destinatario,
+.view-documentos .views-row .views-field-field-doc-lexpedicion {
+  display: inline-block;
+  margin-top: 0px;
+  vertical-align: top;
+  max-width: 24%;
+}
+
+/* line 375, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-remitente .views-label,
+.view-documentos .views-row .views-field-field-doc-destinatario .views-label,
+.view-documentos .views-row .views-field-field-doc-lexpedicion .views-label {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* line 381, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-remitente .field-content,
+.view-documentos .views-row .views-field-field-doc-destinatario .field-content,
+.view-documentos .views-row .views-field-field-doc-lexpedicion .field-content {
+  color: #FFB52B;
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/* line 389, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-remitente {
+  max-width: 50%;
+}
+
+/* line 393, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.view-documentos .views-row .views-field-field-doc-destinatario,
+.view-documentos .views-row .views-field-field-doc-lexpedicion {
+  margin: 0 20px;
+}
+
+/* line 400, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-node-type-documento .node_view {
+  display: block;
+}
+
+/* line 403, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-node-type-documento .layout_content {
+  margin-bottom: 45px;
+  margin-top: 100px;
+}
+
+/* line 408, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-node-type-documento .main_container .container {
+  padding: 0;
+}
+
+/* line 414, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-node-type-documento .region-content article .col-sm-3 {
+  padding-left: 0;
+}
+
+/* line 416, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-node-type-documento .region-content article .col-sm-3 img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 420, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-node-type-documento .region-content article .col-sm-3 .redes {
+  text-align: right;
+}
+
+/* line 427, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content {
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 0;
+}
+
+/* line 432, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .header_document .ico-doc {
+  color: #FFB52B;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  padding-left: 35px;
+  position: relative;
+}
+
+/* line 440, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .header_document .ico-doc:before {
+  background: url("../images/icons/ic_doc.svg") no-repeat center;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 30px;
+  left: 0;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+}
+
+/* line 453, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .header_document h2 {
+  margin-top: 0;
+}
+
+/* line 458, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .field--label-inline {
+  margin-bottom: 15px;
+}
+
+/* line 461, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .card {
+  margin-bottom: 18px;
+}
+
+/* line 463, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .card .card-header {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #B4B4B4;
+  color: #EAEAEA;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 2px 15px;
+  text-transform: uppercase;
+}
+
+/* line 474, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .card .card-header.active {
+  background: #1B9F90;
+}
+
+/* line 478, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .card .card-body {
+  border: 1px solid #CDCDCD;
+  display: none;
+  padding: 15px;
+}
+
+/* line 484, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #393939;
+}
+
+/* line 489, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .panel-heading {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 496, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .panel-body {
+  padding: 15px 0 15px;
+}
+
+/* line 500, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-ref-onomasticos .field {
+  display: inline;
+}
+
+/* line 504, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-ref-onomasticos .field--name-field-doc-cargo2::before, .page-docs-content .panel .field--name-field-ref-onomasticos .field--name-field-doc-cargo1::before {
+  content: "> ";
+}
+
+/* line 510, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-ref-tematicos .field--item {
+  clear: both;
+}
+
+/* line 514, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-ref-tematicos .field-list ul {
+  list-style: none;
+  padding-left: 0;
+  display: block;
+}
+
+/* line 523, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-doc-institucion .field--item .shs {
+  clear: both;
+}
+
+/* line 529, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-doc-geograficos .field {
+  display: inline;
+}
+
+/* line 531, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-doc-geograficos .field .shs {
+  display: inline;
+  padding-left: 0;
+}
+
+/* line 536, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .panel .field--name-field-doc-geograficos .field.field--name-field-ref-docregion::before {
+  content: ">> ";
+}
+
+/* line 543, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .link_item {
+  margin: 15px 0;
+  text-align: right;
+}
+
+/* line 546, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+.page-docs-content .link_item a {
+  color: #1B9F90;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  /* line 557, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-node-type-documento .main_container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* line 563, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .region-filters {
+    padding: 0 15px;
+  }
+  /* line 567, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .filter_section {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    display: flex;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  /* line 571, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .title-filters {
+    display: block;
+  }
+  /* line 574, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .show_filters {
+    display: block;
+    margin-left: 32px;
+  }
+  /* line 578, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .sidebar_left_content {
+    margin-top: 15px;
+    max-width: 100%;
+  }
+  /* line 581, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .sidebar_left_content .region-sidebar-first {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    z-index: 1;
+  }
+  /* line 592, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .block_search form .form-actions {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 600, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .region-filters {
+    padding: 0;
+  }
+  /* line 605, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .block_search form .row {
+    margin: 0;
+  }
+  /* line 608, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .block_search form .col-sm-6,
+  .block_search form .col-md-12,
+  .block_search form .col-xs-12,
+  .block_search form .col-sm-12 {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  /* line 619, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .region-filters .message-search {
+    margin-bottom: 20px;
+  }
+  /* line 622, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .region-filters .btn-filters {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  /* line 625, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .region-filters .btn-filters .btn_green {
+    width: 100%;
+  }
+  /* line 633, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .view-documentos .views-row .views-field-field-doc-remitente,
+  .view-documentos .views-row .views-field-field-doc-destinatario,
+  .view-documentos .views-row .views-field-field-doc-lexpedicion,
+  .view-documentos .views-row .views-field-field-doc-body1 {
+    display: none;
+  }
+  /* line 642, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .path-documentos .show_filters {
+    margin-left: 15px;
+  }
+  /* line 647, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-node-type-documento .layout_content {
+    margin-top: 20px;
+  }
+  /* line 650, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-node-type-documento .main_container {
+    padding: 150px 15px 20px;
+  }
+  /* line 655, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-node-type-documento .region-content article .col-sm-3 {
+    padding: 0;
+  }
+  /* line 657, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-node-type-documento .region-content article .col-sm-3 img {
+    height: auto;
+    max-width: 246px;
+    width: auto;
+  }
+  /* line 662, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-node-type-documento .region-content article .col-sm-3 .redes {
+    text-align: left;
+  }
+  /* line 669, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-docs-content {
+    padding: 0;
+  }
+  /* line 671, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-docs-content .header_document {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    display: flex;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -moz-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+    margin-top: -90px;
+    position: relative;
+  }
+  /* line 677, ../../../../Documents/Projects/Tecno-Makers/Calamari/SourceCode/themes/custom/calamari/sass/design/_docs.scss */
+  .page-docs-content .header_document .content {
+    background: #fff;
+    display: block;
+    padding: 5px;
+    width: calc(100% - 100px);
+  }
+}

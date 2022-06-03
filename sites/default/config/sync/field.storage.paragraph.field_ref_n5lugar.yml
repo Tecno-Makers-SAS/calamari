@@ -1,0 +1,20 @@
+uuid: 979396f5-0337-4d75-bc0f-f727eb2c8ef1
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_ref_n5lugar
+field_name: field_ref_n5lugar
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

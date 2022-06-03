@@ -1,0 +1,19 @@
+uuid: 92800ef1-1b74-4c6f-a1a7-e977a13b6df1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gnal_sumary
+    - node.type.proyectos
+id: node.proyectos.field_gnal_sumary
+field_name: field_gnal_sumary
+entity_type: node
+bundle: proyectos
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

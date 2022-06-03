@@ -1,0 +1,22 @@
+uuid: 14e8049c-9937-4b54-8c5d-5b0722d03bda
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - calamari
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: calamari_breadcrumbs
+theme: calamari
+region: navigation
+weight: -8
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  provider: system
+  label_display: '0'
+visibility: {  }

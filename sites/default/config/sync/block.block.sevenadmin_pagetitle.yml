@@ -1,0 +1,18 @@
+uuid: 52cfa8aa-f447-44c1-ab15-29793985ed54
+langcode: es
+status: true
+dependencies:
+  theme:
+    - sevenadmin
+id: sevenadmin_pagetitle
+theme: sevenadmin
+region: header
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

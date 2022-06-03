@@ -1,0 +1,40 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+
+.page-node-type-documento .field.field--name-field-ref-geograficos,
+.page-node-type-documento .field.field--name-field-ref-n5lugar {
+    display: inline-block;
+}
+.page-node-type-documento.field.field--name-field-ref-n5lugar:before {
+    content: ">";
+    margin-right: 5px;
+}
+.page-node-type-documento .field.field--name-field-ref-geograficos ul {
+    padding: 0;
+}
+.page-node-type-documento .table-responsive-sm table thead {
+    background: unset!important;
+}
+.page-node-type-documento td,
+.page-node-type-documento th{
+    border: none!important;
+}
+.page-node-type-documento .table-striped > tbody > tr:nth-of-type(odd) {
+    background: unset!important;
+}
+.page-node-type-documento td,
+.page-node-type-documento th {
+    padding: 0px!important;
+}
+ul.shs li{
+    list-style: none !important;
+}
+.field--item ul.shs{
+    padding-left: 0px;
+}
+ul.shs li:after {
+    content: '- '!important;
+    margin: 0 0 0 10px!important;
+}

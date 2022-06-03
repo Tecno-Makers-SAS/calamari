@@ -1,0 +1,37 @@
+uuid: 2f9bb6f1-faef-48d9-8d22-5fde0d5c7f65
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.onomasticos.field_doc_cargo1
+    - field.field.paragraph.onomasticos.field_doc_cargo2
+    - field.field.paragraph.onomasticos.field_doc_pmencionadas
+    - paragraphs.paragraphs_type.onomasticos
+  module:
+    - chosen_field
+id: paragraph.onomasticos.default
+targetEntityType: paragraph
+bundle: onomasticos
+mode: default
+content:
+  field_doc_cargo1:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_cargo2:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_pmencionadas:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+hidden:
+  created: true
+  status: true

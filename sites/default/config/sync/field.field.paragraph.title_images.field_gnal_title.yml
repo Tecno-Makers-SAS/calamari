@@ -1,0 +1,19 @@
+uuid: 8ed906af-cf8a-4d75-b761-5ff85a338852
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gnal_title
+    - paragraphs.paragraphs_type.title_images
+id: paragraph.title_images.field_gnal_title
+field_name: field_gnal_title
+entity_type: paragraph
+bundle: title_images
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,364 @@
+<?php
+
+/**
+ * @file
+ * Contains calamari_config.module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+use Drupal\views\Views;
+
+
+/**
+ * Implements hook_theme().
+ */
+
+function calamari_config_theme($existing, $type, $theme, $path) {
+  return array(
+    'infosearch' => [
+      'variables' => ['data' => NULL],
+    ]
+  );
+}
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+
+function calamari_config_page_attachments(array &$attachments)
+{
+  if(Drupal::service('path.matcher')->isFrontPage()) {
+    $node = Node::load( 21 );
+    $ar_images = $node->get('field_imagenes')->getValue();
+    foreach( $ar_images as $row ) {
+      $file = File::load($row['target_id']);
+      $uri = $file->getFileUri();
+      $url = Url::fromUri(file_create_url($uri))->toString();
+      $img[] = [
+        'name' => $file->getFilename(),
+        'url' => $url
+      ];
+    }
+    $attachments['#attached']['library'][] = 'calamari_config/calamari-init';
+    $attachments['#attached']['drupalSettings']['bgfront'] = $img;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function calamari_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+   if( $form_id == "node_documento_edit_form") {    
+     $form['field_ref_tematicos']['widget']['#maxlength'] = NULL;   
+    }   
+  if( $form_id == "views_exposed_form" && $form['#id'] == 'views-exposed-form-documentos-page-1') {
+
+    $form['#attached']['library'][] = 'calamari_config/calamari-init';
+
+    //Temas_padres
+    $temas_padres = getJsonData('json_tematicos', 'rest_export_2');
+    $data['All'] = '- Cualquier Tema -';
+    foreach ($temas_padres as $key => $tp ){
+      $data[$tp['tid']] = $tp['name'];
+    }
+
+    $temas_hijos = getJsonData('json_tematicos', 'rest_export_1');
+    $temash['All'] = '- Cualquier Tema -';
+    foreach ($temas_hijos as $key => $th ){
+      $temash[$th['tid']] = $th['name'];
+    }
+
+    //Geos padres
+    $geos_padres = getJsonData('json_geograficos', 'rest_export_2');
+    $geos['All'] = '- Cualquier Geogr&aacute;fico -';
+    foreach ($geos_padres as $key => $geo ){
+      $geos[$geo['tid']] = $geo['name'];
+    }
+
+    //Geos Hijos
+    $geos_hijos = getJsonData('json_geograficos', 'rest_export_1');
+    $geosh['All'] = '- Cualquier Geogr&aacute;fico -';
+    foreach ($geos_hijos as $key => $geoh ){
+      $geosh[$geoh['tid']] = $geoh['name'];
+    }
+
+    //Validación de Url
+    $tema_nivel1= \Drupal::request()->query->get('tema_nivel1');
+    if(empty($tema_nivel1)){
+      $tema_nivel1 = 'All';
+    }
+
+    $tema_nivel2= \Drupal::request()->query->get('tema_nivel2');
+    if(empty($tema_nivel2)){
+      $tema_nivel2 = 'All';
+    }
+
+    $tema_nivel3= \Drupal::request()->query->get('tema_nivel3');
+    if(empty($tema_nivel3)){
+      $tema_nivel3 = 'All';
+    }
+
+    $tema_geo1= \Drupal::request()->query->get('tema_geo1');
+    if(empty($tema_geo1)){
+      $tema_geo1 = 'All';
+    }
+
+    $tema_geo2= \Drupal::request()->query->get('tema_geo2');
+    if(empty($tema_geo2)){
+      $tema_geo2 = 'All';
+    }
+
+    $tema_geo3= \Drupal::request()->query->get('tema_geo3');
+    if(empty($tema_geo3)){
+      $tema_geo3 = 'All';
+    }
+
+    if(Drupal::service('path.matcher')->isFrontPage()) {
+      $form['item_simple'] = [
+        '#markup' => '<h3>B&uacute;squeda Simple</h3>',
+        '#weight' => 0
+      ];
+      $form['key']['#weight'] = 1;
+      $form['key']['#attributes']['placeholder'] = 'Buscar por palabra clave';
+      $form['key']['#attributes']['class'][] = 'form-control';
+      $form['key']['#prefix'] = '<div class="col-md-12">';
+      $form['key']['#suffix'] = '</div>';
+
+      $form['item_temas '] = [
+        '#markup' => '<h3 class="subtitle">B&uacute;squeda por Temas</h3>',
+        '#weight' => 2
+      ];
+
+      $form['tema_nivel1'] = [
+        '#type' => 'select',
+        '#title' => 'Tema nivel 1',
+        '#options' => $data,
+        '#weight' => 3,
+        '#prefix' => '<div class="row"><div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div>',
+      ];
+
+      $form['tema_nivel2'] = [
+        '#type' => 'select',
+        '#title' => 'Tema nivel 2',
+        '#options' => $temash,
+        '#weight' => 3,
+        '#prefix' => '<div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div>'
+      ];
+      $form['tema_nivel2']['#attributes']['disabled'] = 'disabled';
+
+      $form['tema_nivel3'] = [
+        '#type' => 'select',
+        '#title' => 'Tema nivel 3',
+        '#options' => $temash,
+        '#weight' => 3,
+        '#prefix' => '<div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div></div>'
+      ];
+      $form['tema_nivel3']['#attributes']['disabled'] = 'disabled';
+
+      $form['field_ref_tematicos']['#weight'] = 4;
+      $form['field_ref_tematicos']['#attributes']['style'] = 'display:none';
+      $form['item_link '] = [
+        '#markup' => '<div class="advanced_search"><a href="/documentos">IR A B&Uacute;SQUEDA AVANZADA</a></div>',
+        '#weight' => 4
+      ];
+      $form['field_doc_pmencionadas']['#access'] = FALSE;
+      $form['field_doc_cargo1']['#access'] = FALSE;
+      $form['field_doc_institucion']['#access'] = FALSE;
+      $form['field_ref_geograficos']['#access'] = FALSE;
+      $form['field_ref_docregion']['#access'] = FALSE;
+      $form['field_ref_docpueblo']['#access'] = FALSE;
+
+    } else {
+      $form['item_advance '] = [
+        '#markup' => '<h3>B&uacute;squeda Avanzada</h3><div class="row">',
+        '#weight' => 0
+      ];
+
+      $form['key']['#weight'] = 1;
+      $form['key']['#attributes']['placeholder'] = 'Buscar por palabra clave';
+      $form['key']['#attributes']['class'][] = 'form-control';
+      $form['key']['#prefix'] = '<div class="col-md-12">';
+      $form['key']['#suffix'] = '</div>';
+
+      $form['field_doc_pmencionadas']['#weight'] = 2;
+      $form['field_doc_pmencionadas']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_doc_pmencionadas']['#suffix'] = '</div>';
+
+      $form['field_doc_cargo1']['#weight'] = 3;
+      $form['field_doc_cargo1']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_doc_cargo1']['#suffix'] = '</div>';
+
+      $form['field_doc_institucion']['#weight'] = 4;
+      $form['field_doc_institucion']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_doc_institucion']['#suffix'] = '</div></div>';
+
+      $form['item_temas'] = [
+        '#markup' => '<h3>B&uacute;squeda por Temas</h3><h4>Temáticos</h4>',
+        '#weight' => 7
+      ];
+
+      $form['tema_nivel1'] = [
+        '#type' => 'select',
+        '#title' => 'Tema nivel 1',
+        '#title_display' => 'invisible',
+        '#options' => $data,
+        '#weight' => 8,
+        '#prefix' => '<div class="row"><div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div>',
+        '#default_value' => $tema_nivel1
+      ];
+
+      $form['tema_nivel2'] = [
+        '#type' => 'select',
+        '#title' => 'Tema nivel 2',
+        '#title_display' => 'invisible',
+        '#options' => $temash,
+        '#weight' => 9,
+        '#prefix' => '<div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div>',
+        '#default_value' => $tema_nivel2
+      ];
+      $form['tema_nivel2']['#attributes']['disabled'] = 'disabled';
+
+      $form['tema_nivel3'] = [
+        '#type' => 'select',
+        '#title' => 'Tema nivel 3',
+        '#title_display' => 'invisible',
+        '#options' => $temash,
+        '#weight' => 10,
+        '#prefix' => '<div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div></div>',
+        '#default_value' => $tema_nivel3
+      ];
+      $form['tema_nivel3']['#attributes']['disabled'] = 'disabled';
+
+      $form['field_ref_tematicos']['#weight'] = 11;
+      $form['field_ref_tematicos']['#prefix'] = '<div class="row"><div class="col-sm-12">';
+      $form['field_ref_tematicos']['#suffix'] ='</div></div>';
+      $form['field_ref_tematicos']['#attributes']['style'] = 'display:none';
+      $form['field_ref_tematicos']['#title_display'] = 'invisible';
+
+      $form['item_geo'] = [
+        '#markup' => '<h3>B&uacute;squeda por Geográficos</h3>',
+        '#weight' => 12
+      ];
+
+      $form['field_ref_docregion']['#weight'] = 13;
+      $form['field_ref_docregion']['#prefix'] = '<div class="row"><div class="col-sm-6">';
+      $form['field_ref_docregion']['#suffix'] = '</div>';
+
+      $form['field_ref_docpueblo']['#weight'] = 14;
+      $form['field_ref_docpueblo']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_ref_docpueblo']['#suffix'] = '</div></div>';
+
+      /*$form['tema_geo1'] = [
+        '#type' => 'select',
+        '#title' => 'Geogr&aacute;fico 1',
+        '#title_display' => 'invisible',
+        '#options' => $geos,
+        '#weight' => 13,
+        '#prefix' => '<div class="row"><div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div>',
+        '#default_value' => $tema_geo1
+      ];
+
+      $option_empty[0] = "-Cualquier Geogr&aacute;fico-";
+      $form['tema_geo2'] = [
+        '#type' => 'select',
+        '#title' => 'Geogr&aacute;fico 2',
+        '#title_display' => 'invisible',
+        '#options' => $geosh,
+        '#weight' => 14,
+        '#prefix' => '<div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div>',
+        '#default_value' => $tema_geo2
+      ];
+      $form['tema_geo2']['#attributes']['disabled'] = 'disabled';
+
+      $form['tema_geo3'] = [
+        '#type' => 'select',
+        '#title' => 'Geogr&aacute;fico 3',
+        '#title_display' => 'invisible',
+        '#options' => $geosh,
+        '#weight' => 15,
+        '#prefix' => '<div class="col-xs-12 col-sm-4">',
+        '#suffix' => '</div></div>',
+        '#default_value' => $tema_geo3
+      ];*/
+      $form['tema_geo3']['#attributes']['disabled'] = 'disabled';
+
+      $form['field_ref_geograficos']['#title_display'] = 'invisible';
+      $form['field_ref_geograficos']['#weight'] = 16;
+      $form['field_ref_geograficos']['#prefix'] = '<div class="col-md-12">';
+      $form['field_ref_geograficos']['#suffix'] = '</div>';
+      $form['field_ref_geograficos']['#attributes']['style'] = 'display:none';
+
+
+    }
+  }
+}
+
+/**
+ * Implements hook_search_api_query_alter().
+ */
+function calamari_config_search_api_query_alter(\Drupal\search_api\Query\QueryInterface $query) {
+  $conditions = &$query->getConditionGroup()->getConditions();
+  foreach ($conditions as $i => $condition) {
+  $tag = \Drupal::request()->query->get('key');
+      if ($tag != NULL) {
+    $c = $condition->getConditions();
+    $field = $c[$i]->getField();
+    $value = $c[$i]->getValue()[0];
+    $ids = _calamari_config_getTids($value);
+    if ($field == "field_ref_tematicos") {
+      $c[$i]->setValue( $ids );
+    }
+  }
+ }
+}
+
+function _calamari_config_getTids( $tid ){
+  $ids[] = $tid;
+  $terms = Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadTree('tematicos', $tid);
+  if (count($terms) > 0) {
+    foreach ($terms as $term) {
+      $ids[] = $term->tid;
+      $sons = Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadTree('tematicos', $term->id);
+      if (count($sons) > 0) {
+        foreach ($sons as $son) {
+          $ids[] = $son->tid;
+        }
+      }
+    }
+  }
+  return $ids;
+}
+
+
+function getJsonData($name, $display, $args = [], $itemsPerPage = 0)
+{
+  $view = Views::getView($name);
+  if (count($args) > 0) {
+    $view->setArguments($args);
+  }
+  if ($itemsPerPage != 0):
+    $view->setItemsPerPage($itemsPerPage);
+  endif;
+  $view->execute($display);
+  $renderedView = $view->render($display);
+  $viewResult = \Drupal::service('renderer')->render($renderedView);
+  return Json::decode($viewResult);
+}

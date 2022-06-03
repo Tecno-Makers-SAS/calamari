@@ -1,0 +1,29 @@
+uuid: 50aa66ef-1532-4e7c-b4aa-ce394ffa0cf2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ref_docregion
+    - paragraphs.paragraphs_type.geograficos
+    - taxonomy.vocabulary.doc_original_region
+id: paragraph.geograficos.field_ref_docregion
+field_name: field_ref_docregion
+entity_type: paragraph
+bundle: geograficos
+label: 'Según doc original Región'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      doc_original_region: doc_original_region
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

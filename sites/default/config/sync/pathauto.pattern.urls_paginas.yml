@@ -1,0 +1,22 @@
+uuid: 2371feb2-f087-4a00-b787-a8365f5aa4e6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: urls_paginas
+label: Urls-paginas
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  20a6fde7-b936-4509-a6f6-8a0fd9fc3389:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 20a6fde7-b936-4509-a6f6-8a0fd9fc3389
+selection_logic: and
+weight: -5
+relationships: {  }

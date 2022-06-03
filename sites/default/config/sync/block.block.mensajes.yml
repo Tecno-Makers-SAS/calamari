@@ -1,0 +1,20 @@
+uuid: e665054b-e85b-4dc6-91b1-f90c69e8082e
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sevenadmin
+id: mensajes
+theme: sevenadmin
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensajes
+  provider: system
+  label_display: '0'
+visibility: {  }

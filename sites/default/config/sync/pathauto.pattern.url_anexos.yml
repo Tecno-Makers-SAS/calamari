@@ -1,0 +1,22 @@
+uuid: ad46f568-347f-436e-845f-df35417944be
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: url_anexos
+label: 'Url Anexos'
+type: 'canonical_entities:node'
+pattern: 'anexos/[node:title]'
+selection_criteria:
+  c3a2874c-df80-4d59-aec0-78c8d854d9fe:
+    id: node_type
+    bundles:
+      anexo: anexo
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c3a2874c-df80-4d59-aec0-78c8d854d9fe
+selection_logic: and
+weight: -5
+relationships: {  }

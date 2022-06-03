@@ -1,0 +1,14 @@
+uuid: 3d7b22b2-1ed7-4def-9cbe-eab2d94fedeb
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cdocumento
+id: taxonomy_term.cdocumento.default
+targetEntityType: taxonomy_term
+bundle: cdocumento
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true

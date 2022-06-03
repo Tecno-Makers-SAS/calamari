@@ -1,0 +1,8 @@
+uuid: 26e04ec7-48e4-4b8f-9a09-b2c25a45368d
+langcode: es
+status: true
+dependencies: {  }
+name: Remitente
+vid: remitente
+description: ''
+weight: 0

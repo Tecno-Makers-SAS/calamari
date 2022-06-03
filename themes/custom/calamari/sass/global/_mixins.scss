@@ -1,0 +1,21 @@
+@mixin prefix($property, $value, $prefixes: ()){
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+
+// RGB to RGBA
+//example -> background-color: hex-to-rgba($color-3, 0.68);
+@function hex-to-rgba ($color: #FFF, $opacity: 0.5) {
+  @return rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin placeholder($selector,$color, $font, $size) {
+  #{$selector}::-webkit-input-placeholder {color: $color; font-weight: $font; $size: font-size;}
+  #{$selector}::-moz-placeholder          {color: $color; font-weight: $font; $size: font-size;}
+  #{$selector}:-ms-input-placeholder      {color: $color; font-weight: $font; $size: font-size;}
+}
+//@include prefix(transform ,translateY(-50%), webkit moz o ms); @include prefix(transition ,all .5s, webkit moz o ms);

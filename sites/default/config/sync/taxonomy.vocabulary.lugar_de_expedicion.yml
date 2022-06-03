@@ -1,0 +1,8 @@
+uuid: c61b6af0-5358-483a-bf34-86332f0245a0
+langcode: es
+status: true
+dependencies: {  }
+name: 'Lugar de expedición'
+vid: lugar_de_expedicion
+description: ''
+weight: 0

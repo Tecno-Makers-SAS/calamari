@@ -1,0 +1,9 @@
+uuid: c3008f62-6ef0-4a8d-b246-80db85b18ae7
+langcode: es
+status: true
+dependencies: {  }
+id: geograficos
+label: Geográficos
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

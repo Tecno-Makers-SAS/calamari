@@ -1,0 +1,68 @@
+uuid: 27cdfe55-0b87-4dd8-bf1a-bec10d8bdab5
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.documento.field_doc_body1
+    - field.field.node.documento.field_doc_body2
+    - field.field.node.documento.field_doc_cantimg
+    - field.field.node.documento.field_doc_clasedoc
+    - field.field.node.documento.field_doc_destinatario
+    - field.field.node.documento.field_doc_fagi
+    - field.field.node.documento.field_doc_fexpedicion
+    - field.field.node.documento.field_doc_flimite
+    - field.field.node.documento.field_doc_geograficos
+    - field.field.node.documento.field_doc_institucion
+    - field.field.node.documento.field_doc_lexpedicion
+    - field.field.node.documento.field_doc_nfolio
+    - field.field.node.documento.field_doc_nimgdigital
+    - field.field.node.documento.field_doc_nlegajo
+    - field.field.node.documento.field_doc_nodoc
+    - field.field.node.documento.field_doc_nolibro
+    - field.field.node.documento.field_doc_procedencia
+    - field.field.node.documento.field_doc_remitente
+    - field.field.node.documento.field_doc_title
+    - field.field.node.documento.field_doc_topagi
+    - field.field.node.documento.field_doc_topologia
+    - field.field.node.documento.field_ref_onomasticos
+    - field.field.node.documento.field_ref_tematicos
+    - node.type.documento
+  module:
+    - user
+id: node.documento.teaser
+targetEntityType: node
+bundle: documento
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_doc_body1: true
+  field_doc_body2: true
+  field_doc_cantimg: true
+  field_doc_clasedoc: true
+  field_doc_destinatario: true
+  field_doc_fagi: true
+  field_doc_fexpedicion: true
+  field_doc_flimite: true
+  field_doc_geograficos: true
+  field_doc_institucion: true
+  field_doc_lexpedicion: true
+  field_doc_nfolio: true
+  field_doc_nimgdigital: true
+  field_doc_nlegajo: true
+  field_doc_nodoc: true
+  field_doc_nolibro: true
+  field_doc_procedencia: true
+  field_doc_remitente: true
+  field_doc_title: true
+  field_doc_topagi: true
+  field_doc_topologia: true
+  field_ref_onomasticos: true
+  field_ref_tematicos: true
+  langcode: true
+  search_api_excerpt: true

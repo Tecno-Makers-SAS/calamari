@@ -1,0 +1,29 @@
+uuid: da52cfd2-fde9-4436-a1fa-4d945e72acc8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_clasedoc
+    - node.type.documento
+    - taxonomy.vocabulary.cdocumento
+id: node.documento.field_doc_clasedoc
+field_name: field_doc_clasedoc
+entity_type: node
+bundle: documento
+label: 'Clase de documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cdocumento: cdocumento
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

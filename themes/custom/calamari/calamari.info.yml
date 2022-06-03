@@ -1,0 +1,22 @@
+name: 'Calamari'
+type: theme
+description: 'Thema del sitio Calamari'
+core_version_requirement: ^8.8 || ^9
+base theme: bootstrap
+
+regions:
+  navigation: 'Navigation'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  filters: 'Filters'
+  page_top: 'Page top'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  footer_bottom: 'Footer bottom'
+
+libraries-extend:
+  bootstrap/framework:
+    - calamari/framework

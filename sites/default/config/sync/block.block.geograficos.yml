@@ -1,0 +1,29 @@
+uuid: e04260fc-19fb-40ca-a4d2-f4a07222fe40
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.geograficos
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: geograficos
+theme: calamari
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:geograficos'
+settings:
+  id: 'facet_block:geograficos'
+  label: Geográficos
+  provider: facets
+  label_display: visible
+  block_id: geograficos
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

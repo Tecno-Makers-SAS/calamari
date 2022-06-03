@@ -1,0 +1,22 @@
+<tr>
+    <td style="width:24%">
+        {% if content.field_ref_docregion %} 
+            {{ content.field_ref_docregion }}            
+        {% else %}
+            <p>---</p>
+        {% endif %}  
+    </td>
+    <td style="width:20%">
+        {% if content.field_ref_docpueblo %} 
+            {{ content.field_ref_docpueblo }}
+        {% endif %}  
+    </td>
+    <td style="width:56%">
+        {% if content.field_ref_geograficos %} 
+            {{ content.field_ref_geograficos }} 
+        {% endif %}
+        {% if content.field_ref_n5lugar %} 
+            &nbsp;&nbsp;{{ content.field_ref_n5lugar }} 
+        {% endif %}         
+    </td>
+</tr>

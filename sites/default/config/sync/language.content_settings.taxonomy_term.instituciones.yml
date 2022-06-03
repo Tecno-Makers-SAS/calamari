@@ -1,0 +1,11 @@
+uuid: 63739454-9103-490b-96b5-8686ef063103
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.instituciones
+id: taxonomy_term.instituciones
+target_entity_type_id: taxonomy_term
+target_bundle: instituciones
+default_langcode: site_default
+language_alterable: false

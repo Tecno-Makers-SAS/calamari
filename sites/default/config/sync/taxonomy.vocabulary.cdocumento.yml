@@ -1,0 +1,8 @@
+uuid: 426f1e37-c453-45fe-93dc-90478160dba4
+langcode: es
+status: true
+dependencies: {  }
+name: 'Clase de Documento'
+vid: cdocumento
+description: ''
+weight: 0

@@ -1,0 +1,38 @@
+uuid: 943ed75c-90c0-465c-8e28-77353b49d354
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gnal_images
+    - paragraphs.paragraphs_type.title_images
+  module:
+    - image
+id: paragraph.title_images.field_gnal_images
+field_name: field_gnal_images
+entity_type: paragraph
+bundle: title_images
+label: Imagenes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,29 @@
+uuid: 8eaaf679-68ab-4c20-8f31-ba984bbad681
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.instituciones
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: instituciones
+theme: calamari
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:instituciones'
+settings:
+  id: 'facet_block:instituciones'
+  label: Instituciones
+  provider: facets
+  label_display: visible
+  block_id: instituciones
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

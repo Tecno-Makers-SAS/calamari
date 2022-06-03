@@ -1,0 +1,29 @@
+uuid: 2ab5271e-fafa-42ec-a6e3-b22b6a8be4f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.procedencia
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: procedencia
+theme: calamari
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:procedencia'
+settings:
+  id: 'facet_block:procedencia'
+  label: Procedencia
+  provider: facets
+  label_display: visible
+  block_id: procedencia
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

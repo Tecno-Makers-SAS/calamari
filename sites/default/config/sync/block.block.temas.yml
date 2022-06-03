@@ -1,0 +1,29 @@
+uuid: b559ae65-ab6b-44f2-bfe0-f4922833c13e
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tematicos
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: temas
+theme: calamari
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:tematicos'
+settings:
+  id: 'facet_block:tematicos'
+  label: Temas
+  provider: facets
+  label_display: visible
+  block_id: temas
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,11 @@
+uuid: 279a7b1d-7a3e-472a-82de-d26fc4306693
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tematicos
+id: taxonomy_term.tematicos
+target_entity_type_id: taxonomy_term
+target_bundle: tematicos
+default_langcode: site_default
+language_alterable: false

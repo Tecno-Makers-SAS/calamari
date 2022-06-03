@@ -1,0 +1,29 @@
+uuid: 1b3a6c18-b2a2-4b28-9f87-6d8797294077
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_tematicos
+    - node.type.documento
+    - taxonomy.vocabulary.tematicos
+id: node.documento.field_ref_tematicos
+field_name: field_ref_tematicos
+entity_type: node
+bundle: documento
+label: Temáticos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tematicos: tematicos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

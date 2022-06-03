@@ -1,0 +1,11 @@
+uuid: 6327dead-5e53-4f51-878c-6c058e86085b
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lugar_de_expedicion
+id: taxonomy_term.lugar_de_expedicion
+target_entity_type_id: taxonomy_term
+target_bundle: lugar_de_expedicion
+default_langcode: site_default
+language_alterable: false

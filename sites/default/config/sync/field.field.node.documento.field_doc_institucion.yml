@@ -1,0 +1,29 @@
+uuid: 0d5b85f3-87df-4da1-8a67-7afe35467ff1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_institucion
+    - node.type.documento
+    - taxonomy.vocabulary.instituciones
+id: node.documento.field_doc_institucion
+field_name: field_doc_institucion
+entity_type: node
+bundle: documento
+label: Instituciones
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      instituciones: instituciones
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

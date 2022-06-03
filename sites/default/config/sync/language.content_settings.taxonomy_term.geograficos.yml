@@ -1,0 +1,11 @@
+uuid: be2374d2-ce11-4463-8edc-be23a5ee203f
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.geograficos
+id: taxonomy_term.geograficos
+target_entity_type_id: taxonomy_term
+target_bundle: geograficos
+default_langcode: site_default
+language_alterable: false

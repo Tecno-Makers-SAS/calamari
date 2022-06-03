@@ -1,0 +1,29 @@
+uuid: 940aaa8f-b652-498e-9f7e-1a8ecc2a4950
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.fecha_de_expedicion
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: fechadeexpedicion
+theme: calamari
+region: filters
+weight: -6
+provider: null
+plugin: 'facet_block:fecha_de_expedicion'
+settings:
+  id: 'facet_block:fecha_de_expedicion'
+  label: 'Refine por años'
+  provider: facets
+  label_display: visible
+  block_id: fechadeexpedicion
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/documentos"
+    negate: false
+    context_mapping: {  }

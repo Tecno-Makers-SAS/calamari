@@ -1,0 +1,25 @@
+uuid: 16bf33f7-1a63-4a37-8ede-522e9bdcae2c
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b12aa904-fd3b-4738-88ea-79f78a0816bb'
+  module:
+    - block_content
+  theme:
+    - calamari
+id: links_footer
+theme: calamari
+region: footer_bottom
+weight: -7
+provider: null
+plugin: 'block_content:b12aa904-fd3b-4738-88ea-79f78a0816bb'
+settings:
+  id: 'block_content:b12aa904-fd3b-4738-88ea-79f78a0816bb'
+  label: links_footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

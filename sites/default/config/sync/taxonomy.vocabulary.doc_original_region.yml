@@ -1,0 +1,8 @@
+uuid: 8271fc1d-6a9e-4ffd-823b-2364f6b57d19
+langcode: es
+status: true
+dependencies: {  }
+name: 'Doc Original Region'
+vid: doc_original_region
+description: ''
+weight: 0

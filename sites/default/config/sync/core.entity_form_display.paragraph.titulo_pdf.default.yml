@@ -1,0 +1,24 @@
+uuid: 4e266442-ec46-43e0-8d79-e0373b30c5c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.titulo_pdf.field_pdf
+    - paragraphs.paragraphs_type.titulo_pdf
+  module:
+    - file
+id: paragraph.titulo_pdf.default
+targetEntityType: paragraph
+bundle: titulo_pdf
+mode: default
+content:
+  field_pdf:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  status: true

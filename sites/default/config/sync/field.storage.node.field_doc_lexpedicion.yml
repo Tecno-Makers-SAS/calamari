@@ -1,0 +1,20 @@
+uuid: e0165a69-eef8-42e3-a2b1-d0c268f7aee2
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_doc_lexpedicion
+field_name: field_doc_lexpedicion
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 3da325c4-428a-4383-a8bd-be8a5f544ccd
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.proyectos
+id: node.proyectos
+target_entity_type_id: node
+target_bundle: proyectos
+default_langcode: site_default
+language_alterable: false

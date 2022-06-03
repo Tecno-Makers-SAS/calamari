@@ -1,0 +1,20 @@
+uuid: 1f1c3631-bcef-42d9-b4b8-a473573653fa
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_doc_pmencionadas
+field_name: field_doc_pmencionadas
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

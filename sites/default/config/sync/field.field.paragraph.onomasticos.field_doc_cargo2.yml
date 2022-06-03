@@ -1,0 +1,29 @@
+uuid: d0a9ea43-1471-4102-af4b-364401f4e110
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_doc_cargo2
+    - paragraphs.paragraphs_type.onomasticos
+    - taxonomy.vocabulary.cargos
+id: paragraph.onomasticos.field_doc_cargo2
+field_name: field_doc_cargo2
+entity_type: paragraph
+bundle: onomasticos
+label: Cargo2
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cargos: cargos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

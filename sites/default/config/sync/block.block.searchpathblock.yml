@@ -1,0 +1,26 @@
+uuid: 18126f67-0cf5-4a8b-a8e5-da28fb24a4e3
+langcode: es
+status: true
+dependencies:
+  module:
+    - calamari_config
+    - system
+  theme:
+    - calamari
+id: searchpathblock
+theme: calamari
+region: filters
+weight: -5
+provider: null
+plugin: search_path_block
+settings:
+  id: search_path_block
+  label: 'Search path block'
+  provider: calamari_config
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

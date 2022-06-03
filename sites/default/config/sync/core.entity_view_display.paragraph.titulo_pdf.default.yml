@@ -1,0 +1,24 @@
+uuid: 344a6467-8773-4aef-a3dc-9474af0b8d05
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.titulo_pdf.field_pdf
+    - paragraphs.paragraphs_type.titulo_pdf
+  module:
+    - pdf
+id: paragraph.titulo_pdf.default
+targetEntityType: paragraph
+bundle: titulo_pdf
+mode: default
+content:
+  field_pdf:
+    weight: 1
+    label: hidden
+    settings:
+      scale: 1
+    third_party_settings: {  }
+    type: pdf_pages
+    region: content
+hidden:
+  search_api_excerpt: true

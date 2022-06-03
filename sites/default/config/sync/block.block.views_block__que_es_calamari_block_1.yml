@@ -1,0 +1,30 @@
+uuid: 479028b5-5789-4625-ac67-6774ac6c335b
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.que_es_calamari
+  module:
+    - system
+    - views
+  theme:
+    - calamari
+id: views_block__que_es_calamari_block_1
+theme: calamari
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:que_es_calamari-block_1'
+settings:
+  id: 'views_block:que_es_calamari-block_1'
+  label: 'El Proyecto'
+  provider: views
+  label_display: visible
+  views_label: 'El Proyecto'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /proyecto
+    negate: false
+    context_mapping: {  }

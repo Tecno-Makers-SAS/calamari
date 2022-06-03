@@ -1,0 +1,29 @@
+uuid: 312678d7-d0b3-408b-965f-97f983357154
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_lexpedicion
+    - node.type.documento
+    - taxonomy.vocabulary.lugar_de_expedicion
+id: node.documento.field_doc_lexpedicion
+field_name: field_doc_lexpedicion
+entity_type: node
+bundle: documento
+label: 'Lugar de expedición'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lugar_de_expedicion: lugar_de_expedicion
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

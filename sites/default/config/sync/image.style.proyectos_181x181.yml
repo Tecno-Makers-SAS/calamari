@@ -1,0 +1,15 @@
+uuid: b1d1cb71-8cbc-4867-8dd7-f3b402a314c1
+langcode: es
+status: true
+dependencies: {  }
+name: proyectos_181x181
+label: 'proyectos (181x181)'
+effects:
+  46e6b56d-b0dd-41ae-97c0-2ac1333051d6:
+    uuid: 46e6b56d-b0dd-41ae-97c0-2ac1333051d6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 181
+      height: 181
+      anchor: center-center

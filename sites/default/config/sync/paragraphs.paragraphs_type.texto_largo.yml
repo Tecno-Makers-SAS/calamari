@@ -1,0 +1,9 @@
+uuid: c6856c1f-7907-4cce-a507-76b83c2412c7
+langcode: es
+status: true
+dependencies: {  }
+id: texto_largo
+label: 'Texto largo'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,344 @@
+form{
+	label{
+		color: $thirdColor;
+		font-family: $mainFont;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		&.form-required{
+			&:after{
+				content: none;
+			}
+		}
+	}
+	input{
+		&.form-control{
+			background:$lightColor;
+			border-radius: 20px;
+			border:1px solid $border;
+			height: 35px;
+			margin-bottom: 20px;
+			padding:0 20px;
+			&:focus,
+			&:hover{
+				box-shadow: none;
+				outline: none;
+			}
+		}
+	}
+	textarea{
+		&.form-control{
+			background:$lightColor;
+			border-radius:20px;
+			border:1px solid $border;
+			min-height: 200px;
+			padding:15px 20px;
+		}
+	}
+	select{
+		&.form-control{
+			background: url('../images/icons/ic_arrow.svg') $lightColor no-repeat;
+			background-position:calc(100% - 15px) center;
+			background-size:25px;
+			border-radius: 20px;
+			border:1px solid $border;
+			height: 35px;
+			margin-bottom: 40px;
+			padding:0 20px;
+			@include prefix(appearance , none, webkit moz o ms);
+		}
+	}
+	.select-wrapper{
+		&:after{
+			content: none;
+			display: none;
+		}
+	}
+	.form-check{
+		padding:0;
+		label{
+			cursor: pointer;
+			display: inline-block;
+			font-family: $mainFont;
+			font-size: 16px;
+			vertical-align: top;
+			width: 94%;
+			a{
+				color: $thirdColor;
+			}
+		}
+		&.active{
+			label{
+				color: $thirdColor;
+			}
+		}
+		input{
+			border:1px solid $border;
+			border-radius:2px;
+			cursor: pointer;
+			display: inline-block;
+			height: 14px;
+			margin:0 10px 0 0;
+			position:relative;
+			top: inherit;
+			vertical-align: -2px;
+			width: 14px;
+			@include prefix(appearance , none, webkit moz o ms);
+			&:checked{
+				background: url('../images/check.svg') no-repeat center $mainColor;
+				background-size:10px;
+			}
+			&:hover,
+			&:focus{
+				box-shadow:none;
+				outline: none;
+			}
+		}
+	}
+	.form-actions{
+		margin-top: 30px;
+		text-align: right;
+		button{
+			@extend %btn_green;
+			@include prefix(transition , all .5s, webkit moz o ms);
+			&:hover,
+			&:focus{
+				@include prefix(transition , all .5s, webkit moz o ms);
+			}
+		}
+	}
+	.form-textarea-wrapper{
+		border-radius:20px;
+		overflow: hidden;
+	}
+	.chosen-container{
+		background: url('../images/icons/ic_arrow.svg') $lightColor no-repeat;
+		background-position:calc(100% - 15px) center;
+		background-size:25px;
+		border-radius: 20px;
+		border:1px solid $border;
+		height: 35px;
+		margin-bottom: 40px;
+		padding:0 20px;
+		position:relative;
+		width: 100%!important;
+		@include prefix(appearance , none, webkit moz o ms);
+		&.chosen-with-drop,
+		&.chosen-container-active{
+			border-bottom-left-radius:0;
+			border-bottom-right-radius:0;
+			.chosen-single{
+				background:transparent;
+				border:0;
+				box-shadow:none;
+			}
+		}
+		.chosen-single{
+			background:transparent;
+			border:0;
+			border-radius:0;
+			box-shadow:none;
+			height: auto;
+			padding:5px 0;
+			div{
+				b{
+					display: none;
+				}
+			}
+		}
+		.chosen-drop{
+			border-bottom-left-radius:20px;
+			border-bottom-right-radius:20px;
+			left:0;
+			margin-top:1px;
+			overflow: hidden;
+			.chosen-results{
+				border-bottom-left-radius:20px;
+				border-bottom-right-radius:20px;
+				li{
+					&.result-selected,
+					&:hover,
+					&:focus{
+						background:$mainColor;
+						color: $lightColor;
+					}
+				}
+			}
+		}
+		&.chosen-container-single {
+			.chosen-search {
+				input[type="text"]{
+					background: url('../images/icons/ic_search.svg') no-repeat;
+					background-position:calc(100% - 15px) center;
+					background-size:15px;
+				}
+			}
+			.chosen-drop{
+				left: 0;
+			}
+		}
+	}
+	&.user-login-form{
+		margin: 150px auto 40px;
+		max-width: 350px;
+	}
+	&.webform-submission-contact-form{
+		.form-actions{
+			margin-bottom: 55px;
+			margin-top: 20px;
+			text-align: right;
+			button{
+				margin:0;
+				@extend %btn_green;
+				&:before{
+  					content: "\e904";
+					display: inline-block; 
+					font-family: $iconFont;
+					font-size: 25px;
+					margin-right: 12px;
+					vertical-align: middle;
+					width: 25px;
+				}
+				&:hover,
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+	}
+}
+.form-control{
+	&:disabled{
+		cursor: not-allowed;
+		opacity:0.9;
+	}
+}
+.has-glyphicons .select-wrapper:after{
+	content: none;
+}
+input[type="checkbox"]{
+	border:2px solid $thirdColor;
+	border-radius:0px;
+	cursor: pointer;
+	display: inline-block;
+	height: 18px;
+	margin:0 10px 0 0;
+	position:relative;
+	top: inherit;
+	vertical-align: -2px;
+	width: 18px;
+	@include prefix(appearance , none, webkit moz o ms);
+	&:checked{
+		background: url('../images/check.svg') no-repeat center;
+		background-size:10px;
+		border:2px solid $mainColor;
+	}
+	&:hover,
+	&:focus{
+		box-shadow:none;
+		outline: none;
+	}
+}
+.webform-confirmation__back{
+	text-align:center;
+}
+.webform-confirmation-modal,
+.ui-dialog{
+	border:0!important;
+	border-top:8px solid $mainColor!important;
+	.ui-dialog-titlebar{
+		background:transparent;
+		border:0;
+		color: $mainColor;
+		padding-top:15px;
+		.ui-dialog-title{
+		    font-size: 18px;
+			font-weight: bold;
+    		line-height: 24px;
+			text-align: center;
+			text-transform: uppercase;
+			padding:0 40px;
+			white-space: inherit;
+			width: 100%;
+		}
+		.ui-dialog-titlebar-close{
+			background:transparent;
+			border:0;
+			font-size: 0;
+			text-indent: 0;
+			right: 10px;
+			&:hover,
+			&:focus{
+				opacity: 0.8;
+				outline: none;
+			}
+			span{
+				display: none;
+			}
+			&:before{
+				color: $mainColor;
+				content: "\e908";
+				font-size: 14px;
+				@extend %icons;
+			}
+		}
+	}
+	.ui-widget-content{
+		font-size: 16px;
+		line-height: 20px;
+		padding:20px 40px;
+		text-align: center;
+	}
+}
+.message_contact{
+	margin:40px auto;
+	text-align: center;
+	p{
+		color: $secondColor;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 29px;
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 1100px){
+	form{
+		&.webform-submission-formulario-contactenos-form {
+			.form-item{
+				width: 47.9%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 960px){
+	form{
+		&.webform-submission-contact-form{
+			.form-actions{
+				margin-bottom: 25px;
+				text-align: center;
+				button{
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.message_contact{
+		p{
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}
+@media screen and (max-height: 767px){
+	.webform-confirmation-modal,
+	.ui-dialog{
+		left: 50%!important;
+		width: calc(100% - 30px)!important;
+		@include prefix(transform , translateX(-50%), webkit moz o ms);
+		.ui-widget-content{
+			padding:20px 40px;
+		}
+	}
+}

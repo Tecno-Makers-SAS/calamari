@@ -1,0 +1,43 @@
+printable_entities:
+  node: node
+  block: '0'
+  block_content: '0'
+  contact_message: '0'
+  file: '0'
+  path_alias: '0'
+  search_api_task: '0'
+  shortcut: '0'
+  taxonomy_term: '0'
+  tour: '0'
+  user: '0'
+  webform_submission: '0'
+  webform: '0'
+  menu_link_content: '0'
+  paragraph: '0'
+open_target_blank: true
+css_include: themes/custom/calamari/css/print.css
+extract_links: '0'
+save_pdf: true
+pdf_tool: wkhtmltopdf
+paper_size: Letter
+page_orientation: portrait
+path_to_binary: ''
+pdf_location: documento
+send_to_printer: true
+close_window: false
+list_attribute: false
+printable_print_link_locations:
+  node: node
+  comment: '0'
+  user: '0'
+printable_pdf_link_locations:
+  node: '0'
+  comment: '0'
+  user: '0'
+print_pdf_use_xvfb_run: 0
+path_to_xvfb_run: ''
+_core:
+  default_config_hash: '--64pTFtZ_ATDgWZMzTVtdhWcYJcq7fvQT9fZn3UCOU'
+langcode: es
+ignore_warnings: 0
+path_to_xfb_run: ''

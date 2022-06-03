@@ -1,0 +1,22 @@
+uuid: 8389fd5a-bf75-451b-a37b-32c82ced3c8a
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sevenadmin
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: sevenadmin_breadcrumbs
+theme: sevenadmin
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  provider: system
+  label_display: '0'
+visibility: {  }

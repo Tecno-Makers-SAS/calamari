@@ -1,0 +1,21 @@
+uuid: 8b533e5d-e8ce-4b4d-b02b-d47f0d4c8803
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_title
+    - node.type.documento
+  module:
+    - text
+id: node.documento.field_doc_title
+field_name: field_doc_title
+entity_type: node
+bundle: documento
+label: 'Titulo Completo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

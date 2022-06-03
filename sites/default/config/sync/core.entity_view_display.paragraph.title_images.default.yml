@@ -1,0 +1,33 @@
+uuid: d2696b15-640e-4564-94dd-5b3ad147326f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_images.field_gnal_images
+    - field.field.paragraph.title_images.field_gnal_title
+    - paragraphs.paragraphs_type.title_images
+  module:
+    - image
+id: paragraph.title_images.default
+targetEntityType: paragraph
+bundle: title_images
+mode: default
+content:
+  field_gnal_images:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_gnal_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: cc0b6854-098f-4967-93d0-7ed838b2f9bb
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: urls_articulo
+label: Urls-articulo
+type: 'canonical_entities:node'
+pattern: 'articulo/[node:title]'
+selection_criteria:
+  63c7218b-b1de-4a6d-88c2-ee599ab1f75c:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 63c7218b-b1de-4a6d-88c2-ee599ab1f75c
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,29 @@
+uuid: e7fd0f53-1312-4bd2-ab3d-7b1d30d0097b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_procedencia
+    - node.type.documento
+    - taxonomy.vocabulary.procedencia
+id: node.documento.field_doc_procedencia
+field_name: field_doc_procedencia
+entity_type: node
+bundle: documento
+label: Procedencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      procedencia: procedencia
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: a3e20e22-2af1-4b32-a8a3-14bc0d0a20cd
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Comentarios sobre el sitio web'
+recipients:
+  - duvan.zafra@tecno-makers.com
+reply: ''
+weight: 0
+message: 'Su mensaje ha sido recibido con &eacute;xito, muy pronto estableceremos contacto con usted. Gracias por escribirnos.'
+redirect: ''

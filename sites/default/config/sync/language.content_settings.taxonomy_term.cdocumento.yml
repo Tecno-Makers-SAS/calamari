@@ -1,0 +1,11 @@
+uuid: 891d0b1c-183a-4137-bad5-e398b897b74f
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cdocumento
+id: taxonomy_term.cdocumento
+target_entity_type_id: taxonomy_term
+target_bundle: cdocumento
+default_langcode: site_default
+language_alterable: false

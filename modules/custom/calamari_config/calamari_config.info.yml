@@ -1,0 +1,6 @@
+name: 'calamari_config'
+type: module
+description: 'Multiple setting Calamari'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'

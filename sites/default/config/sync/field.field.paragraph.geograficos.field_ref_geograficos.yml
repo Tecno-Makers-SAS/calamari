@@ -1,0 +1,29 @@
+uuid: 29a72925-6097-4c0c-bd92-1c14aee6525e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ref_geograficos
+    - paragraphs.paragraphs_type.geograficos
+    - taxonomy.vocabulary.geograficos
+id: paragraph.geograficos.field_ref_geograficos
+field_name: field_ref_geograficos
+entity_type: paragraph
+bundle: geograficos
+label: Geográficos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      geograficos: geograficos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

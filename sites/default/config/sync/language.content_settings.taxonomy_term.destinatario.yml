@@ -1,0 +1,11 @@
+uuid: 1a0c79f1-2154-4885-a50e-9e6d2769fcb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.destinatario
+id: taxonomy_term.destinatario
+target_entity_type_id: taxonomy_term
+target_bundle: destinatario
+default_langcode: site_default
+language_alterable: false

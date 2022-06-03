@@ -1,0 +1,21 @@
+uuid: d65053b6-9cb3-488c-b342-3b751144afaa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_body1
+    - node.type.documento
+  module:
+    - text
+id: node.documento.field_doc_body1
+field_name: field_doc_body1
+entity_type: node
+bundle: documento
+label: 'Descripción Nivel 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: c2084149-136d-422e-b696-edd66d857ccd
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3d04a066-d9bb-4957-be3d-a092f88685fe'
+  module:
+    - block_content
+  theme:
+    - calamari
+id: logo_blanco
+theme: calamari
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:3d04a066-d9bb-4957-be3d-a092f88685fe'
+settings:
+  id: 'block_content:3d04a066-d9bb-4957-be3d-a092f88685fe'
+  label: logo_blanco
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

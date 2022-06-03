@@ -1,0 +1,25 @@
+uuid: e152eee4-f0cc-46ff-a52d-9a638498e310
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texto_largo.field_body
+    - paragraphs.paragraphs_type.texto_largo
+  module:
+    - text
+id: paragraph.texto_largo.default
+targetEntityType: paragraph
+bundle: texto_largo
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

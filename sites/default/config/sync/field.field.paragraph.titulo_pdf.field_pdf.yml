@@ -1,0 +1,27 @@
+uuid: fa6af224-c64c-4402-8cea-2499311bc29a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pdf
+    - paragraphs.paragraphs_type.titulo_pdf
+  module:
+    - file
+id: paragraph.titulo_pdf.field_pdf
+field_name: field_pdf
+entity_type: paragraph
+bundle: titulo_pdf
+label: pdf
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'pdfs_paragraphs/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

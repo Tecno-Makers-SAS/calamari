@@ -1,0 +1,8 @@
+uuid: 705eb4d1-a32c-4a06-b1cc-12ff733a3ced
+langcode: es
+status: true
+dependencies: {  }
+name: Procedencia
+vid: procedencia
+description: ''
+weight: 0

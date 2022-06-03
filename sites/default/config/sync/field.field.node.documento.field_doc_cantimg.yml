@@ -1,0 +1,23 @@
+uuid: 7e838eca-da79-4171-9712-937cbd2f6756
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_cantimg
+    - node.type.documento
+id: node.documento.field_doc_cantimg
+field_name: field_doc_cantimg
+entity_type: node
+bundle: documento
+label: 'Cantidad imágenes del documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

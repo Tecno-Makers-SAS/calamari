@@ -1,0 +1,347 @@
+uuid: 31947a77-245e-4892-853c-84a881ebe35d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.documento.field_doc_body1
+    - field.field.node.documento.field_doc_body2
+    - field.field.node.documento.field_doc_cantimg
+    - field.field.node.documento.field_doc_clasedoc
+    - field.field.node.documento.field_doc_destinatario
+    - field.field.node.documento.field_doc_fagi
+    - field.field.node.documento.field_doc_fexpedicion
+    - field.field.node.documento.field_doc_flimite
+    - field.field.node.documento.field_doc_geograficos
+    - field.field.node.documento.field_doc_institucion
+    - field.field.node.documento.field_doc_lexpedicion
+    - field.field.node.documento.field_doc_nfolio
+    - field.field.node.documento.field_doc_nimgdigital
+    - field.field.node.documento.field_doc_nlegajo
+    - field.field.node.documento.field_doc_nodoc
+    - field.field.node.documento.field_doc_nolibro
+    - field.field.node.documento.field_doc_procedencia
+    - field.field.node.documento.field_doc_remitente
+    - field.field.node.documento.field_doc_title
+    - field.field.node.documento.field_doc_topagi
+    - field.field.node.documento.field_doc_topologia
+    - field.field.node.documento.field_ref_onomasticos
+    - field.field.node.documento.field_ref_tematicos
+    - node.type.documento
+  module:
+    - chosen_field
+    - datetime
+    - field_group
+    - paragraphs
+    - path
+    - shs_chosen
+    - text
+third_party_settings:
+  field_group:
+    group_mubicacion:
+      children:
+        - field_doc_fagi
+        - field_doc_nlegajo
+        - field_doc_nolibro
+        - field_doc_nodoc
+        - field_doc_nfolio
+        - field_doc_nimgdigital
+        - field_doc_cantimg
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        effect: none
+        formatter: closed
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        speed: fast
+        attributes: ''
+      label: 'Módulo de Ubicación'
+    group_mdescripcion:
+      children:
+        - field_doc_topagi
+        - field_doc_clasedoc
+        - field_doc_procedencia
+        - field_doc_remitente
+        - field_doc_destinatario
+        - field_doc_flimite
+        - field_doc_lexpedicion
+        - field_doc_fexpedicion
+        - title
+        - field_doc_title
+        - field_doc_body1
+        - field_doc_body2
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Módulo de Descripción'
+    group_mdescriptores:
+      children:
+        - field_ref_onomasticos
+        - field_ref_tematicos
+        - field_doc_institucion
+        - field_doc_geograficos
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Módulo Descriptores'
+id: node.documento.default
+targetEntityType: node
+bundle: documento
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_doc_body1:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_doc_body2:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_doc_cantimg:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_doc_clasedoc:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_destinatario:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_fagi:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_fexpedicion:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_doc_flimite:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_doc_geograficos:
+    type: entity_reference_paragraphs
+    weight: 44
+    settings:
+      title: Párrafo
+      title_plural: Parráfos
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: geograficos
+    third_party_settings: {  }
+    region: content
+  field_doc_institucion:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_lexpedicion:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_nfolio:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_doc_nimgdigital:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_doc_nlegajo:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_doc_nodoc:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_doc_nolibro:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_doc_procedencia:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_remitente:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_title:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_doc_topagi:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_doc_topologia:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_ref_onomasticos:
+    type: entity_reference_paragraphs
+    weight: 41
+    settings:
+      title: Párrafo
+      title_plural: Parráfos
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_ref_tematicos:
+    weight: 42
+    settings:
+      chosen_override: false
+      chosen_settings:
+        disable_search: false
+        search_contains: false
+        placeholder_text_multiple: 'Elija algunas opciones'
+        placeholder_text_single: 'Elige una opción'
+        no_results_text: 'No hay resultados coincidentes'
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
+    third_party_settings: {  }
+    type: options_shs_chosen
+    region: content
+  langcode:
+    type: language_select
+    weight: 8
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: chosen_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

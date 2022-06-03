@@ -1,0 +1,14 @@
+uuid: 320728e5-84ac-4107-9b0f-3363b8990f2b
+name: Calamari
+mail: contacto@catalogocalamari.com
+slogan: ''
+page:
+  403: /node/23
+  404: /node/22
+  front: /node/21
+admin_compact_mode: false
+weight_select_max: 100
+langcode: es
+default_langcode: es
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

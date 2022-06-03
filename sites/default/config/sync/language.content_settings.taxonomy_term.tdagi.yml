@@ -1,0 +1,11 @@
+uuid: 2a3791ee-b039-4d27-b990-122acb1a7a99
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tdagi
+id: taxonomy_term.tdagi
+target_entity_type_id: taxonomy_term
+target_bundle: tdagi
+default_langcode: site_default
+language_alterable: false

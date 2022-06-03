@@ -1,0 +1,21 @@
+uuid: 279090cd-7223-48db-bfde-6c0043d218b1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_fexpedicion
+    - node.type.documento
+  module:
+    - datetime
+id: node.documento.field_doc_fexpedicion
+field_name: field_doc_fexpedicion
+entity_type: node
+bundle: documento
+label: 'Fecha de expedición'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

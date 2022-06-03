@@ -1,0 +1,11 @@
+uuid: d3abb678-3f91-4bf9-a96a-9ad6f743ebbf
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topologia
+id: taxonomy_term.topologia
+target_entity_type_id: taxonomy_term
+target_bundle: topologia
+default_langcode: site_default
+language_alterable: false

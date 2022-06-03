@@ -1,0 +1,29 @@
+uuid: 97f12add-a4ff-445b-86b2-36613908e2b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ref_docpueblo
+    - paragraphs.paragraphs_type.geograficos
+    - taxonomy.vocabulary.doc_original_pueblo
+id: paragraph.geograficos.field_ref_docpueblo
+field_name: field_ref_docpueblo
+entity_type: paragraph
+bundle: geograficos
+label: 'Según doc. original Pueblo / ciudad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      doc_original_pueblo: doc_original_pueblo
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

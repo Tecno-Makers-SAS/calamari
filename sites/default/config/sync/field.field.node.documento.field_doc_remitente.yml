@@ -1,0 +1,29 @@
+uuid: a99ce6c3-e352-4c91-98d9-f857d8063f6d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_remitente
+    - node.type.documento
+    - taxonomy.vocabulary.remitente
+id: node.documento.field_doc_remitente
+field_name: field_doc_remitente
+entity_type: node
+bundle: documento
+label: Remitente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      remitente: remitente
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

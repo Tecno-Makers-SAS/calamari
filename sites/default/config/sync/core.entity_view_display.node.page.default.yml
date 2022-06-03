@@ -1,0 +1,33 @@
+uuid: 12bf6187-0fa3-41fa-b5bf-204144b1c8a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_gnal_parrafo
+    - field.field.node.page.field_imagenes
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_gnal_parrafo:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_imagenes: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

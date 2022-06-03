@@ -1,0 +1,43 @@
+uuid: 32f00318-d57e-40be-87f1-1e14aca69fc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_geograficos
+    - node.type.documento
+    - paragraphs.paragraphs_type.geograficos
+  module:
+    - entity_reference_revisions
+id: node.documento.field_doc_geograficos
+field_name: field_doc_geograficos
+entity_type: node
+bundle: documento
+label: Geográficos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      geograficos: geograficos
+    target_bundles_drag_drop:
+      geograficos:
+        enabled: true
+        weight: 6
+      onomasticos:
+        weight: 7
+        enabled: false
+      texto_largo:
+        weight: 8
+        enabled: false
+      title_images:
+        weight: 9
+        enabled: false
+      title_video:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,33 @@
+uuid: e2137c8c-d498-4de7-ae98-c8fdd1d802a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.documentos
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - calamari
+third_party_settings:
+  block_class:
+    classes: block_search
+id: formularioexpuestodocumentospage_1
+theme: calamari
+region: filters
+weight: -7
+provider: null
+plugin: 'views_exposed_filter_block:documentos-page_1'
+settings:
+  id: 'views_exposed_filter_block:documentos-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/documentos"
+    negate: false
+    context_mapping: {  }

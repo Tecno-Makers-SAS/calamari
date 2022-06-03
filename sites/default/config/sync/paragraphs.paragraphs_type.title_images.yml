@@ -1,0 +1,9 @@
+uuid: 4b83f9d2-53e3-42dc-91a5-2c6386ddcec3
+langcode: es
+status: true
+dependencies: {  }
+id: title_images
+label: 'Title + Images'
+icon_uuid: null
+description: 'Multiple Images'
+behavior_plugins: {  }

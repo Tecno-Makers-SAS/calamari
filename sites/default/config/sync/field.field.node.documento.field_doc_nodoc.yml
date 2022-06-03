@@ -1,0 +1,19 @@
+uuid: 29459a10-980e-477a-a3b3-816eebd3ddc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_nodoc
+    - node.type.documento
+id: node.documento.field_doc_nodoc
+field_name: field_doc_nodoc
+entity_type: node
+bundle: documento
+label: 'No Documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

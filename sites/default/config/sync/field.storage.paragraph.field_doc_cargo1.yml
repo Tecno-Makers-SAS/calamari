@@ -1,0 +1,20 @@
+uuid: 99728a93-b3fc-42b0-b134-ea32cc82cccd
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_doc_cargo1
+field_name: field_doc_cargo1
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

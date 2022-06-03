@@ -1,0 +1,24 @@
+uuid: 1f6c503f-f3ae-4b93-bbce-4d21e75059cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cdocumento
+id: taxonomy_term.cdocumento.default
+targetEntityType: taxonomy_term
+bundle: cdocumento
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  status: true

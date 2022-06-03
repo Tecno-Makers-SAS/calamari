@@ -1,0 +1,29 @@
+uuid: 6f6b7b49-cf7a-4695-ae25-bffae361f81e
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.personas_mencionadas
+  module:
+    - facets
+    - system
+  theme:
+    - calamari
+id: personasmencionadas
+theme: calamari
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:personas_mencionadas'
+settings:
+  id: 'facet_block:personas_mencionadas'
+  label: 'Personas mencionadas'
+  provider: facets
+  label_display: visible
+  block_id: personasmencionadas
+visibility:
+  request_path:
+    id: request_path
+    pages: /documentos
+    negate: false
+    context_mapping: {  }

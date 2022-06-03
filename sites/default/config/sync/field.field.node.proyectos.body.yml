@@ -1,0 +1,23 @@
+uuid: 1e94f501-92c7-467f-af37-55dfef844fb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.proyectos
+  module:
+    - text
+id: node.proyectos.body
+field_name: body
+entity_type: node
+bundle: proyectos
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,8 @@
+uuid: 2fa19b01-b613-47f2-aaff-053ab251a4ee
+langcode: es
+status: true
+dependencies: {  }
+name: Temáticos
+vid: tematicos
+description: ''
+weight: 0

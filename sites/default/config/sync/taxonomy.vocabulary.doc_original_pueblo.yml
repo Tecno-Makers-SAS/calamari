@@ -1,0 +1,8 @@
+uuid: 3e266b82-721e-4bd0-a78e-f830624f4f4c
+langcode: es
+status: true
+dependencies: {  }
+name: 'Doc Original Pueblo'
+vid: doc_original_pueblo
+description: ''
+weight: 0

@@ -1,0 +1,165 @@
+{%
+  set classes = [
+  node.bundle|clean_class,
+  node.isPromoted() ? 'is-promoted',
+  node.isSticky() ? 'is-sticky',
+  not node.isPublished() ? 'is-unpublished',
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {# <div class="col-sm-3">
+    <img src="/themes/custom/calamari/images/foto.png" class="img-fluid" alt="calamari"/>
+    <div class="redes">Siganos: {{ content.addtoany }}</div>
+  </div> #}
+  <div class="colxs-12 col-sm-12 page-docs-content">
+    <div class="header_document">
+      <div class="content">
+        <div class="ico-doc">Documento</div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-10">
+            <h2{{ title_attributes }}>{{ label }}</h2>
+          </div>
+          <div class="col-xs-12 col-sm-2">{{ content.printable_navigation }}</div>
+        </div>
+        <div class="fexped">{{ content.field_doc_fexpedicion }}</div>
+      </div>
+    </div>
+    <div{{ content_attributes.addClass('content') }}>
+      <!-- Ubicacion -->
+      <div class="card first-card">
+        <div class="card-header">Módulo de Ubicación</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <div><b>No. Catalogación:</b> {{ label }}</div>
+              {{ content.field_doc_fagi }}
+              {{ content.field_doc_nlegajo }}
+              {{ content.field_doc_nolibro }}
+            </div>
+            <div class="col-sm-6">
+              {{ content.field_doc_nodoc }}
+              {{ content.field_doc_nfolio }}
+              {{ content.field_doc_nimgdigital }}
+              {{ content.field_doc_cantimg }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Descripción -->
+      <div class="card">
+        <div class="card-header">Módulo de Descripción</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              {{ content.field_doc_topagi }}
+              {{ content.field_doc_clasedoc }}
+              {{ content.field_doc_procedencia }}
+              {{ content.field_doc_remitente }}
+              {{ content.field_doc_destinatario }}
+            </div>
+            <div class="col-sm-6">
+              {{ content.field_doc_flimite }}
+              {{ content.field_doc_lexpedicion }}
+              {{ content.field_doc_fexpedicion }}
+              {{ content.field_doc_title }}
+            </div>
+          </div>
+          {{ content.field_doc_body1 }}
+          {{ content.field_doc_body2 }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Descriptores -->
+    <div class="card">
+      <div class="card-header">Módulo de descriptores</div>
+      <div class="card-body">
+        <div class="panel panel-default panel-onomastico">
+          <div class="panel-heading">Onomásticos</div>
+          <div class="panel-body">
+            <div class="table-responsive-sm">
+              {% if node.field_ref_onomasticos|length > 0 %}
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th>Personas Mencionadas</th>
+                    <th>Cargo 1</th>
+                    <th>Cargo 2</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {{ content.field_ref_onomasticos }}
+                  </tbody>
+                </table>
+              {% else %}
+                <div class="not_results">
+                  <div class="content">
+                    <p>Lo sentimos no se encuentra documentación relacionada a este campo</p>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default panel-tematicos">
+          <div class="panel-heading">Temáticos</div>
+          <div class="panel-body">
+            {% if node.field_ref_tematicos|length > 0 %}
+              {{ content.field_ref_tematicos }}
+            {% else %}
+              <div class="not_results">
+                <div class="content">
+                  <p>Lo sentimos no se encuentra documentación relacionada a este campo</p>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="panel panel-default panel-institucion">
+          <div class="panel-heading">Institución</div>
+          <div class="panel-body">
+            {% if node.field_doc_institucion|length > 0 %}
+              {{ content.field_doc_institucion }}
+            {% else %}
+              <div class="not_results">
+                <div class="content">
+                  <p>Lo sentimos no se encuentra documentación relacionada a este campo</p>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="panel panel-default panel-geograficos">
+              <div class="panel-body">
+            {% if node.field_doc_geograficos|length > 0 %}
+            <div class="table-responsive-sm">
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th colspan="2">Lugares mencionados en el original</th>
+                    <th>Ubicación geográfica actual</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{ content.field_doc_geograficos }}
+                </tbody>
+              </table>
+              {% else %}
+                <div class="not_results">
+                  <div class="content">
+                    <p>Lo sentimos no se encuentra documentación relacionada a este campo</p>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {#    <div class="link_item">
+        <a href="#">Archivo de Indias</a>
+    </div> #}
+  </div>
+</article>

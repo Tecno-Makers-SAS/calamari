@@ -1,0 +1,11 @@
+uuid: d4d6449d-285c-40de-a1f2-769af26a259f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.anexo
+id: node.anexo
+target_entity_type_id: node
+target_bundle: anexo
+default_langcode: site_default
+language_alterable: false

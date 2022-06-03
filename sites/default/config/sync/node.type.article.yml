@@ -1,0 +1,19 @@
+uuid: cf889cf5-9e77-439f-b553-704be4c6ce98
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Artículo
+type: article
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

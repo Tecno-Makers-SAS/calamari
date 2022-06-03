@@ -1,0 +1,56 @@
+uuid: e4d5452c-09c3-4108-8fa4-836acab42ab9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.geograficos.field_ref_docpueblo
+    - field.field.paragraph.geograficos.field_ref_docregion
+    - field.field.paragraph.geograficos.field_ref_geograficos
+    - field.field.paragraph.geograficos.field_ref_n5lugar
+    - paragraphs.paragraphs_type.geograficos
+  module:
+    - chosen_field
+    - shs_chosen
+id: paragraph.geograficos.default
+targetEntityType: paragraph
+bundle: geograficos
+mode: default
+content:
+  field_ref_docpueblo:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_ref_docregion:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_ref_geograficos:
+    weight: 0
+    settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
+      chosen_override: false
+      chosen_settings:
+        disable_search: false
+        search_contains: false
+        placeholder_text_multiple: 'Elija algunas opciones'
+        placeholder_text_single: 'Elige una opción'
+        no_results_text: 'No hay resultados coincidentes'
+    third_party_settings: {  }
+    type: options_shs_chosen
+    region: content
+  field_ref_n5lugar:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+hidden:
+  created: true
+  status: true

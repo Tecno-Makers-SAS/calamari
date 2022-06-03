@@ -1,0 +1,98 @@
+<div class="layout-container">
+
+  {{ page.navigation}}
+
+  <header role="banner">
+    <a class="btn_toggle_mobile">ic</a>
+    <div class="block_menu">
+      <div class="container">
+          {{ page.header }}
+      </div>
+    </div>
+  </header>
+  <div class="region_top_info">
+      <div class="container">
+        {# Highlighted #}
+        {% if page.highlighted %}
+          {% block highlighted %}
+            <div class="highlighted">{{ page.highlighted }}</div>
+          {% endblock %}
+        {% endif %}
+
+        {# Help #}
+        {% if page.help %}
+          {% block help %}
+            {{ page.help }}
+          {% endblock %}
+        {% endif %}
+        {{ page.breadcrumb }}
+      </div>
+  </div>
+  {%
+    set content_classes = [
+      page.sidebar_first and page.sidebar_second ? 'layout_content container sidebars_active',
+      page.sidebar_first and page.sidebar_second is empty ? 'layout_content container sidebar_left ',
+      page.sidebar_second and page.sidebar_first is empty ? 'layout_content container sidebar_right',
+      page.sidebar_first is empty and page.sidebar_second is empty ? 'layout_content container full_content'
+    ]
+  %}
+  <div{{ content_attributes.addClass(content_classes) }}>
+      {# filters #}
+      {% block filters %}
+        <div class="container">
+          {{ page.filters }}
+        </div>
+      {% endblock %}
+
+      {# Sidebar First #}
+      {% if page.sidebar_first %}
+        {% block sidebar_first %}
+          <div class="filter_section">
+            <div class="show_filters collapsed">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2 class="title-filters">Ver filtros</h2>
+          </div>
+          <aside class="sidebar_left_content" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endblock %}
+      {% endif %}
+
+      {# Content #}
+      <section class="main_container">
+        {# Content #}
+        {% block content %}
+            <a id="main-content"></a>
+            <div class="container">
+              {{ page.content }}
+            </div>
+        {% endblock %}
+      </section>
+  </div>
+  <footer role="contentinfo" class="footer_calamari" id="footer">
+      <div class="top_footer">
+          <div class="container">
+              {% if page.footer%}
+                  <div class="item_footer">
+                      <div class="footer_content">
+                          {{ page.footer}}
+                      </div>
+                  </div>
+              {% endif %}
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="container">
+              {% if page.footer_bottom %}
+                  <div class="content_bottom" role="complementary">
+                    {{ page.footer_bottom }}
+                  </div>
+              {% endif %}
+          </div>
+      </div>
+  </footer>
+
+</div>{# /.layout-container #}

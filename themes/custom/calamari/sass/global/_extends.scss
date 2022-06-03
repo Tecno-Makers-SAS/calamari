@@ -1,0 +1,90 @@
+%title{
+	font-size: 40px;	
+	font-weight: bold;	
+	line-height: 48px;
+}
+%label{
+	font-size: 18px;	
+	font-weight: bold;	
+	line-height: 20px;
+}
+%subtitle{
+	color: $thirdColor;
+	font-size: 24px;	
+	font-weight: bold;	
+	line-height: 32px;
+	margin-bottom: 20px;
+}
+%tag{
+	color: $secondColor;
+	font-size: 12px;	
+	font-weight: bold;	
+	line-height: 24px;
+}
+%link{
+	color: $mainColor;
+	font-size: 12px;	
+	line-height: 24px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+%description{
+	font-size: 18px;	
+	line-height: 24px;
+}
+%btn_green{
+	background: $mainColor;
+	border:1px solid $mainColor;
+	border-radius: 0px;
+	color: $lightColor;
+	display: inline-block;
+	font-size: 18px;	
+	font-weight: bold;	
+	font-weight: bold;
+	height: 42px;
+	line-height: 42px;
+	padding:0 25px;
+	&:hover,
+	&:active:focus,
+	&:active:hover,
+	&:active.focus{
+		background:$lightColor;
+		border:1px solid $mainColor;
+		color: $mainColor;
+		text-decoration: none;
+		outline: none;
+	}
+
+}
+%icons{
+	display: inline-block;
+	font-family: $iconFont;
+	vertical-align: middle;
+}
+%blockFluid{
+	left: -50vw;
+	margin-left: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+@media screen and (max-width: 1100px){
+	%title{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	%subtitle{
+		font-size: 24px;
+		line-height: 32px;
+	}
+	%description{
+		font-size: 16px;	
+		line-height: 24px;
+	}
+}
+@media screen and (max-width:320px){ 
+	%title{
+		font-size: 35px;
+		line-height: 35px;
+	}
+}

@@ -1,0 +1,22 @@
+uuid: e05d526a-5973-4a5f-8c97-58b8d3195a8e
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - calamari
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: calamari_messages
+theme: calamari
+region: footer_bottom
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  provider: system
+  label_display: '0'
+visibility: {  }

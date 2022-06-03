@@ -1,0 +1,22 @@
+uuid: d0061ea5-7270-48b2-996d-72e448be671b
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - calamari
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: calamari_content
+theme: calamari
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  provider: system
+  label_display: '0'
+visibility: {  }

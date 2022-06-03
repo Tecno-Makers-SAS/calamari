@@ -1,0 +1,11 @@
+uuid: a0889e61-2e0a-4c9b-9e8e-e93bf059e751
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.procedencia
+id: taxonomy_term.procedencia
+target_entity_type_id: taxonomy_term
+target_bundle: procedencia
+default_langcode: site_default
+language_alterable: false

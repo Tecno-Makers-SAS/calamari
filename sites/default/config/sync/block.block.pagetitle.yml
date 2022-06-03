@@ -1,0 +1,25 @@
+uuid: 0bfcbda5-6f56-4f5f-9d3a-c24a50f6ae36
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - calamari
+id: pagetitle
+theme: calamari
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /contacto
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,355 @@
+uuid: 6f828861-bd77-4906-b256-ab58a83384e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_onomasticos
+    - field.storage.paragraph.field_doc_cargo1
+    - field.storage.paragraph.field_doc_cargo2
+    - field.storage.node.field_doc_clasedoc
+    - field.storage.node.field_doc_body1
+    - field.storage.node.field_doc_body2
+    - field.storage.node.field_doc_destinatario
+    - field.storage.node.field_doc_fexpedicion
+    - field.storage.node.field_doc_flimite
+    - field.storage.node.field_doc_fagi
+    - field.storage.node.field_doc_geograficos
+    - field.storage.paragraph.field_ref_geograficos
+    - field.storage.node.field_doc_institucion
+    - field.storage.node.field_doc_lexpedicion
+    - field.storage.paragraph.field_ref_n5lugar
+    - field.storage.paragraph.field_doc_pmencionadas
+    - field.storage.node.field_doc_procedencia
+    - field.storage.node.field_doc_remitente
+    - field.storage.paragraph.field_ref_docpueblo
+    - field.storage.paragraph.field_ref_docregion
+    - field.storage.node.field_ref_tematicos
+    - field.storage.node.field_doc_topagi
+    - field.storage.node.field_doc_title
+    - search_api.server.database
+  module:
+    - paragraphs
+    - node
+    - search_api
+id: documents
+name: documents
+description: ''
+read_only: false
+field_settings:
+  field_doc_body1:
+    label: 'Descripción Nivel 1'
+    datasource_id: 'entity:node'
+    property_path: field_doc_body1
+    type: text
+    boost: 0.8
+    dependencies:
+      config:
+        - field.storage.node.field_doc_body1
+  field_doc_body2:
+    label: 'Descripción Nivel 2'
+    datasource_id: 'entity:node'
+    property_path: field_doc_body2
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_doc_body2
+  field_doc_cargo1:
+    label: Cargo1
+    datasource_id: 'entity:node'
+    property_path: 'field_ref_onomasticos:entity:field_doc_cargo1'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ref_onomasticos
+        - field.storage.paragraph.field_doc_cargo1
+      module:
+        - paragraphs
+  field_doc_cargo2:
+    label: Cargo2
+    datasource_id: 'entity:node'
+    property_path: 'field_ref_onomasticos:entity:field_doc_cargo2'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ref_onomasticos
+        - field.storage.paragraph.field_doc_cargo2
+      module:
+        - paragraphs
+  field_doc_clasedoc:
+    label: 'Clase de documento'
+    datasource_id: 'entity:node'
+    property_path: field_doc_clasedoc
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_clasedoc
+  field_doc_destinatario:
+    label: Destinatario
+    datasource_id: 'entity:node'
+    property_path: field_doc_destinatario
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_destinatario
+  field_doc_fagi:
+    label: 'Fondo en el AGI'
+    datasource_id: 'entity:node'
+    property_path: field_doc_fagi
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_fagi
+  field_doc_fexpedicion:
+    label: 'Fecha de expedición'
+    datasource_id: 'entity:node'
+    property_path: field_doc_fexpedicion
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_doc_fexpedicion
+  field_doc_flimite:
+    label: 'Fechas límites'
+    datasource_id: 'entity:node'
+    property_path: field_doc_flimite
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_doc_flimite
+  field_doc_institucion:
+    label: Instituciones
+    datasource_id: 'entity:node'
+    property_path: field_doc_institucion
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_institucion
+  field_doc_lexpedicion:
+    label: 'Lugar de expedición'
+    datasource_id: 'entity:node'
+    property_path: field_doc_lexpedicion
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_lexpedicion
+  field_doc_pmencionadas:
+    label: 'Personas mencionadas'
+    datasource_id: 'entity:node'
+    property_path: 'field_ref_onomasticos:entity:field_doc_pmencionadas'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ref_onomasticos
+        - field.storage.paragraph.field_doc_pmencionadas
+      module:
+        - paragraphs
+  field_doc_procedencia:
+    label: Procedencia
+    datasource_id: 'entity:node'
+    property_path: field_doc_procedencia
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_procedencia
+  field_doc_remitente:
+    label: Remitente
+    datasource_id: 'entity:node'
+    property_path: field_doc_remitente
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_remitente
+  field_doc_title:
+    label: 'Titulo Completo'
+    datasource_id: 'entity:node'
+    property_path: field_doc_title
+    type: text
+    boost: 0.5
+    dependencies:
+      config:
+        - field.storage.node.field_doc_title
+  field_doc_topagi:
+    label: 'Tipología documental del AGI'
+    datasource_id: 'entity:node'
+    property_path: field_doc_topagi
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_topagi
+  field_ref_docpueblo:
+    label: 'Según doc. original Pueblo / ciudad'
+    datasource_id: 'entity:node'
+    property_path: 'field_doc_geograficos:entity:field_ref_docpueblo'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_geograficos
+        - field.storage.paragraph.field_ref_docpueblo
+      module:
+        - paragraphs
+  field_ref_docregion:
+    label: 'Según doc original Región'
+    datasource_id: 'entity:node'
+    property_path: 'field_doc_geograficos:entity:field_ref_docregion'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_geograficos
+        - field.storage.paragraph.field_ref_docregion
+      module:
+        - paragraphs
+  field_ref_geograficos:
+    label: Geográficos
+    datasource_id: 'entity:node'
+    property_path: 'field_doc_geograficos:entity:field_ref_geograficos'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_geograficos
+        - field.storage.paragraph.field_ref_geograficos
+      module:
+        - paragraphs
+  field_ref_n5lugar:
+    label: 'Nivel 5 - Lugar específico'
+    datasource_id: 'entity:node'
+    property_path: 'field_doc_geograficos:entity:field_ref_n5lugar'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_geograficos
+        - field.storage.paragraph.field_ref_n5lugar
+      module:
+        - paragraphs
+  field_ref_tematicos:
+    label: Temáticos
+    datasource_id: 'entity:node'
+    property_path: field_ref_tematicos
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ref_tematicos
+  texto_full:
+    label: texto_full
+    property_path: aggregated_field
+    type: text
+    configuration:
+      type: concat
+      fields:
+        - 'entity:node/field_doc_body1'
+        - 'entity:node/title'
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 2
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - documento
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  hierarchy:
+    fields:
+      field_ref_geograficos: taxonomy_term-parent
+      field_ref_tematicos: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  html_filter:
+    all_fields: true
+    fields:
+      - field_doc_body1
+      - field_doc_body2
+      - field_doc_flimite
+      - field_doc_title
+      - texto_full
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignore_character:
+    all_fields: true
+    fields:
+      - field_doc_body1
+      - field_doc_body2
+      - field_doc_flimite
+      - field_doc_title
+      - texto_full
+      - title
+    ignorable: '[''¿¡!?,.:;]'
+    ignorable_classes:
+      - Pc
+      - Pd
+      - Pe
+      - Pf
+      - Pi
+      - Po
+      - Ps
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  ignorecase:
+    all_fields: true
+    fields:
+      - field_doc_body1
+      - field_doc_body2
+      - field_doc_flimite
+      - field_doc_title
+      - texto_full
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
+    all_fields: true
+    fields:
+      - field_doc_body1
+      - field_doc_body2
+      - field_doc_title
+      - texto_full
+      - title
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: true
+    fields:
+      - field_doc_body1
+      - field_doc_body2
+      - field_doc_flimite
+      - field_doc_title
+      - texto_full
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: database

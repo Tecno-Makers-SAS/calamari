@@ -1,0 +1,7 @@
+importexcel.import_excel_form:
+  path: '/ImportExcel/Form'
+  defaults:
+    _form: '\Drupal\importexcel\Form\ImportExcelForm'
+    _title: 'ImportExcelForm'
+  requirements:
+    _access: 'TRUE'

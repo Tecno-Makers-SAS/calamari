@@ -1,0 +1,46 @@
+uuid: f2a2c12e-62b9-4d58-9248-8df6add76e6d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.anexo.body
+    - field.field.node.anexo.field_archivo_pdf
+    - node.type.anexo
+  module:
+    - pdf
+    - text
+    - user
+id: node.anexo.default
+targetEntityType: node
+bundle: anexo
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_archivo_pdf:
+    weight: 102
+    label: hidden
+    settings:
+      keep_pdfjs: '1'
+      width: 100%
+      height: 1000px
+      page: ''
+      zoom: page-width
+      custom_zoom: ''
+      pagemode: ''
+    third_party_settings: {  }
+    type: pdf_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

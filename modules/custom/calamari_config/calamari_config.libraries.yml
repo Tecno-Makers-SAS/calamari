@@ -1,0 +1,6 @@
+calamari-init:
+  version: 1.x
+  js:
+    js/calamari-init.js: {}
+  dependencies:
+    - core/drupalSettings

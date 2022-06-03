@@ -1,0 +1,51 @@
+uuid: b438e168-2c73-4a24-a5ee-cc052757832b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.geograficos.field_ref_docpueblo
+    - field.field.paragraph.geograficos.field_ref_docregion
+    - field.field.paragraph.geograficos.field_ref_geograficos
+    - field.field.paragraph.geograficos.field_ref_n5lugar
+    - paragraphs.paragraphs_type.geograficos
+  module:
+    - shs
+id: paragraph.geograficos.default
+targetEntityType: paragraph
+bundle: geograficos
+mode: default
+content:
+  field_ref_docpueblo:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ref_docregion:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ref_geograficos:
+    weight: 0
+    label: hidden
+    settings:
+      link: 0
+    third_party_settings: {  }
+    type: entity_reference_shs
+    region: content
+  field_ref_n5lugar:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  search_api_excerpt: true

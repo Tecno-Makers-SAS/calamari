@@ -1,0 +1,8 @@
+uuid: 69aeb00a-aac3-4424-8a18-b518f139e37b
+langcode: es
+status: true
+dependencies: {  }
+name: Instituciones
+vid: instituciones
+description: ''
+weight: 0

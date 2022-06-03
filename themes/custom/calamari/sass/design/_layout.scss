@@ -1,0 +1,301 @@
+.toolbar-fixed{
+	header{
+		top: 90px;
+	}
+}
+header{
+	background:$lightColor;
+	left: 0;
+	position:fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	&.header_green{
+		background:$mainColor;
+	}
+	.btn_toggle_mobile{
+		cursor: pointer;
+		display: none;
+		font-size: 0;
+		left: 19px;
+		position:fixed;
+		top: 15px;
+		z-index: 2;
+		&:before{
+			content: "\e909";
+			color: $mainColor;
+			font-family: $iconFont;
+			font-size: 20px;
+		}
+		&:hover,
+		&:focus{
+			opacity:0.8;
+		}
+		&.change_icon{
+			&:before{
+				content: "\e908";
+			}
+		}
+	}
+	.container{
+		border-bottom: 1px solid $borderLight;
+	}
+	.block_menu{
+		.region-header{
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			.logo{
+				display: inline-block;
+				float: none!important;
+				margin:0;
+				max-width: 220px;
+				padding:20px 0;
+				vertical-align: middle;
+				width: 100%;
+				img{
+					height: auto;
+					max-width: 100%;
+				}
+			}
+			#block-calamari-main-menu{
+				display: inline-block;
+				text-align: right;
+				vertical-align: middle;
+				width: calc(100% - 220px);
+				.navbar-nav{
+					float: none;
+					li{
+						display: inline-block;
+						float: none;
+						vertical-align: middle;
+						a{
+							color: $thirdColor;
+							display: block;
+							font-size: 15px;
+							font-weight: 900;
+							line-height: 22px;
+							padding: 10px 20px;
+							position:relative;
+							&:hover,
+							&:focus{
+								background:transparent;
+								color: $mainColor;
+								outline: none;
+								text-decoration: none;
+								&:after{
+									opacity:1;
+									width: 100%;
+									@include prefix(transition ,all .5s, webkit moz o ms);
+								}
+							}
+							&:after{
+								background: $fiveColor;
+								bottom: 0;
+								content:'';
+								display: block;
+								height: 1px;
+								left: 0;
+								opacity:0;
+								position:absolute;
+								width: 0;
+								@include prefix(transition ,all .5s, webkit moz o ms);
+							}
+						}
+						&.active{
+							a{
+								color: $mainColor;
+								&:after{
+									opacity:1;
+									width: 100%;
+									@include prefix(transition ,all .5s, webkit moz o ms);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.path-frontpage {
+  header {
+    .block_menu {
+      .region-header {
+        .logo {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer_calamari{
+	.container{
+		max-width: 100%;
+		padding:0px;
+	}
+	.logo_footer,
+	#block-logo-blanco{
+		background:$bk;
+		padding:30px 15px;
+		text-align: center;
+		img{
+			display: block;
+			height: auto;
+			margin:0 auto;
+			max-width: 55px;
+		}
+		p{
+			display: none;
+		}
+	}
+	#block-logo-blanco{
+	}
+	.footer_bottom{
+		background:$fourColor;
+		padding:15px;
+		text-align: center;
+		.field--name-body{
+			color: $lightColor;
+			p{
+				font-size: 12px;
+				margin:0;
+			}
+			a{
+				color: $lightColor;
+				display: inline-block;
+				font-size: 12px;
+				line-height: 24px;
+				text-decoration: underline;
+			}
+		}
+
+		.powered{
+			align-items:center;
+			display: flex;
+			justify-content: center;
+			font-size: 12px;
+			line-height: 14px;
+			margin-top: 15px;
+			p{
+				display: block;
+				margin:0;
+			}
+			img{
+				height: auto;
+				margin:0;
+				margin-left: 10px;
+				max-width: 150px;
+			}
+		}
+		ul{
+			li{
+				display: inline-block;
+				vertical-align: middle;
+				a{
+					color: $lightColor;
+					display: inline-block;
+					font-size: 12px;
+					line-height: 24px;
+					text-decoration: underline;
+				}
+				&:after{
+					content: '|';
+					margin:0 3px;
+				}
+				&:last-child{
+					&:after{
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1480px){
+}
+@media screen and (max-width: 960px){
+	header {
+		.btn_toggle_mobile{
+			display: block;
+		}
+		.block_menu {
+			.region-header {
+				.logo{
+					margin:0 auto;
+					max-width: 140px;
+					padding:15px 0;
+					width: auto;
+				}
+				#block-calamari-main-menu{
+					background:$lightColor;
+					height: 100%;
+					left: -100%;
+					position:fixed;
+					text-align: left;
+					top: 68px;
+					width: 100%;
+					@include prefix(transition ,left .5s, webkit moz o ms);
+					&.open_menu{
+						left: 0;
+						@include prefix(transition ,left .5s, webkit moz o ms);
+					}
+					.navbar-nav{
+						margin:0;
+						padding:20px 15px;
+						li{
+							display: block;
+							margin-bottom: 15px;
+							margin-right: 0;
+							&:last-child{
+								margin-right: 0;
+							}
+							a{
+								display: inline-block;
+								padding-left: 0;
+								text-transform: uppercase;
+								&:hover,
+								&:focus{
+									outline: none;
+									opacity:0.8;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px){
+	header {
+		.block_menu {
+			.region-header {
+				#block-calamari-main-menu{
+					overflow: auto;
+					top: 56px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 320px){
+	.footer_calamari {
+		.logo_footer,
+		#block-logo-blanco{
+			padding:15px;
+		}
+		.footer_bottom {
+			.field--name-body {
+				p{font-size: 11px;}
+				a{
+					font-size: 11px;
+				}
+			}
+		}
+	}
+
+}

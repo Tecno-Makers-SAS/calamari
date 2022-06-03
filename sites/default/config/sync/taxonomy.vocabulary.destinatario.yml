@@ -1,0 +1,8 @@
+uuid: 2cebddf3-eaa5-4bc7-8a68-103c4c5c695e
+langcode: es
+status: true
+dependencies: {  }
+name: Destinatario
+vid: destinatario
+description: ''
+weight: 0

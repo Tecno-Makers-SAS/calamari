@@ -1,0 +1,11 @@
+uuid: caa1901c-6417-4e87-ad02-19021ed85f2c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.documento
+id: node.documento
+target_entity_type_id: node
+target_bundle: documento
+default_langcode: site_default
+language_alterable: false
