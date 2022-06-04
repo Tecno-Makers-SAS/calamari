@@ -38,3 +38,32 @@ ul.shs li:after {
     content: '- '!important;
     margin: 0 0 0 10px!important;
 }
+
+.view-documentos .view-header {
+   text-align: left !important;
+}
+
+
+.view-documentos .view-header a{
+  display: inline-block;
+  float:right;
+  background: #1B9F90;
+  border: 1px solid #1B9F90;
+  border-radius: 0px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-weight: bold;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 25px;
+}
+
+.view-documentos .view-header a:hover{
+  background: #fff;
+  border: 1px solid #1B9F90;
+  color: #1B9F90;
+  text-decoration: none;
+  outline: none;
+}
