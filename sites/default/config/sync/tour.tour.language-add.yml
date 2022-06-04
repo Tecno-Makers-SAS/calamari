@@ -24,8 +24,8 @@ tips:
     plugin: text
     label: 'Seleccionar idioma'
     weight: 2
-    body: '<p>Seleccione un idioma de la lista, o seleccione "Idioma personalizado ..." al final de la lista.</p><p>Haga clic en el botón "Agregar idioma" cuando haya terminado de elegir su idioma.</p><p>Al agregar un idioma personalizado, usted obtendrá un formulario adicional donde se puede proporcionar el nombre, código y dirección del idioma.</p>'
     selector: '#edit-predefined-langcode'
+    body: '<p>Seleccione un idioma de la lista, o seleccione "Idioma personalizado ..." al final de la lista.</p><p>Haga clic en el botón "Agregar idioma" cuando haya terminado de elegir su idioma.</p><p>Al agregar un idioma personalizado, usted obtendrá un formulario adicional donde se puede proporcionar el nombre, código y dirección del idioma.</p>'
   language-add-continue:
     id: language-add-continue
     plugin: text

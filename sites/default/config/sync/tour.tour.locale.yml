@@ -24,43 +24,43 @@ tips:
     plugin: text
     label: 'Translation language'
     weight: 2
-    body: 'Elija el idioma que quiere traducir.'
     selector: '#edit-langcode'
+    body: 'Elija el idioma que quiere traducir.'
   locale-search:
     id: locale-search
     plugin: text
     label: Search
     weight: 3
-    body: 'Intruduzca la palabra u oración específica que usted desea traducir, también puede escribir solamente una parte de la palabra.'
     selector: '#edit-string'
+    body: 'Intruduzca la palabra u oración específica que usted desea traducir, también puede escribir solamente una parte de la palabra.'
   locale-filter:
     id: locale-filter
     plugin: text
     label: 'Filtrar la búsqueda'
     weight: 4
-    body: 'Puede buscar cadenas no traducidas si quiere traducir algo que todavía no está traducido. Si quiere modificar una traducción exitente, podría querer buscar solo cadenas traducidas.'
     selector: '#edit-translation'
+    body: 'Puede buscar cadenas no traducidas si quiere traducir algo que todavía no está traducido. Si quiere modificar una traducción exitente, podría querer buscar solo cadenas traducidas.'
   locale-submit:
     id: locale-submit
     plugin: text
     label: 'Aplicar sus criterios de búsqueda'
     weight: 5
-    body: 'Para aplicar su criterio de búsqueda, haga click en el botón <em>Filtrar</em>.'
     selector: '#edit-submit'
+    body: 'Para aplicar su criterio de búsqueda, haga click en el botón <em>Filtrar</em>.'
   locale-translate:
     id: locale-translate
     plugin: text
     label: Traducir
     weight: 6
-    body: 'Puede escribir su propia traducción en los campos de texto en la columna de la derecha. Intente fijarse en cual contexto el texto será usado para traducirlo de la manera apropiada.'
     selector: .js-form-type-textarea
+    body: 'Puede escribir su propia traducción en los campos de texto en la columna de la derecha. Intente fijarse en cual contexto el texto será usado para traducirlo de la manera apropiada.'
   locale-validate:
     id: locale-validate
     plugin: text
     label: 'Validar la traducción'
     weight: 7
-    body: 'Cuando haya terminado sus traducciones, haga clic en el botón <em>Guardar traducciones</em>. Usted debe guardar sus traducciones, cada vez antes de cambiar de página o hacer una nueva búsqueda.'
     selector: '#edit-submit--2'
+    body: 'Cuando haya terminado sus traducciones, haga clic en el botón <em>Guardar traducciones</em>. Usted debe guardar sus traducciones, cada vez antes de cambiar de página o hacer una nueva búsqueda.'
   locale-continue:
     id: locale-continue
     plugin: text

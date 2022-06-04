@@ -26,63 +26,63 @@ tips:
     plugin: text
     label: 'Mostrar en esta vista'
     weight: 2
-    body: 'Una visualización es una manera de mostrar los resultados, por ejemplo, como una página o un bloque. Una vista puede contener múltiples visualizaciones, las cuales figuran en esta lista. La visualización activa está resaltada.'
     selector: '#views-display-top'
+    body: 'Una visualización es una manera de mostrar los resultados, por ejemplo, como una página o un bloque. Una vista puede contener múltiples visualizaciones, las cuales figuran en esta lista. La visualización activa está resaltada.'
   views-ui-view-admin:
     id: views-ui-view-admin
     plugin: text
     label: 'Administración de Vista'
     weight: 3
-    body: 'Realice tareas administrativas, incluyendo añadir una descripción y crear un clon. Haga clic en el botón desplegable para ver las opciones disponibles.'
-    selector: '#views-display-extra-actions'
     position: left-start
+    selector: '#views-display-extra-actions'
+    body: 'Realice tareas administrativas, incluyendo añadir una descripción y crear un clon. Haga clic en el botón desplegable para ver las opciones disponibles.'
   views-ui-format:
     id: views-ui-format
     plugin: text
     label: 'Formato de salida'
     weight: 4
-    body: 'Seleccione cómo dar salida a los resultados. Por ejemplo, seleccione <em>Content</em> para dar salida a cada elemento por completo, utilizando los ajustes de visualización configurados. O seleccione <em>Fields</em>, lo que le permite producir sólo campos específicos para cada resultado. Se pueden añadir formatos adicionales instalando módulos en <em>extend</em> la funcionalidad básica de Drupal.'
     selector: .views-ui-display-tab-bucket.format
+    body: 'Seleccione cómo dar salida a los resultados. Por ejemplo, seleccione <em>Content</em> para dar salida a cada elemento por completo, utilizando los ajustes de visualización configurados. O seleccione <em>Fields</em>, lo que le permite producir sólo campos específicos para cada resultado. Se pueden añadir formatos adicionales instalando módulos en <em>extend</em> la funcionalidad básica de Drupal.'
   views-ui-fields:
     id: views-ui-fields
     plugin: text
     label: Campos
     weight: 5
-    body: 'Si esta vista utiliza campos, éstos se listan aquí. Puede hacer clic en un campo para configurarlo.'
     selector: .views-ui-display-tab-bucket.field
+    body: 'Si esta vista utiliza campos, éstos se listan aquí. Puede hacer clic en un campo para configurarlo.'
   views-ui-filter:
     id: views-ui-filter
     plugin: text
     label: 'Filtra tu vista'
     weight: 6
-    body: 'Añada filtros para limitar los resultados en la salida. Por ejemplo, para mostrar sólo el contenido que es <em>publicado</em>, usted agregaría un filtro para <em>Publicado</em> y seleccionaría <em>Si</em>.'
     selector: .views-ui-display-tab-bucket.filter
+    body: 'Añada filtros para limitar los resultados en la salida. Por ejemplo, para mostrar sólo el contenido que es <em>publicado</em>, usted agregaría un filtro para <em>Publicado</em> y seleccionaría <em>Si</em>.'
   views-ui-filter-operations:
     id: views-ui-filter-operations
     plugin: text
     label: 'Filtrar acciones'
     weight: 7
-    body: 'Agregue, reorganice o elimine los filtros.'
     selector: '.views-ui-display-tab-bucket.filter .dropbutton-widget'
+    body: 'Agregue, reorganice o elimine los filtros.'
   views-ui-sorts:
     id: views-ui-sorts
     plugin: text
     label: 'Criterios de ordenación'
     weight: 8
-    body: 'Controle el orden en el que se emiten los resultados. Haga clic en una regla de ordenación activa para configurarla.'
     selector: .views-ui-display-tab-bucket.sort
+    body: 'Controle el orden en el que se emiten los resultados. Haga clic en una regla de ordenación activa para configurarla.'
   views-ui-sorts-operations:
     id: views-ui-sorts-operations
     plugin: text
     label: 'Acciones de ordenación'
     weight: 9
-    body: 'Agregar, reorganizar o eliminar reglas de clasificación.'
     selector: '.views-ui-display-tab-bucket.sort .dropbutton-widget'
+    body: 'Agregar, reorganizar o eliminar reglas de clasificación.'
   views-ui-preview:
     id: views-ui-preview
     plugin: text
     label: Preview
     weight: 10
-    body: 'Muestra una vista previa de la salida de la vista.'
-    selector: '#preview-submit'
     position: left-start
+    selector: '#preview-submit'
+    body: 'Muestra una vista previa de la salida de la vista.'
