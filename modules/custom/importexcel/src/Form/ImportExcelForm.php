@@ -2,6 +2,7 @@
 namespace Drupal\importexcel\Form;
 
 use Drupal;
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -89,7 +90,6 @@ class ImportExcelForm extends FormBase {
   public function submitForm( array &$form, FormStateInterface $form_state ) {
     $image = $form_state->getValue('archivo');
     $totalrows = $form_state->getValue('totalfilas');
-
     $file = File::load( $image[0] );
     $file->save();
     $absolute_path = Drupal::service('file_system')->realpath($file->get('uri')->value);
@@ -110,7 +110,7 @@ class ImportExcelForm extends FormBase {
   protected function processFile( $dataVector, $totalrows ) {
     //Load Node
     $vectorSlice = array_slice($dataVector, 3, $totalrows);
-    $pageVector =  array_chunk($vectorSlice, 10);
+    $pageVector =  array_chunk($vectorSlice, 50);
     $operations = [];
     foreach ($pageVector as $small_vector){
       $operations[] = ['\Drupal\importexcel\Form\ImportExcelForm::batchProcessFile', [$small_vector]];
@@ -126,8 +126,7 @@ class ImportExcelForm extends FormBase {
     batch_set($batch);
   }
 
-  public static function batchProcessFile($dataVector, &$context) {
-
+  public static function batchProcessFile($dataVector) {
     foreach ( $dataVector as $row ) {
        $nid = self::getNidByField( 'title', $row['B'] );
         if( !empty($nid) ) {
@@ -138,10 +137,10 @@ class ImportExcelForm extends FormBase {
     }
 
     //info proccess batch
-    $batch_size=sizeof($dataVector);
-    $batch_number=sizeof($context['results'])+1;
+    /*$batch_size=sizeof($dataVector);
+    $batch_number=sizeof($context['results']) + 1;
     $context['message'] = sprintf("Importando %s nodes por Batch. Batch #%s", $batch_size, $batch_number);
-    $context['results'][] = sizeof($dataVector);
+    $context['results'][] = sizeof($dataVector);*/
   }
 
   public static function batchFinished($success, $results) {
@@ -149,7 +148,7 @@ class ImportExcelForm extends FormBase {
       $message = count($results). ' Registros procesados.';
     else
       $message = 'Importación Generada con error.';
-    Drupal::messenger()->addMessage($message);
+      Drupal::messenger()->addMessage($message);
   }
 
   public static function updateDoc( $nid, $objectNode ) {
@@ -218,13 +217,13 @@ class ImportExcelForm extends FormBase {
       }
       //Onomastico
       $onomastico = self::createOno(trim($objectNode['W']), trim($objectNode['X']), trim($objectNode['Y']));
-      
+
       if (is_array($onomastico)) {
         $node->field_ref_onomasticos[] = [
           'target_id' => $onomastico['id'],
           'target_revision_id' => $onomastico['rid']
-        ];       
-       
+        ];
+
       }
 
       //tematicos
@@ -243,9 +242,9 @@ class ImportExcelForm extends FormBase {
           'target_id' => $geografico['id'],
           'target_revision_id' => $geografico['rid'],
         ];
-      } 
+      }
        $node->save();
-    
+
     }catch (Exception $e){
       Drupal::logger('importexcel')->error($e->getMessage()."- Update Node: ".$objectNode['B']);
     }
@@ -294,6 +293,7 @@ class ImportExcelForm extends FormBase {
       $doc->set('field_doc_body2', $objectNode['V']);
       //onomastico
       $onomastico = self::createOno(trim($objectNode['W']), trim($objectNode['X']), trim($objectNode['Y']));
+
       if (is_array($onomastico)) {
         $arOno[] = [
           'target_id' => $onomastico['id'],
@@ -323,8 +323,8 @@ class ImportExcelForm extends FormBase {
         $doc->set('field_doc_geograficos', $arGeo);
       }
 
-      $doc->enforceIsNew();   
-      $doc->save();    
+      $doc->enforceIsNew();
+      $doc->save();
     } catch ( Exception $e){
       Drupal::logger('importexcel')->error($e->getMessage()."- Insert Node: ".$objectNode['B']);
     }
@@ -351,7 +351,6 @@ class ImportExcelForm extends FormBase {
   }
 
   public static function formatDateFile( $yy, $mm, $dd ) {
-
       if( !empty($dd) ) {
         $day = $dd;
       } else {
@@ -374,24 +373,24 @@ class ImportExcelForm extends FormBase {
   }
 
   // Create Onomastico
-  public static function createOno( $person, $job1, $job2 ) {
+  public static function createOno( $xperson, $xjob1, $xjob2 ) {
 
-      if(empty($person)){
+      if(empty($xperson)){
         $person = '_none';
       } else {
-        $person = ['target_id' => self::getTidByName($person, 'personas_mencionadas')];
+        $person = ['target_id' => self::getTidByName($xperson, 'personas_mencionadas')];
       }
 
-      if(empty($job1)){
+      if(empty($xjob1)){
         $job1 = '_none';
       } else {
-        $job1 = ['target_id' => self::getTidByName($job1, 'cargos')];
+        $job1 = ['target_id' => self::getTidByName($xjob1, 'cargos')];
       }
 
-      if(empty($job2)){
+      if(empty($xjob2)){
         $job2 = '_none';
       } else {
-        $job2 = ['target_id' => self::getTidByName($job2, 'cargos')];
+        $job2 = ['target_id' => self::getTidByName($xjob2, 'cargos')];
       }
 
       if( ( $person == '_none' ) && ( $job1 == '_none' ) && ($job2 == '_none') ) {
@@ -403,39 +402,46 @@ class ImportExcelForm extends FormBase {
           'field_doc_cargo1' => $job1,
           'field_doc_cargo2' => $job2
         ]);
+
+        $ar_tmp = [
+          'field_doc_pmencionadas' => $person,
+          'field_doc_cargo1' => $job1,
+          'field_doc_cargo2' => $job2
+        ];
         $paragraph->save();
         $ar_parag['id'] = $paragraph->id();
         $ar_parag['rid'] = $paragraph->getRevisionId();
+
       }
       return $ar_parag;
   }
 
 
   //Crear Geografico
-  public static function createGeo( $ubicacion, $lugar, $region, $pueblo ) {
+  public static function createGeo( $xubicacion, $xlugar, $xregion, $xpueblo ) {
 
-    if(empty($ubicacion) || $ubicacion == 0 ){
+    if(empty($xubicacion) || $xubicacion == 0 ){
       $ubicacion = '_none';
     } else {
-      $ubicacion = ['target_id' => $ubicacion ];
+      $ubicacion = ['target_id' => $xubicacion ];
     }
 
-    if(empty($lugar)){
+    if(empty($xlugar)){
       $lugar = '_none';
     } else {
-      $lugar = ['target_id' => self::getTidByName($lugar, 'nivel_5_lugar_especifico')];
+      $lugar = ['target_id' => self::getTidByName($xlugar, 'nivel_5_lugar_especifico')];
     }
 
-    if(empty($region)){
+    if(empty($xregion)){
       $region = '_none';
     } else {
-      $region = ['target_id' => self::getTidByName($region, 'doc_original_region')];
+      $region = ['target_id' => self::getTidByName($xregion, 'doc_original_region')];
     }
 
-    if(empty($pueblo)){
+    if(empty($xpueblo)){
       $pueblo = '_none';
     } else {
-      $pueblo = ['target_id' => self::getTidByName($pueblo, 'doc_original_pueblo')];
+      $pueblo = ['target_id' => self::getTidByName($xpueblo, 'doc_original_pueblo')];
     }
 
     if( ( $ubicacion == '_none' ) && ( $lugar == '_none' ) && ($pueblo == '_none') && ($region == '_none') ) {
@@ -487,17 +493,18 @@ class ImportExcelForm extends FormBase {
       $tid = self::getTidByNameParent($t1, 'tematicos');
       if( !empty( $t2 ) && !empty($tid) ){
         $ar_padre = self::getChildrenTerms($t2, $tid);
-        $tid = reset($ar_padre);
+        if(!empty($ar_padre)) {
+          $tid = reset($ar_padre);
+        }
         if( !empty( $t3 ) && !empty($tid) ){
           $ar_son = self::getChildrenTerms($t3, $tid);
-          $tid = reset($ar_son);
+          if(!empty($ar_son)){
+            $tid = reset($ar_son);
+          }
         }
       }
       return $tid;
     }
-    /*else {
-      return '_none';
-    }*/
   }
 
   public static function getTidByNameParent($name = NULL, $vid = NULL) {
@@ -534,9 +541,9 @@ class ImportExcelForm extends FormBase {
   }
 
   public static function debug( $var ) {
-    echo '<br/><br/><br/><pre>';
+    echo '<br/><pre>';
     print_r( $var );
-    echo '</pre> <hr/>';
+    echo '</pre><hr/>';
   }
 
 }

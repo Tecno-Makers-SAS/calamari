@@ -54,9 +54,9 @@ function calamari_config_page_attachments(array &$attachments)
  */
 function calamari_config_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
-   if( $form_id == "node_documento_edit_form") {    
-     $form['field_ref_tematicos']['widget']['#maxlength'] = NULL;   
-    }   
+   if( $form_id == "node_documento_edit_form") {
+     $form['field_ref_tematicos']['widget']['#maxlength'] = NULL;
+    }
   if( $form_id == "views_exposed_form" && $form['#id'] == 'views-exposed-form-documentos-page-1') {
 
     $form['#attached']['library'][] = 'calamari_config/calamari-init';
@@ -164,12 +164,26 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       ];
       $form['tema_nivel3']['#attributes']['disabled'] = 'disabled';
 
-      $form['field_ref_tematicos']['#weight'] = 4;
+      $form['item_temas '] = [
+        '#markup' => '<h3 class="subtitle">B&uacute;squeda por Fecha</h3>',
+        '#weight' => 4
+      ];
+
+      $form['field_doc_fexpedicion']['#weight'] = 5;
+      $form['field_doc_fexpedicion']['#prefix'] = "<div class='row'><div class='col-sm-6'>";
+      $form['field_doc_fexpedicion']['#suffix'] = "</div>";
+
+      $form['field_doc_fexpedicion_1']['#weight'] = 5;
+      $form['field_doc_fexpedicion_1']['#prefix'] = "<div class='col-sm-6'>";
+      $form['field_doc_fexpedicion_1']['#suffix'] = "</div></div>";
+
+      $form['field_ref_tematicos']['#weight'] = 6;
       $form['field_ref_tematicos']['#attributes']['style'] = 'display:none';
       $form['item_link '] = [
         '#markup' => '<div class="advanced_search"><a href="/documentos">IR A B&Uacute;SQUEDA AVANZADA</a></div>',
-        '#weight' => 4
+        '#weight' => 6
       ];
+
       $form['field_doc_pmencionadas']['#access'] = FALSE;
       $form['field_doc_cargo1']['#access'] = FALSE;
       $form['field_doc_institucion']['#access'] = FALSE;
@@ -178,6 +192,7 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       $form['field_ref_docpueblo']['#access'] = FALSE;
 
     } else {
+
       $form['item_advance '] = [
         '#markup' => '<h3>B&uacute;squeda Avanzada</h3><div class="row">',
         '#weight' => 0
@@ -295,13 +310,23 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
         '#default_value' => $tema_geo3
       ];*/
       $form['tema_geo3']['#attributes']['disabled'] = 'disabled';
-
       $form['field_ref_geograficos']['#title_display'] = 'invisible';
       $form['field_ref_geograficos']['#weight'] = 16;
       $form['field_ref_geograficos']['#prefix'] = '<div class="col-md-12">';
       $form['field_ref_geograficos']['#suffix'] = '</div>';
       $form['field_ref_geograficos']['#attributes']['style'] = 'display:none';
 
+      $form['field_doc_fexpedicion']['#title_display'] = 'invisible';
+      $form['field_doc_fexpedicion']['#weight'] = 17;
+      $form['field_doc_fexpedicion']['#prefix'] = '<div class="col-md-12">';
+      $form['field_doc_fexpedicion']['#suffix'] = '</div>';
+      $form['field_doc_fexpedicion']['#attributes']['style'] = 'display:none';
+
+      $form['field_doc_fexpedicion_1']['#title_display'] = 'invisible';
+      $form['field_doc_fexpedicion_1']['#weight'] = 18;
+      $form['field_doc_fexpedicion_1']['#prefix'] = '<div class="col-md-12">';
+      $form['field_doc_fexpedicion_1']['#suffix'] = '</div>';
+      $form['field_doc_fexpedicion_1']['#attributes']['style'] = 'display:none';
 
     }
   }
