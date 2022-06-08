@@ -10,6 +10,8 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
 use Drupal\views\Views;
 
 
@@ -186,6 +188,7 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
 
       $form['field_doc_pmencionadas']['#access'] = FALSE;
       $form['field_doc_cargo1']['#access'] = FALSE;
+      $form['field_doc_cargo2']['#access'] = FALSE;
       $form['field_doc_institucion']['#access'] = FALSE;
       $form['field_ref_geograficos']['#access'] = FALSE;
       $form['field_ref_docregion']['#access'] = FALSE;
@@ -208,13 +211,17 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       $form['field_doc_pmencionadas']['#prefix'] = '<div class="col-sm-6">';
       $form['field_doc_pmencionadas']['#suffix'] = '</div>';
 
-      $form['field_doc_cargo1']['#weight'] = 3;
+      $form['field_doc_institucion']['#weight'] = 3;
+      $form['field_doc_institucion']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_doc_institucion']['#suffix'] = '</div>';
+
+      $form['field_doc_cargo1']['#weight'] = 4;
       $form['field_doc_cargo1']['#prefix'] = '<div class="col-sm-6">';
       $form['field_doc_cargo1']['#suffix'] = '</div>';
 
-      $form['field_doc_institucion']['#weight'] = 4;
-      $form['field_doc_institucion']['#prefix'] = '<div class="col-sm-6">';
-      $form['field_doc_institucion']['#suffix'] = '</div></div>';
+      $form['field_doc_cargo2']['#weight'] = 5;
+      $form['field_doc_cargo2']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_doc_cargo2']['#suffix'] = '</div></div>';
 
       $form['item_temas'] = [
         '#markup' => '<h3>B&uacute;squeda por Temas</h3><h4>Temáticos</h4>',
