@@ -171,19 +171,47 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
         '#weight' => 4
       ];
 
-      $form['field_doc_fexpedicion']['#weight'] = 5;
-      $form['field_doc_fexpedicion']['#prefix'] = "<div class='row'><div class='col-sm-6'>";
-      $form['field_doc_fexpedicion']['#suffix'] = "</div>";
+      $connection = \Drupal::database();
+      $query = $connection->select('node__field_doc_fexpedicion', 'nf');
+      $query->addExpression('extract(year from field_doc_fexpedicion_value)', 'year');
+      $years = $query->distinct()->execute()->fetchAllAssoc('year');
+      $arsy = ['All' => 'Cualquiera'];
+      foreach($years as $k => $y){
+        if($k == 1 ) {
+          $arsy['0001'] = '0001';
+        } else {
+          $arsy[$k] = $k;
+        }
+      }
 
-      $form['field_doc_fexpedicion_1']['#weight'] = 5;
-      $form['field_doc_fexpedicion_1']['#prefix'] = "<div class='col-sm-6'>";
-      $form['field_doc_fexpedicion_1']['#suffix'] = "</div></div>";
+      $form['fecha_desde'] = [
+        '#type' => 'select',
+        '#title' => 'Desde',
+        '#options' => $arsy,
+        '#weight' => 5,
+        '#prefix' => "<div class='row'><div class='col-sm-6'>",
+        '#suffix' => '</div>'
+      ];
 
-      $form['field_ref_tematicos']['#weight'] = 6;
+      $form['fecha_hasta'] = [
+        '#type' => 'select',
+        '#title' => 'Hasta',
+        '#options' => $arsy,
+        '#weight' => 5,
+        '#prefix' => "<div class='col-sm-6'>",
+        '#suffix' => '</div></div>'
+      ];
+
+      $form['field_doc_fexpedicion']['#weight'] = 6;
+      $form['field_doc_fexpedicion']['#attributes']['style'] = 'display:none';
+      $form['field_doc_fexpedicion_1']['#weight'] = 6;
+      $form['field_doc_fexpedicion_1']['#attributes']['style'] = 'display:none';
+
+      $form['field_ref_tematicos']['#weight'] = 7;
       $form['field_ref_tematicos']['#attributes']['style'] = 'display:none';
       $form['item_link '] = [
         '#markup' => '<div class="advanced_search"><a href="/documentos">IR A B&Uacute;SQUEDA AVANZADA</a></div>',
-        '#weight' => 6
+        '#weight' => 7
       ];
 
       $form['field_doc_pmencionadas']['#access'] = FALSE;
@@ -215,13 +243,19 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       $form['field_doc_institucion']['#prefix'] = '<div class="col-sm-6">';
       $form['field_doc_institucion']['#suffix'] = '</div>';
 
+      $cargos = getJsonData('json_cargos', 'rest_export_1');
+      $ar_cargo['All'] = '- Cualquiera -';
+      foreach ($cargos as $key => $cargo ){
+        $ar_cargo[$cargo['cid']] = $cargo['name'];
+      }
+
       $form['field_doc_cargo1']['#weight'] = 4;
       $form['field_doc_cargo1']['#prefix'] = '<div class="col-sm-6">';
-      $form['field_doc_cargo1']['#suffix'] = '</div>';
+      $form['field_doc_cargo1']['#suffix'] = '</div></div>';
 
-      $form['field_doc_cargo2']['#weight'] = 5;
-      $form['field_doc_cargo2']['#prefix'] = '<div class="col-sm-6">';
-      $form['field_doc_cargo2']['#suffix'] = '</div></div>';
+      //$form['field_doc_cargo2']['#weight'] = 5;
+      //$form['field_doc_cargo2']['#prefix'] = '<div class="col-sm-6">';
+      //$form['field_doc_cargo2']['#suffix'] = '</div>';
 
       $form['item_temas'] = [
         '#markup' => '<h3>B&uacute;squeda por Temas</h3><h4>Temáticos</h4>',

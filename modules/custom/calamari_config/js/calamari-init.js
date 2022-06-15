@@ -155,4 +155,21 @@
     }
   });
 
+  /************************ SELECTS FECHAS ******************************/
+  $(document).on('change', 'select[name="fecha_desde"]', function (){
+    var year =  $(this).val();
+    if( year != 'All') {
+      $('input[name="field_doc_fexpedicion"]').val('01-01-' + year);
+    }
+  });
+
+  $(document).on('change', 'select[name="fecha_hasta"]', function (){
+    var year =  $(this).val();
+    if( year != 'All') {
+      $('input[name="field_doc_fexpedicion_1"]').val('31-12-' + year);
+    }
+  });
+
+
+
 })(jQuery, Drupal, drupalSettings);
