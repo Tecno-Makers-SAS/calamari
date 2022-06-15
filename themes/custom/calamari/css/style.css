@@ -67,3 +67,7 @@ ul.shs li:after {
   text-decoration: none;
   outline: none;
 }
+
+.field--name-field-ref-geograficos ul.shs li:first-child{
+  display: none;
+}
