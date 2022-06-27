@@ -132,7 +132,7 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       $form['key']['#prefix'] = '<div class="col-md-12">';
       $form['key']['#suffix'] = '</div>';
 
-      $form['item_temas '] = [
+      $form['item_temas'] = [
         '#markup' => '<h3 class="subtitle">B&uacute;squeda por Temas</h3>',
         '#weight' => 2
       ];
@@ -166,8 +166,8 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       ];
       $form['tema_nivel3']['#attributes']['disabled'] = 'disabled';
 
-      $form['item_temas '] = [
-        '#markup' => '<h3 class="subtitle">B&uacute;squeda por Fecha</h3>',
+      $form['item_fechas '] = [
+        '#markup' => '<h3 class="subtitle">B&uacute;squeda por rango de fechas</h3>',
         '#weight' => 4
       ];
 
@@ -189,8 +189,8 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
         '#title' => 'Desde',
         '#options' => $arsy,
         '#weight' => 5,
-        '#prefix' => "<div class='row'><div class='col-sm-6'>",
-        '#suffix' => '</div>'
+        '#prefix' => "<div class='row'><div class='col-sm-6'><div class='col-sm-6'>",
+        '#suffix' => '</div></div>'
       ];
 
       $form['fecha_hasta'] = [
@@ -198,8 +198,8 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
         '#title' => 'Hasta',
         '#options' => $arsy,
         '#weight' => 5,
-        '#prefix' => "<div class='col-sm-6'>",
-        '#suffix' => '</div></div>'
+        '#prefix' => "<div class='col-sm-6'><div class='col-sm-6'>",
+        '#suffix' => '</div></div></div>'
       ];
 
       $form['field_doc_fexpedicion']['#weight'] = 6;
@@ -238,24 +238,24 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       $form['field_doc_pmencionadas']['#weight'] = 2;
       $form['field_doc_pmencionadas']['#prefix'] = '<div class="col-sm-6">';
       $form['field_doc_pmencionadas']['#suffix'] = '</div>';
-
-      $form['field_doc_institucion']['#weight'] = 3;
-      $form['field_doc_institucion']['#prefix'] = '<div class="col-sm-6">';
-      $form['field_doc_institucion']['#suffix'] = '</div>';
-
+     
       $cargos = getJsonData('json_cargos', 'rest_export_1');
       $ar_cargo['All'] = '- Cualquiera -';
       foreach ($cargos as $key => $cargo ){
         $ar_cargo[$cargo['cid']] = $cargo['name'];
       }
 
-      $form['field_doc_cargo1']['#weight'] = 4;
+      $form['field_doc_cargo1']['#weight'] = 3;
       $form['field_doc_cargo1']['#prefix'] = '<div class="col-sm-6">';
       $form['field_doc_cargo1']['#suffix'] = '</div></div>';
 
       //$form['field_doc_cargo2']['#weight'] = 5;
       //$form['field_doc_cargo2']['#prefix'] = '<div class="col-sm-6">';
       //$form['field_doc_cargo2']['#suffix'] = '</div>';
+      $form['field_doc_institucion']['#weight'] = 4;
+      $form['field_doc_institucion']['#prefix'] = '<div class="col-sm-6">';
+      $form['field_doc_institucion']['#suffix'] = '</div>';
+
 
       $form['item_temas'] = [
         '#markup' => '<h3>B&uacute;squeda por Temas</h3><h4>Temáticos</h4>',
