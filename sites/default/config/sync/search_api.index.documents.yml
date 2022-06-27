@@ -3,29 +3,29 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.storage.node.field_doc_body1
+    - field.storage.node.field_doc_body2
     - field.storage.node.field_ref_onomasticos
     - field.storage.paragraph.field_doc_cargo1
     - field.storage.paragraph.field_doc_cargo2
     - field.storage.node.field_doc_clasedoc
-    - field.storage.node.field_doc_body1
-    - field.storage.node.field_doc_body2
     - field.storage.node.field_doc_destinatario
+    - field.storage.node.field_doc_fagi
     - field.storage.node.field_doc_fexpedicion
     - field.storage.node.field_doc_flimite
-    - field.storage.node.field_doc_fagi
-    - field.storage.node.field_doc_geograficos
-    - field.storage.paragraph.field_ref_geograficos
     - field.storage.node.field_doc_institucion
     - field.storage.node.field_doc_lexpedicion
-    - field.storage.paragraph.field_ref_n5lugar
     - field.storage.paragraph.field_doc_pmencionadas
     - field.storage.node.field_doc_procedencia
     - field.storage.node.field_doc_remitente
+    - field.storage.node.field_doc_title
+    - field.storage.node.field_doc_topagi
+    - field.storage.node.field_doc_geograficos
     - field.storage.paragraph.field_ref_docpueblo
     - field.storage.paragraph.field_ref_docregion
+    - field.storage.paragraph.field_ref_geograficos
+    - field.storage.paragraph.field_ref_n5lugar
     - field.storage.node.field_ref_tematicos
-    - field.storage.node.field_doc_topagi
-    - field.storage.node.field_doc_title
     - search_api.server.database
   module:
     - paragraphs
@@ -259,6 +259,7 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   entity_status: {  }
+  entity_type: {  }
   hierarchy:
     weights:
       preprocess_index: -45
@@ -332,6 +333,7 @@ processor_settings:
       - texto_full
       - title
     spaces: ''
+    ignored: ._-
     overlap_cjk: 1
     minimum_word_size: '3'
   transliteration:

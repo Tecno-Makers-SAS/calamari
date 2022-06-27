@@ -371,4 +371,3 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.paragraph.field_doc_cargo1'
-
