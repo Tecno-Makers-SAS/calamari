@@ -189,7 +189,7 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
         '#title' => 'Desde',
         '#options' => $arsy,
         '#weight' => 5,
-        '#prefix' => "<div class='row'><div class='col-sm-6'><div class='col-sm-6'>",
+        '#prefix' => "<div class='row'><div class='col-sm-6'><div class='col-sm-6'></div><div class='col-sm-6'>",
         '#suffix' => '</div></div>'
       ];
 
