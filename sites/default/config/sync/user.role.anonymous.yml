@@ -6,6 +6,7 @@ dependencies:
     - filter.format.restricted_html
   module:
     - contact
+    - entity_print_views
     - filter
     - printable
     - system
@@ -18,5 +19,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access site-wide contact form'
+  - 'entity print views access'
   - 'use text format restricted_html'
   - 'view printer friendly versions'
