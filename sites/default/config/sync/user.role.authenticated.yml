@@ -6,10 +6,13 @@ dependencies:
     - filter.format.basic_html
   module:
     - contact
+    - entity_print_views
     - filter
+    - google_analytics
     - printable
     - shortcut
     - system
+    - taxonomy_manager
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
@@ -21,5 +24,8 @@ permissions:
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access site-wide contact form'
+  - 'access taxonomy manager list'
+  - 'entity print views access'
+  - 'opt-in or out of google analytics tracking'
   - 'use text format basic_html'
   - 'view printer friendly versions'
