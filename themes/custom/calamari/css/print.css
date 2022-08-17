@@ -15,7 +15,7 @@ i{
 	margin-bottom: 20px;
 }
 .header_document h2 {
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 48px;
 }
@@ -41,7 +41,7 @@ i{
   width: 30px;
 }
 .panel .panel-heading {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 20px;
 }
@@ -138,8 +138,8 @@ i{
   background: rgba(244, 244, 244, 0.5);
 }
 .page-docs-content {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 17px;
   padding-right: 0;
 }
 .page-docs-content .header_document .ico-doc {
@@ -178,7 +178,7 @@ i{
   background: #B4B4B4;
   color: #EAEAEA;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 36px;
   padding: 2px 15px;
@@ -574,11 +574,11 @@ th {
     margin-bottom: 10px;
   }
   .page-docs-content .card .card-header {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 17px;
   }
   .page-docs-content .panel .panel-heading {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
   }
   .page-docs-content .panel .field--name-field-ref-tematicos .field--item {
@@ -591,7 +591,7 @@ th {
     padding: 5px 8px 0;
   }
   .page-docs-content {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
   }
   .page-docs-content .panel {
@@ -2718,8 +2718,8 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.42857143;
+  padding: 5px;
+  line-height: 0.5;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
