@@ -1,0 +1,22 @@
+uuid: 3d5a5879-b778-480e-bde4-977eca201490
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: urls_documentos
+label: Urls-documentos
+type: 'canonical_entities:node'
+pattern: 'documento/[node:title]'
+selection_criteria:
+  4989ea57-b4a0-458b-90cc-76185f095dbc:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 4989ea57-b4a0-458b-90cc-76185f095dbc
+    context_mapping:
+      node: node
+    bundles:
+      documento: documento
+selection_logic: and
+weight: -5
+relationships: {  }
