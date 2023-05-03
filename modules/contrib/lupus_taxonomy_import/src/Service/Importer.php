@@ -75,7 +75,12 @@ class Importer {
       return FALSE;
     }
 
-    $rows = array_map('str_getcsv', file($filepath));
+    if ($fh = fopen($filepath, "r")) {
+      while ($row = fgetcsv($fh)) {
+        $rows[] = $row;
+      }
+      fclose($fh);
+    }
     $header = array_shift($rows);
 
     // Remove empty lines.
@@ -89,13 +94,10 @@ class Importer {
     $rows = array_map('array_values', $rows);
 
     // Set header as keys in each row.
-    array_walk($rows, function (&$row) use ($header) {    
-      $temp_row[0] = $row[0];
+    array_walk($rows, function (&$row) use ($header) {
       $row = array_combine($header, $row);
-      $otro = array_shift($row);
-      $row = array_merge($temp_row, $row);      
     });
-   
+
     $mapped_rows = [];
     $this->mapRows($mapped_rows, $rows);
 
@@ -164,7 +166,12 @@ class Importer {
       return $errors;
     }
 
-    $rows = array_map('str_getcsv', file($filepath));
+    if ($fh = fopen($filepath, "r")) {
+      while ($row = fgetcsv($fh)) {
+        $rows[] = $row;
+      }
+      fclose($fh);
+    }
 
     $header = array_shift($rows);
     $header_error = NULL;
@@ -239,9 +246,9 @@ class Importer {
    * @param int $level
    *   The current level which is being processed.
    */
-  /*Duvan*/
   protected function mapRows(array &$output, array &$rows, $parent_id = 0, $level = 0) {
-    while (list($key, $row) = each($rows)) {
+    foreach($rows as $key => $row){
+
       reset($rows);
       $item = $this->getTermItem($row);
       $current = $item['term'];

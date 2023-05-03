@@ -233,7 +233,7 @@ function _search_api_views_get_handlers(FieldInterface $field) {
     foreach ($types as $type) {
       $sub_type = NULL;
       if (is_array($type)) {
-        list($type, $sub_type) = $type;
+        [$type, $sub_type] = $type;
       }
       if (isset($mapping[$type])) {
         _search_api_views_handler_adjustments($type, $field, $mapping[$type], $sub_type);
@@ -242,12 +242,7 @@ function _search_api_views_get_handlers(FieldInterface $field) {
     }
   }
   // @todo Replace with multi-catch once we depend on PHP 7.1+.
-  catch (SearchApiException $e) {
-    $vars['%index'] = $field->getIndex()->label();
-    $vars['%field'] = $field->getPrefixedLabel();
-    watchdog_exception('search_api', $e, '%type while adding Views handlers for field %field on index %index: @message in %function (line %line of %file).', $vars);
-  }
-  catch (PluginNotFoundException $e) {
+  catch (SearchApiException | PluginNotFoundException $e) {
     $vars['%index'] = $field->getIndex()->label();
     $vars['%field'] = $field->getPrefixedLabel();
     watchdog_exception('search_api', $e, '%type while adding Views handlers for field %field on index %index: @message in %function (line %line of %file).', $vars);
@@ -407,7 +402,7 @@ function _search_api_views_handler_mapping() {
 
     $event = new MappingViewsHandlersEvent($mapping);
     \Drupal::getContainer()->get('event_dispatcher')
-      ->dispatch(SearchApiEvents::MAPPING_VIEWS_HANDLERS, $event);
+      ->dispatch($event, SearchApiEvents::MAPPING_VIEWS_HANDLERS);
   }
 
   return $mapping;
@@ -513,6 +508,14 @@ function _search_api_views_data_special_fields(array &$table, IndexInterface $in
   $table[$language_field]['sort']['id'] = 'search_api';
   if ($language_field != 'search_api_language') {
     $table[$language_field]['real field'] = 'search_api_language';
+  }
+
+  $url_field = _search_api_views_find_field_alias('search_api_url', $table);
+  $table[$url_field]['title'] = t('Item URL');
+  $table[$url_field]['help'] = t("The item's URL");
+  $table[$url_field]['field']['id'] = 'search_api';
+  if ($url_field != 'search_api_url') {
+    $table[$url_field]['real field'] = 'search_api_url';
   }
 
   $relevance_field = _search_api_views_find_field_alias('search_api_relevance', $table);
@@ -990,7 +993,7 @@ function _search_api_views_get_field_handler_mapping() {
 
     $event = new MappingViewsFieldHandlersEvent($plain_mapping);
     \Drupal::getContainer()->get('event_dispatcher')
-      ->dispatch(SearchApiEvents::MAPPING_VIEWS_FIELD_HANDLERS, $event);
+      ->dispatch($event, SearchApiEvents::MAPPING_VIEWS_FIELD_HANDLERS);
 
     // Then create a new, more practical structure, with the mappings grouped by
     // mapping type.

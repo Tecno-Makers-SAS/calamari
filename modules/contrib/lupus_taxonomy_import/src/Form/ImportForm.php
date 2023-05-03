@@ -134,12 +134,12 @@ class ImportForm extends FormBase implements ContainerInjectionInterface {
       $form_state->setErrorByName('csv_file', $this->t('CSV file field is required.'));
     }
 
-   /* if ($errors = $this->importer->validate($this->file)) {
+    if ($errors = $this->importer->validate($this->file)) {
       $form_state->setErrorByName('csv_file', $this->t('Invalid file format. Check the example file for proper formatting.'));
       foreach ($errors as $error) {
         $this->messenger()->addWarning($error);
       }
-    }*/
+    }
 
     $vocabulary_id = $form_state->getValue('vocabulary_id');
     $vocabularies = Vocabulary::loadMultiple([$vocabulary_id]);

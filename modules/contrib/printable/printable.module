@@ -272,9 +272,9 @@ function printable_preparing_pdf() {
 function printable_file_url_alter(&$uri) {
   if (printable_preparing_pdf()) {
     $service = \Drupal::service('stream_wrapper_manager');
-    $scheme = \Drupal::service('stream_wrapper_manager')->getScheme($uri);
+    $scheme = $service->getScheme($uri);
 
-    if ($scheme) {
+    if ($service->isValidScheme($scheme)) {
       $path = \Drupal::service('file_system')->realpath($scheme . '://');
       $uri = ($path ? $path . '/' : '') . substr($uri, strlen($scheme) + 3);
     }

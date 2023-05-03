@@ -238,7 +238,7 @@ function calamari_config_form_alter(&$form, FormStateInterface $form_state, $for
       $form['field_doc_pmencionadas']['#weight'] = 2;
       $form['field_doc_pmencionadas']['#prefix'] = '<div class="col-sm-6">';
       $form['field_doc_pmencionadas']['#suffix'] = '</div>';
-     
+
       $cargos = getJsonData('json_cargos', 'rest_export_1');
       $ar_cargo['All'] = '- Cualquiera -';
       foreach ($cargos as $key => $cargo ){
@@ -412,7 +412,6 @@ function _calamari_config_getTids( $tid ){
   }
   return $ids;
 }
-
 
 function getJsonData($name, $display, $args = [], $itemsPerPage = 0)
 {

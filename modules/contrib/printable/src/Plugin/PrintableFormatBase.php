@@ -135,6 +135,19 @@ abstract class PrintableFormatBase extends PluginBase implements PrintableFormat
   }
 
   /**
+   * Set the configuration without saving it (API use).
+   *
+   * @param array $configuration
+   *   The plugin configuration.
+   */
+  public function setConfigurationNoSave(array $configuration) {
+    $this->configuration = $configuration;
+
+    $library_config = $configuration['pdf_library_config'] ?? [];
+    $this->pdfGenerator->setConfiguration($library_config);
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
@@ -213,16 +226,19 @@ abstract class PrintableFormatBase extends PluginBase implements PrintableFormat
    *   The HTML of the page to be added.
    *
    * @return string
-   *   The HTML string with presence of links dependending on configuration.
+   *   The HTML string with presence of links depending on configuration.
    */
   protected function extractLinks($content) {
-    if ($this->configFactory->get('printable.settings')->get('extract_links')) {
-      $rendered_page = $this->linkExtractor->extract($content);
+    switch($this->configFactory->get('printable.settings')->get('extract_links')) {
+      case 'extract':
+        return $this->linkExtractor->extract($content);
+
+      case 'remove':
+        return $this->linkExtractor->removeAttribute($content, 'href');
+
+      default:
+        return $content;
     }
-    else {
-      $rendered_page = $this->linkExtractor->removeAttribute($content, 'href');
-    }
-    return $rendered_page;
   }
 
   /**

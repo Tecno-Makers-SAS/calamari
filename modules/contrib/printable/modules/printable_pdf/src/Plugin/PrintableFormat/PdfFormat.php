@@ -4,6 +4,7 @@ namespace Drupal\printable_pdf\Plugin\PrintableFormat;
 
 use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Config\ConfigFactory;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Messenger\MessengerInterface;
@@ -82,6 +83,13 @@ class PdfFormat extends PrintableFormatBase {
   protected $messenger;
 
   /**
+   * The file system service.
+   *
+   * @var \Drupal\Core\File\FileSystemInterface
+   */
+  protected $fileSystem;
+
+  /**
    * {@inheritdoc}
    *
    * @param array $configuration
@@ -106,14 +114,17 @@ class PdfFormat extends PrintableFormatBase {
    *   The public stream wrapper service.
    * @param \Drupal\Core\Messenger\MessengerInterface $messenger
    *   The Drupal messenger service.
+   * @param \Drupal\Core\File\FileSystemInterface $fileSystem
+   *   The filesystem service.
    */
-  public function __construct(array $configuration, $plugin_id, array $plugin_definition, ConfigFactory $config_factory, PdfGeneratorPluginManager $pdf_generator_manager, PrintableCssIncludeInterface $printable_css_include, LinkExtractorInterface $link_extractor, CurrentPathStack $pathCurrent, RequestStack $requestStack, PublicStream $public_stream, MessengerInterface $messenger) {
+  public function __construct(array $configuration, $plugin_id, array $plugin_definition, ConfigFactory $config_factory, PdfGeneratorPluginManager $pdf_generator_manager, PrintableCssIncludeInterface $printable_css_include, LinkExtractorInterface $link_extractor, CurrentPathStack $pathCurrent, RequestStack $requestStack, PublicStream $public_stream, MessengerInterface $messenger, FileSystemInterface $fileSystem) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $config_factory, $printable_css_include, $link_extractor);
     $this->pdfGeneratorManager = $pdf_generator_manager;
     $this->pathCurrent = $pathCurrent;
     $this->requestStack = $requestStack;
     $this->publicStream = $public_stream;
     $this->messenger = $messenger;
+    $this->fileSystem = $fileSystem;
     $pdf_library = (string) $this->configFactory->get('printable.settings')->get('pdf_tool');
 
     if (!$pdf_library) {
@@ -125,7 +136,8 @@ class PdfFormat extends PrintableFormatBase {
 
     $pdf_library = strtolower($pdf_library);
     try {
-      $this->pdfGenerator = $this->pdfGeneratorManager->createInstance($pdf_library);
+      $library_config = $configuration['pdf_library_config'] ?? [];
+      $this->pdfGenerator = $this->pdfGeneratorManager->createInstance($pdf_library, $library_config);
     }
     catch (\Exception $e) {
       // The thrower is assumed to have already logged an error but not
@@ -171,7 +183,8 @@ class PdfFormat extends PrintableFormatBase {
       $container->get('path.current'),
       $container->get('request_stack'),
       $container->get('stream_wrapper.public'),
-      $container->get('messenger')
+      $container->get('messenger'),
+      $container->get('file_system'),
     );
   }
 
@@ -328,7 +341,7 @@ class PdfFormat extends PrintableFormatBase {
       ->get('page_orientation');
     $path_to_binary = $this->configFactory->get('printable.settings')
       ->get('path_to_binary');
-    $pdf_location = $this->configFactory->get('printable.settings')
+    $pdf_location = $this->configuration['filename'] ?? $this->configFactory->get('printable.settings')
       ->get('pdf_location');
     $save_pdf = $this->configFactory->get('printable.settings')
       ->get('save_pdf');
@@ -338,7 +351,7 @@ class PdfFormat extends PrintableFormatBase {
 
       $basepath = \Drupal::request()->getBasePath();
       if ($basepath) {
-        $raw_content = str_replace('src="' . $basepath, 'src=', $raw_content);
+        $raw_content = str_replace('src="' . $basepath, 'src="', $raw_content);
       }
 
       $pdf_content = $this->removeImageTokens($raw_content);
@@ -355,8 +368,8 @@ class PdfFormat extends PrintableFormatBase {
 
     if (empty($pdf_location)) {
       $pdf_location = str_replace("/", "_", $this->pathCurrent->getPath()) . '.pdf';
-      $public_dir = $this->publicStream->getDirectoryPath();
-      $pdf_location = trim($public_dir, '/') . '/' . substr($pdf_location, 1);
+      $dir = $this->fileSystem->getTempDirectory();
+      $pdf_location = $dir . '/' . substr($pdf_location, 1);
     }
     else {
       // @todo A token per source entity type? Seems overkill so I'll wait
@@ -368,8 +381,7 @@ class PdfFormat extends PrintableFormatBase {
       $pdf_location = $token_service->replace($pdf_location, [$entity_type => $entity]);
     }
 
-    $this->filename = \Drupal::service('file_system')->getTempDirectory() .
-      '/' . $pdf_location;
+    $this->filename = $pdf_location;
 
     $this->pdfGenerator->save($this->filename);
     return $this->filename;

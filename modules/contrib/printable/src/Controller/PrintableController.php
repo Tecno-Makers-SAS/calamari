@@ -31,6 +31,13 @@ class PrintableController extends ControllerBase implements ContainerInjectionIn
   protected $configFactory;
 
   /**
+   * The format plugin instance.
+   *
+   * @var \Drupal\printable\Plugin\PrintableFormatInterface
+   */
+  protected $formatPlugin;
+
+  /**
    * Constructs a \Drupal\printable\Controller\PrintableController object.
    *
    * @param \Drupal\printable\PrintableFormatPluginManager $printable_format_manager
@@ -74,24 +81,31 @@ class PrintableController extends ControllerBase implements ContainerInjectionIn
    * @param \Drupal\Core\Entity\EntityInterface $entity
    *   The entity to be printed.
    * @param string $printable_format
-   *   The identifier of the hadcopy format plugin.
+   *   The identifier of the hardcopy format plugin.
+   * @param array $configuration
+   *   Custom configuration for the plugin.
    *
    * @return \Symfony\Component\HttpFoundation\Response
    *   The printable response.
    */
-  private function prepareFormat(EntityInterface $entity, $printable_format) {
+  private function prepareFormat(EntityInterface $entity, $printable_format, $configuration = []) {
     if (!$this->printableFormatManager->getDefinition($printable_format, FALSE)) {
       throw new NotFoundHttpException();
     }
 
-    $format = $this->printableFormatManager->createInstance($printable_format);
+    if (!$this->formatPlugin || $this->formatPlugin->getPluginId() != $printable_format) {
+      $this->formatPlugin = $this->printableFormatManager->createInstance($printable_format, $configuration);
+    }
+    else {
+      $this->formatPlugin->setConfigurationNoSave($configuration);
+    }
 
     $content = $this->entityTypeManager()
       ->getViewBuilder($entity->getEntityTypeId())
       ->view($entity, 'printable');
-    $format->setContent($content);
-    $format->setEntity($entity);
-    return $format;
+    $this->formatPlugin->setContent($content);
+    $this->formatPlugin->setEntity($entity);
+    return $this->formatPlugin;
   }
 
   /**
@@ -101,12 +115,14 @@ class PrintableController extends ControllerBase implements ContainerInjectionIn
    *   The entity to be printed.
    * @param string $printable_format
    *   The identifier of the hadcopy format plugin.
+   * @param array $configuration
+   *   Custom configuration for the printable plugin.
    *
    * @return \Symfony\Component\HttpFoundation\Response
    *   The printable response.
    */
-  public function getOutput(EntityInterface $entity, $printable_format) {
-    $format = $this->prepareFormat($entity, $printable_format);
+  public function getOutput(EntityInterface $entity, $printable_format, $configuration) {
+    $format = $this->prepareFormat($entity, $printable_format, $configuration);
     return $format->getOutput();
   }
 

@@ -4,6 +4,7 @@ namespace Drupal\Tests\search_api_db\Kernel;
 
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Database\Database as CoreDatabase;
+use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\search_api\Entity\Index;
 use Drupal\search_api\Entity\Server;
@@ -20,6 +21,7 @@ use Drupal\search_api_db\DatabaseCompatibility\GenericDatabase;
 use Drupal\search_api_db\Plugin\search_api\backend\Database;
 use Drupal\search_api_db\Tests\DatabaseTestsTrait;
 use Drupal\Tests\search_api\Kernel\BackendTestBase;
+use Drupal\Tests\search_api\Kernel\TestLogger;
 
 /**
  * Tests index and search capabilities using the Database search backend.
@@ -51,9 +53,18 @@ class BackendTest extends BackendTestBase {
   protected $indexId = 'database_search_index';
 
   /**
+   * The test logger installed in the container.
+   *
+   * Will throw expections whenever a warning or error is logged.
+   *
+   * @var \Drupal\Tests\search_api\Kernel\TestLogger
+   */
+  protected $logger;
+
+  /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     // Create a dummy table that will cause a naming conflict with the backend's
@@ -97,6 +108,19 @@ class BackendTest extends BackendTestBase {
   /**
    * {@inheritdoc}
    */
+  public function register(ContainerBuilder $container): void {
+    parent::register($container);
+
+    // Set a logger that will throw exceptions when warnings/errors are logged.
+    $this->logger = new TestLogger('');
+    $container->set('logger.factory', $this->logger);
+    $container->set('logger.channel.search_api', $this->logger);
+    $container->set('logger.channel.search_api_db', $this->logger);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   protected function checkBackendSpecificFeatures() {
     $this->checkMultiValuedInfo();
     $this->searchWithRandom();
@@ -126,6 +150,8 @@ class BackendTest extends BackendTestBase {
     $this->regressionTest2873023();
     $this->regressionTest3199355();
     $this->regressionTest3225675();
+    $this->regressionTest3258802();
+    $this->regressionTest3227268();
   }
 
   /**
@@ -335,10 +361,9 @@ class BackendTest extends BackendTestBase {
     $this->assertResults([2, 1], $results, 'Partial search for »foo« with additional filter');
 
     $query = $this->buildSearch();
-    $conditions = $query->createConditionGroup('OR');
+    $conditions = $query->createAndAddConditionGroup('OR');
     $conditions->addCondition('name', 'test');
     $conditions->addCondition('body', 'test');
-    $query->addConditionGroup($conditions);
     $results = $query->execute();
     $this->assertResults([1, 2, 3, 4], $results, 'Partial search with multi-field fulltext filter');
   }
@@ -386,10 +411,9 @@ class BackendTest extends BackendTestBase {
     $this->assertResults([2, 1], $results, 'Prefix search for »foo« with additional filter');
 
     $query = $this->buildSearch();
-    $conditions = $query->createConditionGroup('OR');
+    $conditions = $query->createAndAddConditionGroup('OR');
     $conditions->addCondition('name', 'test');
     $conditions->addCondition('body', 'test');
-    $query->addConditionGroup($conditions);
     $results = $query->execute();
     $this->assertResults([1, 2, 3, 4], $results, 'Prefix search with multi-field fulltext filter');
   }
@@ -423,10 +447,9 @@ class BackendTest extends BackendTestBase {
     $this->assertEmpty($results->getWarnings());
 
     $query = $this->buildSearch();
-    $conditions = $query->createConditionGroup('OR');
+    $conditions = $query->createAndAddConditionGroup('OR');
     $conditions->addCondition('name', 'test');
     $conditions->addCondition('body', 'test');
-    $query->addConditionGroup($conditions);
     $results = $query->execute();
     $this->assertResults([1, 2, 3, 4], $results, 'Search with multi-field fulltext filter');
 
@@ -699,8 +722,16 @@ class BackendTest extends BackendTestBase {
   protected function regressionTest2925464() {
     $index = $this->getIndex();
 
+    // Changing the field type and, thus, column type, will cause a database
+    // error on MySQL and Postgres due to illegal integer values.
+    if (in_array(\Drupal::database()->driver(), ['mysql', 'pgsql'])) {
+      $this->logger->setExpectedErrors(1);
+    }
+
     $index->getField('category')->setType('integer');
     $index->save();
+
+    $this->logger->assertAllExpectedErrorsEncountered();
 
     $index->getField('category')->setType('string');
     $index->save();
@@ -734,9 +765,8 @@ class BackendTest extends BackendTestBase {
     $this->assertEquals($expected, $category_facets, 'Correct facets were returned for minimum count 0');
 
     $query = $this->buildSearch('nonexistent_search_term');
-    $conditions = $query->createConditionGroup('AND', ['facet:category']);
+    $conditions = $query->createAndAddConditionGroup('AND', ['facet:category']);
     $conditions->addCondition('category', 'article_category');
-    $query->addConditionGroup($conditions);
     $facets['category'] = [
       'field' => 'category',
       'limit' => 0,
@@ -887,6 +917,70 @@ class BackendTest extends BackendTestBase {
   }
 
   /**
+   * Tests whether unknown field types are handled correctly.
+   *
+   * @see https://www.drupal.org/node/3258802
+   */
+  protected function regressionTest3258802(): void {
+    $this->enableModules(['search_api_test']);
+
+    $index = $this->getIndex();
+    $type_field = $index->getField('type');
+    $this->assertEquals('string', $type_field->getType());
+    $type_field->setType('search_api_test_unsupported');
+    $index->save();
+    // No tasks should have been created.
+    $task_manager = \Drupal::getContainer()->get('search_api.task_manager');
+    $this->assertEquals(0, $task_manager->getTasksCount());
+    // Reindexing should work fine.
+    $index->clear();
+    $this->assertEquals(5, $this->indexItems($this->indexId));
+
+    $results = $index->query()->addCondition('type', 'article')->execute();
+    $this->assertResults([4, 5], $results, 'Search with filter on field with unknown type');
+
+    $index = $this->getIndex();
+    $type_field = $index->getField('type');
+    $this->assertEquals('search_api_test_unsupported', $type_field->getType());
+    $type_field->setType('string');
+    $index->save();
+    // No tasks should have been created.
+    $tasks_count = $task_manager->getTasksCount();
+    $this->assertEquals(0, $tasks_count);
+    $this->indexItems($this->indexId);
+
+    $this->disableModules(['search_api_test']);
+  }
+
+  /**
+   * Tests whether the text table's "item_id" column has the correct collation.
+   *
+   * This check is only active on MySQL.
+   *
+   * @see https://www.drupal.org/node/3227268
+   *
+   * @see \Drupal\search_api_db\DatabaseCompatibility\MySql::alterNewTable()
+   */
+  protected function regressionTest3227268(): void {
+    $database = \Drupal::database();
+    if ($database->driver() !== 'mysql') {
+      return;
+    }
+    $db_info = $this->getIndexDbInfo();
+    $text_table = $db_info['field_tables']['body']['table'];
+    $this->assertTrue(\Drupal::database()->schema()->tableExists($text_table));
+    $sql = "SHOW FULL COLUMNS FROM {{$text_table}}";
+    $collations = [];
+    foreach ($database->query($sql) as $row) {
+      $collations[$row->Field] = $row->Collation;
+    }
+    // Unfortunately, it's not consistent whether the database will report the
+    // collation as "utf8_general_ci" or "utf8mb3_general_ci".
+    $this->assertContains($collations['item_id'], ['utf8mb3_general_ci', 'utf8_general_ci']);
+    $this->assertEquals('utf8mb4_bin', $collations['word']);
+  }
+
+  /**
    * {@inheritdoc}
    */
   protected function checkIndexWithoutFields() {
@@ -902,6 +996,16 @@ class BackendTest extends BackendTestBase {
     $this->assertEquals($expected, $info_fields);
 
     return $index;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function regressionTest2471509(): void {
+    // As this test will log an exception, we need to take that into account.
+    $this->logger->setExpectedErrors(2);
+    parent::regressionTest2471509();
+    $this->logger->assertAllExpectedErrorsEncountered();
   }
 
   /**
@@ -1014,7 +1118,7 @@ class BackendTest extends BackendTestBase {
     \Drupal::moduleHandler()->alter('search_api_index_items', $index, $items);
     $event = new IndexingItemsEvent($index, $items);
     \Drupal::getContainer()->get('event_dispatcher')
-      ->dispatch(SearchApiEvents::INDEXING_ITEMS, $event);
+      ->dispatch($event, SearchApiEvents::INDEXING_ITEMS);
     foreach ($items as $item) {
       // This will cache the extracted fields so processors, etc., can retrieve
       // them directly.
@@ -1122,7 +1226,7 @@ class BackendTest extends BackendTestBase {
     $db_info = $this->getIndexDbInfo();
     $table = $db_info['index_table'];
     $column = $db_info['field_tables']['name']['column'];
-    $sql = "SELECT $column FROM {{$table}} WHERE item_id = :id";
+    $sql = "SELECT [$column] FROM {{$table}} WHERE [item_id] = :id";
 
     $id = 0;
     date_default_timezone_set('Asia/Seoul');

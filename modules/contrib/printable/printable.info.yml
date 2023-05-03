@@ -8,7 +8,7 @@ configure: printable.configure
 dependencies:
   - drupal:path_alias
 
-# Information added by Drupal.org packaging script on 2022-04-13
-version: '2.1.2'
+# Information added by Drupal.org packaging script on 2022-11-21
+version: '2.1.5'
 project: 'printable'
-datestamp: 1649839529
+datestamp: 1669009598

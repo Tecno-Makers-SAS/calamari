@@ -220,6 +220,7 @@ class TaxonomyManagerForm extends FormBase {
         'callback' => '::exportListFormCallback',
       ],
     ];
+
     /* Vocabulary switcher */
     $vocabularies = \Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->loadMultiple();
     foreach ($vocabularies as $voc) {
@@ -227,7 +228,7 @@ class TaxonomyManagerForm extends FormBase {
     }
 
     $current_path = \Drupal::service('path.current')->getPath();
-    $url_parts = explode('/',$current_path);
+    $url_parts = explode('/', $current_path);
     $voc_id = end($url_parts);
     $form['toolbar']['vocabulary_switcher'] = [
       '#type' => 'select',
@@ -301,15 +302,20 @@ class TaxonomyManagerForm extends FormBase {
    */
   public function taxonomy_term_submit_handler(array &$form, FormStateInterface $form_state) {
     $tid = $form_state->getValue(['search_terms']);
-    $url = Url::fromRoute('entity.taxonomy_term.edit_form', array('taxonomy_term' => $tid));
+    $url = Url::fromRoute('entity.taxonomy_term.edit_form', [
+      'taxonomy_term' => $tid,
+    ]);
     $form_state->setRedirectUrl($url);
   }
+
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $form_state->getValue(['taxonomy', 'manager', 'tree']);
-    $url = Url::fromRoute('taxonomy_manager.admin_vocabulary', array('taxonomy_vocabulary' => $form_state->getValue(['vocabulary_switcher'])));
+    $url = Url::fromRoute('taxonomy_manager.admin_vocabulary', [
+      'taxonomy_vocabulary' => $form_state->getValue(['vocabulary_switcher']),
+    ]);
     $form_state->setRedirectUrl($url);
   }
 
@@ -397,7 +403,7 @@ class TaxonomyManagerForm extends FormBase {
   /**
    * Term data submit handler.
    *
-   * @TODO: redirect to taxonomy manager
+   * @todo: redirect to taxonomy manager
    */
   public static function termDataFormSubmit($form, FormStateInterface $form_state) {
 
