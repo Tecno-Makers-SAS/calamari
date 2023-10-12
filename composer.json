@@ -41,7 +41,7 @@
         "drupal/pathauto": "^1.11",
         "drupal/pdf": "^1.2",
         "drupal/pdf_api": "^2.2",
-        "drupal/printable": "^2.1",
+        "drupal/printable": "^3.0",
         "drupal/search_api": "^1.29",
         "drupal/search_api_solr": "^4.2",
         "drupal/shs": "^2.0@RC",
