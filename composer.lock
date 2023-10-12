@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f176c5c7442e3fa5047a37da7666c9f",
+    "content-hash": "2fe611b71cdceeaf1dd9032fe8d83d5e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3833,46 +3833,46 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.1.7",
+            "version": "6.2.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.1.7"
+                "reference": "6.2.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.1.7.zip",
-                "reference": "6.1.7",
-                "shasum": "6eee721871ec6588fb3f3607165576ad1714a766"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0-rc1.zip",
+                "reference": "6.2.0-rc1",
+                "shasum": "66dbff946292e7e196c733fc6f8a4b0d63a3d9cc"
             },
             "require": {
-                "drupal/core": "^9.3"
+                "drupal/core": "^9.4 || ^10"
             },
             "require-dev": {
                 "drupal/address": "1.x-dev",
                 "drupal/bootstrap": "3.x-dev",
-                "drupal/captcha": "1.x-dev",
+                "drupal/captcha": "^1 || ^2",
                 "drupal/chosen": "3.0.x-dev",
-                "drupal/clientside_validation": "3.0.x-dev",
+                "drupal/ckeditor": "1.0.x-dev",
+                "drupal/clientside_validation": "*",
                 "drupal/clientside_validation_jquery": "*",
-                "drupal/devel": "5.x-dev",
+                "drupal/devel": "*",
                 "drupal/entity": "1.x-dev",
-                "drupal/entity_print": "2.x-dev",
-                "drupal/gnode": "*",
+                "drupal/entity_print": "*",
                 "drupal/group": "1.x-dev",
+                "drupal/hal": "1 - 2",
                 "drupal/jquery_ui": "1.x-dev",
-                "drupal/jquery_ui_checkboxradio": "1.x-dev",
-                "drupal/jquery_ui_datepicker": "1.x-dev",
-                "drupal/lingotek": "4.0.x-dev",
+                "drupal/jquery_ui_checkboxradio": "*",
+                "drupal/jquery_ui_datepicker": "*",
                 "drupal/mailsystem": "4.x-dev",
+                "drupal/metatag": "1.x-dev",
                 "drupal/paragraphs": "1.x-dev",
                 "drupal/select2": "1.x-dev",
                 "drupal/smtp": "1.x-dev",
-                "drupal/styleguide": "1.x-dev",
+                "drupal/styleguide": "^1 || ^2",
                 "drupal/telephone_validation": "2.x-dev",
-                "drupal/token": "1.x-dev",
+                "drupal/token": "*",
                 "drupal/variationcache": "1.x-dev",
-                "drupal/webform-webform_group": "*",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
                 "drupal/webform_clientside_validation": "*",
@@ -3891,16 +3891,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.1.7",
-                    "datestamp": "1696976671",
+                    "version": "6.2.0-rc1",
+                    "datestamp": "1696976940",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
@@ -10366,7 +10366,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "drupal/shs": 5
+        "drupal/shs": 5,
+        "drupal/webform": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,
