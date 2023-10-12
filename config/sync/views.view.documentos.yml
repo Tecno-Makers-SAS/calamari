@@ -1387,7 +1387,7 @@ display:
     position: 1
     display_options:
       cache:
-        type: search_api_tag
+        type: none
         options: {  }
       defaults:
         cache: false
@@ -1404,16 +1404,6 @@ display:
         - user
         - 'user.node_grants:view'
       tags:
-        - 'config:facets.facet.clase_de_documento'
-        - 'config:facets.facet.fecha_de_expedicion'
-        - 'config:facets.facet.fechas_limites'
-        - 'config:facets.facet.geograficos'
-        - 'config:facets.facet.instituciones'
-        - 'config:facets.facet.lugar_de_expedicion'
-        - 'config:facets.facet.personas_mencionadas'
-        - 'config:facets.facet.procedencia'
-        - 'config:facets.facet.tematicos'
-        - 'config:facets.facet.tipologia_agi'
         - 'config:field.storage.node.field_doc_body1'
         - 'config:field.storage.node.field_doc_destinatario'
         - 'config:field.storage.node.field_doc_fexpedicion'
